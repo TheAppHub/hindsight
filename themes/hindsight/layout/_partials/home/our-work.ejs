@@ -1,0 +1,74 @@
+<%# Retrieve posts using your helper %>
+<% let car = getWorkPostBySlug('classic-car-garage-australia'); %>
+<% let kubota = getWorkPostBySlug('in-a-place-we-call-home'); %>
+<% let redheads = getWorkPostBySlug('redheads'); %>
+
+<section class="bg-black">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <div class="grid grid-cols-2 gap-2">
+            <%# Classic Car Garage Australia Link %>
+            <%# Check if post, image, and permalink exist before linking %>
+            <% if (car && car.image && car.__permalink) { %>
+            <a
+                href="<%= url_for(car.path) %>" <%# Link to the post's permalink %>
+                style="background-image: url('<%- url_for(car.__permalink + 'MalsGarage_Banner.jpg') %>')" <%# Manually construct asset URL %>
+                class="p-8 col-span-2 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
+            >
+                <h3
+                    class="mb-5 max-w-xl text-5xl font-extrabold tracking-tight leading-tight text-white"
+                >
+                <%- car.subtitle %>
+                </h3>
+                <button
+                    type="button"
+                    class="inline-flex items-center px-4 py-2.5 font-medium text-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                >
+                    Show more
+                </button>
+            </a>
+            <% } %>
+
+            <%# Kubota Link %>
+             <% if (kubota && kubota.image && kubota.__permalink) { %>
+            <a
+                href="<%= url_for(kubota.path) %>" <%# Link to the post's permalink %>
+                style="background-image: url('<%- url_for(kubota.__permalink + kubota.image) %>');" <%# Manually construct asset URL %>
+                class="p-8 col-span-2 md:col-span-1 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
+            >
+                <h3
+                    class="mb-5 max-w-xl text-4xl font-extrabold tracking-tight leading-tight text-white"
+                >
+                <%- kubota.subtitle %>
+                </h3>
+                <button
+                    type="button"
+                    class="inline-flex items-center px-4 py-2.5 font-medium text-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                >
+                    Show more
+                </button>
+            </a>
+             <% } %>
+
+            <%# Redheads Link %>
+             <% if (redheads && redheads.image && redheads.__permalink) { %>
+            <a
+                href="<%= url_for(redheads.path) %>" <%# Link to the post's permalink %>
+                style="background-image: url('<%- url_for(redheads.__permalink + redheads.image) %>')" <%# Manually construct asset URL %>
+                class="p-8 col-span-2 md:col-span-1 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
+            >
+            <h3
+                class="mb-5 max-w-xl text-4xl font-extrabold tracking-tight leading-tight text-white"
+            >
+            <%- redheads.subtitle %>
+            </h3>
+            <button
+                type="button"
+                class="inline-flex items-center px-4 py-2.5 font-medium text-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+            >
+                Show more
+            </button>
+            </a>
+            <% } %>
+        </div>
+    </div>
+</section>

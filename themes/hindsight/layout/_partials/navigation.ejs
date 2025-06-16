@@ -1,0 +1,50 @@
+<div class="py-4 mt-2 sm:mt-3 sm:mb-2">
+	<nav
+		class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+	>
+		<a
+			href="<%- url_for() %>"
+			class="mb-2 ml-4 text-2xl font-extrabold tracking-tight leading-none md:text-3xl lg:text-4xl gradient"
+		>
+			<span class="inline-block h-6 md:h-7 lg:h-10 -mb-1"
+				><%- getSvg('logos/logo-horizontal.svg') %></span
+			>
+		</a>
+
+		<ul
+			id="nav"
+			class="invisible opacity-0 uppercase flex flex-col z-100 fixed top-0 left-0 right-0 bottom-0 items-center gap-6 text-primary-800 text-2xl justify-center bg-gradient-to-b from-primary-400 to-primary-800 md:visible md:opacity-100 md:static md:flex-row md:bg-none md:flex-1 md:justify-end md:text-tittle-primary-500 md:text-sm lg:gap-12 xl:gap-12 transition-all duration-700"
+		>
+			<% for(name in theme.menu) { %>
+			<li class="text-primary-700 hover:text-primary-500">
+				<a href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
+			</li>
+			<% } %>
+			<a
+				href="/contact"
+				class="bg-primary-800 text-primary-50 hover:bg-primary-700 px-7 py-3 mr-4"
+				>Get in touch</a
+			>
+		</ul>
+		<div class="flex md:hidden flex-1 justify-end mr-4 mb-2">
+			<button type="button" id="hamburger" class="z-200">
+				<svg
+					class="w-6 h-6 text-gray-800"
+					aria-hidden="true"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M18 6H6m12 4H6m12 4H6m12 4H6"
+					/>
+				</svg>
+			</button>
+		</div>
+	</nav>
+</div>

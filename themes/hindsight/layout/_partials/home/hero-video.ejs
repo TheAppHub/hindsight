@@ -1,0 +1,45 @@
+<div
+	id="video-container"
+	class="relative w-full pt-[56%] md:pt-[45%] lg:pt-[37.5%] overflow-hidden bg-black"
+></div>
+
+<script>
+	window.addEventListener("DOMContentLoaded", () => {
+		const container = document.getElementById("video-container");
+		const video = document.createElement("video");
+
+		video.muted = true;
+		video.defaultMuted = true;
+		video.playsInline = true;
+		video.autoplay = true;
+		video.loop = true;
+
+		// Set attributes too for safety
+		video.setAttribute("muted", "");
+		video.setAttribute("autoplay", "");
+		video.setAttribute("loop", "");
+		video.setAttribute("playsinline", "");
+
+		video.className =
+			"absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500";
+
+		const source = document.createElement("source");
+		source.setAttribute("src", "/videos/hero-video.mp4");
+		source.setAttribute("type", "video/mp4");
+
+		video.appendChild(source);
+		container.appendChild(video);
+
+		video.load(); // Start loading the video immediately
+
+		// Try to play immediately
+		video.play().catch((e) => {
+			console.warn("Autoplay blocked or error:", e);
+		});
+
+		// Once enough is buffered, fade in
+		video.addEventListener("canplaythrough", () => {
+			video.classList.add("opacity-100");
+		});
+	});
+</script>
