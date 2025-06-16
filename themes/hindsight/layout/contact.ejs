@@ -1,0 +1,277 @@
+<main class="contact-page">
+	<div class="container mx-auto px-4 py-12">
+		<div class="max-w-7xl mx-auto">
+			<h1
+				class="text-4xl tracking-tight font-extrabold text-gray-900 mb-8 text-center"
+			>
+				<%= page.title %>
+			</h1>
+
+			<div class="prose prose-lg max-w-none mb-12 font-light text-gray-500">
+				<%- page.content %>
+			</div>
+
+			<!-- Contact Form and Info Section -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+				<!-- Contact Form -->
+				<div class="bg-white p-6 h-full">
+					<form id="contactForm" class="space-y-6 h-full flex flex-col">
+						<div>
+							<label
+								for="name"
+								class="block mb-2 text-sm font-medium text-gray-900"
+								>Your name</label
+							>
+							<input
+								type="text"
+								id="name"
+								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5"
+								required
+							/>
+						</div>
+						<div>
+							<label
+								for="email"
+								class="block mb-2 text-sm font-medium text-gray-900"
+								>Your email</label
+							>
+							<input
+								type="email"
+								id="email"
+								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5"
+								required
+							/>
+						</div>
+						<div>
+							<label
+								for="subject"
+								class="block mb-2 text-sm font-medium text-gray-900"
+								>Subject</label
+							>
+							<input
+								type="text"
+								id="subject"
+								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5"
+								required
+							/>
+						</div>
+						<div class="flex-grow">
+							<label
+								for="message"
+								class="block mb-2 text-sm font-medium text-gray-900"
+								>Your message</label
+							>
+							<textarea
+								id="message"
+								rows="4"
+								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5 h-full"
+								required
+							></textarea>
+						</div>
+						<div class="mt-8">
+							<button
+								type="submit"
+								class="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 focus:outline-none"
+							>
+								Send message
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<!-- Contact Information -->
+				<div class="bg-white p-6 h-full">
+					<h2 class="text-2xl tracking-tight font-extrabold text-gray-900 mb-4">
+						Contact Information
+					</h2>
+					<div class="space-y-4 font-light text-gray-500">
+						<div>
+							<h3 class="text-lg font-medium text-gray-900">Address</h3>
+							<p>
+								<%= config.address.street %><br />
+								<%= config.address.suburb %>, <%= config.address.state %> <%=
+								config.address.postcode %><br />
+								<%= config.address.country %>
+							</p>
+						</div>
+						<div>
+							<h3 class="text-lg font-medium text-gray-900">Phone</h3>
+							<p>
+								<a href="tel:<%= config.tel %>" class="hover:text-gray-900"
+									><%= config.phone %></a
+								>
+							</p>
+						</div>
+						<div>
+							<h3 class="text-lg font-medium text-gray-900">Email</h3>
+							<p>
+								<a href="mailto:<%= config.email %>" class="hover:text-gray-900"
+									><%= config.email %></a
+								>
+							</p>
+						</div>
+						<div>
+							<h3 class="text-lg font-medium text-gray-900">Business Hours</h3>
+							<ul>
+								<li>Monday: <%= config.hours.monday %></li>
+								<li>Tuesday: <%= config.hours.tuesday %></li>
+								<li>Wednesday: <%= config.hours.wednesday %></li>
+								<li>Thursday: <%= config.hours.thursday %></li>
+								<li>Friday: <%= config.hours.friday %></li>
+								<li>Saturday: <%= config.hours.saturday %></li>
+								<li>Sunday: <%= config.hours.sunday %></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Map Section - Full Width -->
+			<div class="bg-white p-6">
+				<h2 class="text-2xl tracking-tight font-extrabold text-gray-900 mb-4">
+					Find Us
+				</h2>
+				<div id="map" class="w-full h-96"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<!-- Add Flowbite script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+<!-- Google Maps -->
+<script>
+	function initMap() {
+		const location = { lat: <%= config.coordinates.lat %>, lng: <%= config.coordinates.lng %> };
+		const map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 15,
+			center: location,
+			styles: [
+				{
+					"featureType": "all",
+					"elementType": "geometry",
+					"stylers": [{"color": "#f5f5f5"}]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#616161"}]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.text.stroke",
+					"stylers": [{"visibility": "on"}, {"color": "#f5f5f5"}, {"weight": 2}]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.icon",
+					"stylers": [{"visibility": "off"}]
+				},
+				{
+					"featureType": "administrative",
+					"elementType": "geometry.fill",
+					"stylers": [{"color": "#f5f5f5"}]
+				},
+				{
+					"featureType": "administrative",
+					"elementType": "geometry.stroke",
+					"stylers": [{"color": "#c9c9c9"}, {"weight": 1}]
+				},
+				{
+					"featureType": "landscape",
+					"elementType": "geometry",
+					"stylers": [{"color": "#f5f5f5"}]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "geometry",
+					"stylers": [{"color": "#eeeeee"}]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#757575"}]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "geometry",
+					"stylers": [{"color": "#e5e5e5"}]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#9e9e9e"}]
+				},
+				{
+					"featureType": "road",
+					"elementType": "geometry",
+					"stylers": [{"color": "#ffffff"}]
+				},
+				{
+					"featureType": "road.arterial",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#757575"}]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry",
+					"stylers": [{"color": "#dadada"}]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#616161"}]
+				},
+				{
+					"featureType": "road.local",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#9e9e9e"}]
+				},
+				{
+					"featureType": "transit.line",
+					"elementType": "geometry",
+					"stylers": [{"color": "#e5e5e5"}]
+				},
+				{
+					"featureType": "transit.station",
+					"elementType": "geometry",
+					"stylers": [{"color": "#eeeeee"}]
+				},
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [{"color": "#c9c9c9"}]
+				},
+				{
+					"featureType": "water",
+					"elementType": "labels.text.fill",
+					"stylers": [{"color": "#9e9e9e"}]
+				}
+			]
+		});
+
+		const marker = new google.maps.Marker({
+			position: location,
+			map: map,
+			title: "Hindsight Creative"
+		});
+	}
+</script>
+<script
+	async
+	defer
+	src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
+></script>
+
+<script>
+	// Handle form submission
+	document
+		.getElementById("contactForm")
+		.addEventListener("submit", function (e) {
+			e.preventDefault();
+			// Add your form submission logic here
+			alert("Thank you for your message. We will get back to you soon!");
+			this.reset();
+		});
+</script>

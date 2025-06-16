@@ -109,9 +109,31 @@ sitemap:
 path: sitemap.xml
 
 # Contact
-addres: { suburb: "Ferntree Gully", state: "VIC", postcode: "3156" }
+
+address:
+  street: "123 Mountain Highway"
+  suburb: "Ferntree Gully"
+  state: "VIC"
+  postcode: "3156"
+  country: "Australia"
+coordinates:
+  lat: -37.8833
+  lng: 145.3000
 phone: "(03) 9758 0207"
 tel: "+61397580207"
+email: "studio@hindsight.com.au"
+social:
+  facebook: "https://facebook.com/HindsightDesign"
+  instagram: "https://www.instagram.com/hindsight_creative/"
+  linkedin: "https://linkedin.com/company/hindsightdesign"
+hours:
+  monday: "9:00 AM - 5:00 PM"
+  tuesday: "9:00 AM - 5:00 PM"
+  wednesday: "9:00 AM - 5:00 PM"
+  thursday: "9:00 AM - 5:00 PM"
+  friday: "9:00 AM - 5:00 PM"
+  saturday: "Closed"
+  sunday: "Closed"
 
 # Google Tag Manager
 google_tag_manager:
