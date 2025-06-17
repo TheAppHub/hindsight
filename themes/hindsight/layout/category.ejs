@@ -1,26 +1,29 @@
 <section class="bg-white">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-		<div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+		<div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
 			<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-				Our Work
+				<%= page.category %> Work
 			</h2>
 			<p class="font-light text-gray-500 sm:text-xl">
-				Explore our portfolio of creative work and successful projects.
+				Explore our portfolio of <%= page.category.toLowerCase() %> projects and
+				successful work.
 			</p>
 		</div>
 
 		<!-- Category Navigation -->
-		<div class="flex flex-wrap justify-center gap-2 mb-8">
+		<div
+			class="flex overflow-x-auto gap-2 mb-8 pb-2 scrollbar-hide lg:justify-center"
+		>
 			<a
 				href="<%= url_for('/portfolio/') %>"
-				class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-gray-300"
+				class="px-4 py-2 text-sm font-medium text-gray-900 border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-gray-300 whitespace-nowrap flex-shrink-0"
 			>
 				All
 			</a>
 			<% getFlatCategories().forEach(function(categoryName) { %>
 			<a
 				href="<%= url_for(getCategoryUrl(categoryName)) %>"
-				class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-gray-300"
+				class="px-4 py-2 text-sm font-medium border hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-gray-300 whitespace-nowrap flex-shrink-0 <%= page.category === categoryName ? 'bg-primary-700 border-primary-900 text-white hover:bg-primary-900' : 'text-gray-900 border-gray-200' %>"
 			>
 				<%= categoryName %>
 			</a>
@@ -28,7 +31,7 @@
 		</div>
 
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			<% getWorkPosts().forEach(function(post) { %>
+			<% page.posts.forEach(function(post) { %>
 			<div
 				class="max-w-sm bg-white border border-gray-200 shadow-sm flex flex-col"
 			>
