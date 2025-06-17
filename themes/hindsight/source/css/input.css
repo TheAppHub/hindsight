@@ -55,3 +55,19 @@
 .dark .svg-toggle {
 	fill: #fff;
 }
+
+/* Parallax effect styles */
+.parallax-container {
+	overflow: hidden;
+	position: relative;
+	height: 500px; /* Fixed height for the container */
+}
+
+.parallax-image {
+	will-change: transform;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	height: 600px; /* Taller image to accommodate parallax movement */
+	object-fit: cover;
+	object-position: center;
+}

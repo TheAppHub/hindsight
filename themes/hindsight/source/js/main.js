@@ -218,3 +218,91 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+// ——————————————————————————————————————————————————
+// Services Page Parallax Effect
+// ——————————————————————————————————————————————————
+
+let parallaxInitialized = false;
+
+// Function to initialize parallax
+function initParallax() {
+	// Prevent multiple initializations
+	if (parallaxInitialized) {
+		return;
+	}
+
+	// Check if we're on the services page by looking for the services layout and URL
+	const isServicesPage =
+		window.location.pathname.includes("/services") ||
+		window.location.pathname.includes("/creative-services") ||
+		document.querySelector("section.bg-white .service");
+
+	if (!isServicesPage) {
+		return;
+	}
+
+	// Check if GSAP and ScrollTrigger are available
+	if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+		return;
+	}
+
+	// Only apply parallax on desktop/tablet
+	ScrollTrigger.matchMedia({
+		"(min-width: 768px)": function () {
+			const parallaxImages = document.querySelectorAll(".parallax-image");
+
+			if (parallaxImages.length === 0) {
+				return;
+			}
+
+			parallaxImages.forEach((image) => {
+				// Add overflow hidden to container to prevent image overflow
+				const container = image.closest(".parallax-container");
+				if (container) {
+					container.style.overflow = "hidden";
+				}
+
+				// Create the parallax animation
+				const tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: image,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: 1, // Smooth scrubbing with 1 second delay
+						markers: false,
+					},
+				});
+
+				tl.to(image, {
+					yPercent: -40,
+					ease: "none",
+				});
+			});
+
+			// Mark as initialized
+			parallaxInitialized = true;
+		},
+
+		"(max-width: 767px)": function () {
+			// Kill parallax ScrollTriggers on mobile for better performance
+			ScrollTrigger.getAll().forEach((trigger) => {
+				if (
+					trigger.vars.trigger &&
+					trigger.vars.trigger.classList.contains("parallax-image")
+				) {
+					trigger.kill();
+				}
+			});
+		},
+	});
+}
+
+// Initialize on DOM content loaded
+document.addEventListener("DOMContentLoaded", initParallax);
+
+// Also try on window load as a fallback
+window.addEventListener("load", () => {
+	// Small delay to ensure everything is ready
+	setTimeout(initParallax, 100);
+});
