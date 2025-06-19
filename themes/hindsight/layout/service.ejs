@@ -30,8 +30,8 @@
 		<article
 			class="xl:w-[828px] w-full max-w-none format format-sm sm:format-base"
 		>
-			<p class="lead"><%= page.description %></p>
-			<div><%- page.content %></div>
+			<header class="lead"><%= page.description %></header>
+			<main><%- page.content %></main>
 		</article>
 		<aside class="hidden xl:block" aria-labelledby="sidebar-label">
 			<div class="xl:w-[336px] sticky top-6">
@@ -46,7 +46,7 @@
 					</p>
 					<a
 						href="/contact"
-						class="text-white bg-primary-900 hover:bg-primary-700 font-medium text-sm px-5 py-2.5 mr-2 mb-2 text-center w-full"
+						class="block text-white bg-primary-900 hover:bg-primary-700 font-medium text-sm px-5 py-2.5 mr-2 mb-2 text-center w-full"
 					>
 						Get in touch
 					</a>
@@ -88,105 +88,33 @@
 <aside aria-label="Related articles" class="py-8 lg:py-24 bg-white">
 	<div class="px-4 mx-auto max-w-screen-xl">
 		<h2 class="mb-6 lg:mb-8 text-2xl font-bold text-gray-900">
-			Related articles
+			Related projects
 		</h2>
 		<div class="grid gap-6 lg:gap-12 md:grid-cols-2">
+			<% site.posts.filter(page => page.layout ===
+			'work').forEach(function(project, index) { %>
 			<article class="flex flex-col xl:flex-row">
 				<a href="#" class="mb-2 xl:mb-0">
 					<img
-						src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png"
-						class="mr-5 max-w-sm"
-						alt="Image 1"
+						src="/portfolio/<%= project.source.replace(/\.md$/, '').split('/').pop() %>/<%= project.image %>"
+						class="mr-5 w-full xl:w-48 h-48 object-cover"
+						alt="<%= project.title %> | Hindsight Creative Melbourne"
 					/>
 				</a>
 				<div class="flex flex-col justify-center">
 					<h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
-						<a href="#">Our first office</a>
+						<a href="#"><%= project.title %></a>
 					</h2>
-					<p class="mb-4 text-gray-500 max-w-sm">
-						Over the past year, Volosoft has undergone many changes! After
-						months of preparation.
-					</p>
+					<p class="mb-4 text-gray-500 max-w-sm"><%= project.subtitle %></p>
 					<a
 						href="#"
 						class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline"
 					>
-						Read in 2 minutes
+						Read more
 					</a>
 				</div>
 			</article>
-			<article class="flex flex-col xl:flex-row">
-				<a href="#" class="mb-2 xl:mb-0">
-					<img
-						src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png"
-						class="mr-5 max-w-sm"
-						alt="Image 2"
-					/>
-				</a>
-				<div class="flex flex-col justify-center">
-					<h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
-						<a href="#">Enterprise design tips</a>
-					</h2>
-					<p class="mb-4 text-gray-500 max-w-sm">
-						Over the past year, Volosoft has undergone many changes! After
-						months of preparation.
-					</p>
-					<a
-						href="#"
-						class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline"
-					>
-						Read in 12 minutes
-					</a>
-				</div>
-			</article>
-			<article class="flex flex-col xl:flex-row">
-				<a href="#" class="mb-2 xl:mb-0">
-					<img
-						src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png"
-						class="mr-5 max-w-sm"
-						alt="Image 3"
-					/>
-				</a>
-				<div class="flex flex-col justify-center">
-					<h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
-						<a href="#">We partnered up with Google</a>
-					</h2>
-					<p class="mb-4 text-gray-500 max-w-sm">
-						Over the past year, Volosoft has undergone many changes! After
-						months of preparation.
-					</p>
-					<a
-						href="#"
-						class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline"
-					>
-						Read in 8 minutes
-					</a>
-				</div>
-			</article>
-			<article class="flex flex-col xl:flex-row">
-				<a href="#" class="mb-2 xl:mb-0">
-					<img
-						src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png"
-						class="mr-5 max-w-sm"
-						alt="Image 4"
-					/>
-				</a>
-				<div class="flex flex-col justify-center">
-					<h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
-						<a href="#">Our first project with React</a>
-					</h2>
-					<p class="mb-4 text-gray-500 max-w-sm">
-						Over the past year, Volosoft has undergone many changes! After
-						months of preparation.
-					</p>
-					<a
-						href="#"
-						class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline"
-					>
-						Read in 12 minutes
-					</a>
-				</div>
-			</article>
+			<% }); %>
 		</div>
 	</div>
 </aside>
