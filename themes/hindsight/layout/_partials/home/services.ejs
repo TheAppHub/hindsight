@@ -1,21 +1,22 @@
-<section class="bg-white antialiased">
-	<div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-		<div class="max-w-2xl mx-auto text-center">
-			<h2
-				class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl"
-			>
-				What we do
+<section class="bg-white">
+	<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+		<div class="max-w-screen-lg text-gray-500 sm:text-lg">
+			<h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900">
+				<%= site.data.home.services.heading %>
 			</h2>
-			<p
-				class="mt-4 text-base font-light text-gray-500 sm:text-xl dark:text-gray-400"
-			>
-				We are a full-service creative agency that specialises in branding, web
-				design, and digital marketing. Our team of experts is dedicated to
-				helping you achieve your business goals through strategic and innovative
-				solutions.
-			</p>
-		</div>
 
+			<% site.data.home.services.description.forEach(function(paragraph, index)
+			{ %>
+			<p class="mb-4 <%= index !== 0 ? 'font-medium' : 'font-light' %>">
+				<%= paragraph %>
+			</p>
+			<% }); %>
+		</div>
+	</div>
+</section>
+
+<section class="bg-white antialiased">
+	<div class="max-w-screen-xl px-4 pb-8 mx-auto lg:px-6 sm:pb-16 lg:pb-24">
 		<div
 			class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
 		>
@@ -33,7 +34,7 @@
 				</h3>
 				<p class="text-lg font-light text-gray-500"><%= service.subtitle %></p>
 				<a
-					href="#"
+					href="<%= service.permalink %>"
 					title="<%= service.title %>"
 					class="text-white justify-center bg-primary-900 hover:bg-primary-600 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium text-sm px-5 py-2.5 text-center"
 					role="button"

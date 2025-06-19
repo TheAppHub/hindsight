@@ -1,0 +1,22 @@
+intro:
+  heading: "Strategic and Creative Services for Inspired Brands"
+  description:
+    - "Big ideas are only as strong as the strategy behind them. At Hindsight Creative, we blend creative flair with commercial know-how to build brands primed for growth. We work with forward-thinking businesses that want more than a quick fix. Whether you're launching something new or refining an existing brand, our team dives deep to understand your goals and your audience — so we can deliver concepts designed to convert."
+    - "As a Melbourne-based design and marketing agency, we take a collaborative, insight-led approach to everything we do. From brand identity and digital presence to storytelling and campaigns, every element is purpose-built to connect, convert and evolve with your business. We're strategic and curious, with just the right amount of flair — and we know that when creativity’s done right, it doesn't just look good — it drives results."
+
+behind_brand:
+  heading: "Behind the Brand"
+  description:
+    - "We love collaborating with our clients from start to finish, supporting and guiding them every step of the way. Whether we're delivering a one-off project, acting as an extension of your in-house marketing team, or stepping in as your fully outsourced design and marketing department, we’re all about building meaningful relationships."
+    - "We take the time to understand your goals, your audience and your challenges — so we can create brand experiences that feel authentic and perform across every touchpoint. It’s this relationship-first approach that enables us to deliver strategic, high-impact creative solutions tailored to your business, your industry and your next stage of growth."
+  images:
+    - src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+      alt: "office content 1"
+    - src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+      alt: "office content 2"
+
+services:
+  heading: "How We Make It Happen"
+  description:
+    - "At Hindsight Creative, we partner with businesses of all shapes and sizes to deliver strategic design and marketing services that make an impact. For larger organisations, we provide flexible creative support — from campaign rollouts and digital strategy to content production. For smaller businesses, we act as your go-to team for everything from branding and website design to social media and marketing strategy. As a full-service agency based in Melbourne, we offer brand development, creative campaigns, digital marketing, web design, content creation and SEO — all delivered through a collaborative, insight-led approach. Whatever your size or sector, we bring the expertise, flexibility and creativity to help your brand grow, shift or scale."
+    - "As a full-service agency based in Melbourne, we offer brand development, creative campaigns, digital marketing, web design, content creation and SEO — all delivered through a collaborative, insight-led approach. Whatever your size or sector, we bring the expertise, flexibility and creativity to help your brand grow, shift or scale."

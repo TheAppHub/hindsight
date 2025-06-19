@@ -109,9 +109,8 @@ sitemap:
 path: sitemap.xml
 
 # Contact
-
 address:
-  street: "123 Mountain Highway"
+  street: "24/756 Burwood Hwy"
   suburb: "Ferntree Gully"
   state: "VIC"
   postcode: "3156"
