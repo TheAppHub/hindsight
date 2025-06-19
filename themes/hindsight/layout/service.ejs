@@ -91,8 +91,9 @@
 			Related projects
 		</h2>
 		<div class="grid gap-6 lg:gap-12 md:grid-cols-2">
-			<% site.posts.filter(page => page.layout ===
-			'work').forEach(function(project, index) { %>
+			<% site.posts.filter(post => post.layout === 'work' && post.categories &&
+			post.categories.some(category => category.name ===
+			page.title)).forEach(function(project, index) { %>
 			<article class="flex flex-col xl:flex-row">
 				<a href="#" class="mb-2 xl:mb-0">
 					<img
