@@ -44,7 +44,7 @@ We offer comprehensive branding services tailored to your business and industry:
 - **Brand Guidelines**  
    These guidelines become your internal brand bible, helping your entire team stay aligned as you grow.
 
-### Why Strategic Branding Matters\*\*
+### Why Strategic Branding Matters
 
 In today’s crowded market, strategic branding is what separates memorable businesses from forgettable ones. It builds credibility, encourages loyalty, and sets the tone for how customers interact with you across all platforms.
 
