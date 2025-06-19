@@ -31,7 +31,17 @@
 			class="xl:w-[828px] w-full max-w-none format format-sm sm:format-base"
 		>
 			<header class="lead"><%= page.description %></header>
-			<main><%- page.content %></main>
+			<main>
+				<%- page.content %>
+				<div class="not-format">
+					<a
+						href="/contact"
+						class="text-white bg-primary-900 hover:bg-primary-700 font-medium text-sm px-5 py-2.5 mr-2 mb-2 text-center w-full"
+					>
+						Let's chat
+					</a>
+				</div>
+			</main>
 		</article>
 		<aside class="hidden xl:block" aria-labelledby="sidebar-label">
 			<div class="xl:w-[336px] sticky top-6">
@@ -84,6 +94,9 @@
 		</aside>
 	</div>
 </main>
+
+<!-- prettier-ignore -->
+<%- partial('_partials/faqs', { service: page.title, title: 'Frequently asked questions' }) %>
 
 <aside aria-label="Related articles" class="py-8 lg:py-24 bg-white">
 	<div class="px-4 mx-auto max-w-screen-xl">
