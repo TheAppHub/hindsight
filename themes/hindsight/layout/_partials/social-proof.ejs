@@ -1,4 +1,4 @@
-<section class="bg-white">
+<section class="bg-white" id="social-proof">
 	<div class="px-4 py-8 mx-auto max-w-screen-xl sm:py-16 lg:px-6 xl:px-0">
 		<div class="mx-auto mb-8 max-w-screen-md text-center md:mb-16">
 			<h2
@@ -18,7 +18,7 @@
 				class="flex justify-center items-center p-6 text-center bg-gray-100 rounded xl:p-12"
 			>
 				<div class="text-gray-900">
-					<p class="mb-2 text-4xl font-extrabold md:text-5xl">25+</p>
+					<p id="years" class="mb-2 text-4xl font-extrabold md:text-5xl">25</p>
 					<h3 class="mb-2 text-xl font-semibold">Years of experience</h3>
 					<p class="font-light text-gray-500 dark:text-gray-400">
 						Established in 1998, Hindsight Creative has been solving problems
@@ -30,7 +30,9 @@
 				class="flex justify-center items-center p-6 text-center bg-gray-100 rounded xl:p-12"
 			>
 				<div class="text-gray-900">
-					<p class="mb-2 text-4xl font-extrabold md:text-5xl">100+</p>
+					<p id="clients" class="mb-2 text-4xl font-extrabold md:text-5xl">
+						100
+					</p>
 					<h3 class="mb-2 text-xl font-semibold">Serviced clients</h3>
 					<p class="font-light text-gray-500 dark:text-gray-400">
 						We collaborate with our clients from start to finish, building
@@ -43,7 +45,7 @@
 				class="flex justify-center items-center p-6 text-center bg-gray-100 rounded xl:p-12"
 			>
 				<div class="text-gray-900">
-					<p class="mb-2 text-4xl font-extrabold md:text-5xl">400+</p>
+					<p id="ideas" class="mb-2 text-4xl font-extrabold md:text-5xl">400</p>
 					<h3 class="mb-2 text-xl font-semibold">Design concepts & ideas</h3>
 					<p class="font-light text-gray-500 dark:text-gray-400">
 						More than just a creative studio. We provide personalised design and
@@ -54,3 +56,54 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		let hasAnimated = false;
+
+		function counter(id, start, end, duration) {
+			let obj = document.getElementById(id),
+				current = start,
+				range = end - start,
+				increment = end > start ? 1 : -1,
+				step = Math.abs(Math.floor(duration / range)),
+				timer = setInterval(() => {
+					current += increment;
+					obj.textContent = current + "+";
+					if (current == end) {
+						clearInterval(timer);
+					}
+				}, step);
+		}
+
+		function startCounters() {
+			if (hasAnimated) return;
+			hasAnimated = true;
+
+			counter("years", 0, 25, 1500);
+			counter("clients", 0, 100, 2000);
+			counter("ideas", 0, 400, 2500);
+		}
+
+		// Create intersection observer
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						startCounters();
+						observer.unobserve(entry.target); // Stop observing once triggered
+					}
+				});
+			},
+			{
+				threshold: 0.7, // Trigger when 70% of the section is visible
+			},
+		);
+
+		// Observe the social proof section
+		const socialProofSection = document.querySelector("#social-proof");
+		if (socialProofSection) {
+			observer.observe(socialProofSection);
+		}
+	});
+</script>
