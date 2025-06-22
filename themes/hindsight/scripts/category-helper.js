@@ -38,3 +38,35 @@ hexo.extend.helper.register("getWorkPostsByCategory", function (categoryName) {
 
 	return workPosts.sort("-date");
 });
+
+hexo.extend.helper.register(
+	"getCategoryUrlForService",
+	function (serviceTitle) {
+		// Get all service pages and create a dynamic mapping
+		const servicePages = this.site.pages.filter(
+			(page) => page.layout === "service",
+		);
+
+		// Create a mapping from service titles to category names
+		// This assumes service titles match category names, which seems to be the case
+		const serviceToCategoryMap = {};
+		servicePages.forEach((servicePage) => {
+			serviceToCategoryMap[servicePage.title] = servicePage.title;
+		});
+
+		const categoryName = serviceToCategoryMap[serviceTitle];
+		if (categoryName) {
+			// Convert category name to URL-friendly format (same logic as getCategoryUrl)
+			const urlName = categoryName
+				.toLowerCase()
+				.replace(/\s+/g, "-")
+				.replace(/&/g, "and")
+				.replace(/\+/g, "plus");
+
+			return `/portfolio/${urlName}/`;
+		}
+
+		// Fallback to service page if no category mapping found
+		return null;
+	},
+);
