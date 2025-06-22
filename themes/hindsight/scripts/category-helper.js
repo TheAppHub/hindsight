@@ -19,11 +19,12 @@ hexo.extend.helper.register("getFlatCategories", function () {
 hexo.extend.helper.register("getCategoryUrl", function (categoryName) {
 	// Convert category name to URL-friendly format
 	const urlName = categoryName
+		.toLowerCase()
 		.replace(/\s+/g, "-")
 		.replace(/&/g, "and")
 		.replace(/\+/g, "plus");
 
-	return `/categories/${urlName}/`;
+	return `/portfolio/${urlName}/`;
 });
 
 hexo.extend.helper.register("getWorkPostsByCategory", function (categoryName) {

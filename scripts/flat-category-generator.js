@@ -17,6 +17,7 @@ hexo.extend.generator.register("flat-categories", function (locals) {
 	// Create a page for each unique category
 	categorySet.forEach((categoryName) => {
 		const urlName = categoryName
+			.toLowerCase()
 			.replace(/\s+/g, "-")
 			.replace(/&/g, "and")
 			.replace(/\+/g, "plus");
@@ -29,7 +30,7 @@ hexo.extend.generator.register("flat-categories", function (locals) {
 		);
 
 		categories.push({
-			path: `categories/${urlName}/index.html`,
+			path: `portfolio/${urlName}/index.html`,
 			layout: "category",
 			data: {
 				category: categoryName,
