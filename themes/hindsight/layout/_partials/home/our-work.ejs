@@ -1,74 +1,68 @@
-<%# Retrieve posts using your helper %>
-<% let car = getWorkPostBySlug('classic-car-garage-australia'); %>
-<% let kubota = getWorkPostBySlug('in-a-place-we-call-home'); %>
-<% let redheads = getWorkPostBySlug('redheads'); %>
+<!-- prettier-ignore -->
+<% var latestWorkPosts = getWorkPosts(3); %>
 
-<section class="bg-black">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <div class="grid grid-cols-2 gap-2">
-            <%# Classic Car Garage Australia Link %>
-            <%# Check if post, image, and permalink exist before linking %>
-            <% if (car && car.image && car.__permalink) { %>
-            <a
-                href="<%= url_for(car.path) %>" <%# Link to the post's permalink %>
-                style="background-image: url('<%- url_for(car.__permalink + 'MalsGarage_Banner.jpg') %>')" <%# Manually construct asset URL %>
-                class="p-8 col-span-2 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
-            >
-                <h3
-                    class="mb-5 max-w-xl text-5xl font-extrabold tracking-tight leading-tight text-white"
-                >
-                <%- car.subtitle %>
-                </h3>
-                <button
-                    type="button"
-                    class="inline-flex items-center px-4 py-2.5 font-medium text-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
-                >
-                    Show more
-                </button>
-            </a>
-            <% } %>
-
-            <%# Kubota Link %>
-             <% if (kubota && kubota.image && kubota.__permalink) { %>
-            <a
-                href="<%= url_for(kubota.path) %>" <%# Link to the post's permalink %>
-                style="background-image: url('<%- url_for(kubota.__permalink + kubota.image) %>');" <%# Manually construct asset URL %>
-                class="p-8 col-span-2 md:col-span-1 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
-            >
-                <h3
-                    class="mb-5 max-w-xl text-4xl font-extrabold tracking-tight leading-tight text-white"
-                >
-                <%- kubota.subtitle %>
-                </h3>
-                <button
-                    type="button"
-                    class="inline-flex items-center px-4 py-2.5 font-medium text-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
-                >
-                    Show more
-                </button>
-            </a>
-             <% } %>
-
-            <%# Redheads Link %>
-             <% if (redheads && redheads.image && redheads.__permalink) { %>
-            <a
-                href="<%= url_for(redheads.path) %>" <%# Link to the post's permalink %>
-                style="background-image: url('<%- url_for(redheads.__permalink + redheads.image) %>')" <%# Manually construct asset URL %>
-                class="p-8 col-span-2 md:col-span-1 text-left h-96 bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal"
-            >
-            <h3
-                class="mb-5 max-w-xl text-4xl font-extrabold tracking-tight leading-tight text-white"
-            >
-            <%- redheads.subtitle %>
-            </h3>
-            <button
-                type="button"
-                class="inline-flex items-center px-4 py-2.5 font-medium text-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
-            >
-                Show more
-            </button>
-            </a>
-            <% } %>
-        </div>
-    </div>
+<section class="bg-primary-900">
+	<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+		<div class="text-center text-white">
+			<h2
+				class="mb-4 text-4xl tracking-tight font-extrabold text-white lg:text-5xl"
+			>
+				Turn collaboration into innovation
+			</h2>
+			<a
+				href="/portfolio"
+				class="inline-flex items-center text-lg font-medium text-primary-500 hover:text-primary-700"
+			>
+				Learn more about inner source
+				<svg
+					class="ml-1 w-6 h-6"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+						clip-rule="evenodd"
+					></path>
+				</svg>
+			</a>
+		</div>
+		<div class="grid gap-6 mt-12 lg:mt-14 lg:gap-12 md:grid-cols-3">
+			<% latestWorkPosts.forEach(function(post, index) { %> <% if (post &&
+			post.image && post.__permalink) { %>
+			<div class="flex mb-2 md:flex-col md:mb-0">
+				<a href="<%= url_for(post.path) %>" class="block relative group">
+					<img
+						class="mr-4 w-36 h-36 md:w-full md:h-64 lg:h-80 object-cover transition-all duration-300 group-hover:blur-sm"
+						src="<%- url_for(post.__permalink + post.image) %>"
+						alt="<%- post.title %>"
+					/>
+					<div
+						class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+					>
+						<button
+							class="px-6 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium hover:bg-white/30 transition-all duration-300 shadow-lg"
+						>
+							Go to project
+						</button>
+					</div>
+				</a>
+				<div>
+					<a href="<%= url_for(post.path) %>" class="block">
+						<h3
+							class="text-xl font-bold md:mt-4 mb-2.5 text-white hover:text-primary-500 transition-colors"
+						>
+							<%- post.subtitle || post.title %>
+						</h3>
+					</a>
+					<p class="text-gray-400 mb-4">
+						<!-- prettier-ignore -->
+						<%- post.excerpt || post.description || 'Discover our work on this exciting project.' %>
+					</p>
+				</div>
+			</div>
+			<% } %> <% }); %>
+		</div>
+	</div>
 </section>
