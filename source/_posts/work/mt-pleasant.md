@@ -8,7 +8,7 @@ client: Mt Pleasant Estate
 brief: Estate Branding
 deliverables: Brand Identity, Signage, Website Design
 image: mt-pleasant1.jpg
-permalink: /portfolio/mt-pleasant-estate/
+permalink: /portfolio/mt-pleasant/
 categories:
   - Branding and Design
   - Packaging & Print
