@@ -9,11 +9,13 @@ brief: Brand Refresh
 deliverables: Brand Identity, Signage & Wayfinding, Publication Design
 permalink: /portfolio/richfield-village/
 image: Richfield-Village_1.jpg
+carouselImage: Carousel-Slider-Richfield.jpg
 categories:
- - Branding and Design
- - Packaging & Print
+  - Branding and Design
+  - Packaging & Print
 tags:
 ---
+
 ## Rebranding Richfield. More than just a lifestyle village.
 
 Richfield Village, an architectural award-winning haven for over 55s, desperately needed a brand facelift. Our mission? To revitalise its brand identity, transforming it to a beacon of luxury and quality.

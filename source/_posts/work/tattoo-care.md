@@ -8,6 +8,7 @@ client: Coconut Republic - Tattoo Care
 brief: Brand Development
 deliverables: Brand Identity, Packaging Design, Digital Marketing
 image: tattoo-care3.jpg
+carouselImage: coconut_republic_carousel_slider.jpg
 permalink: /portfolio/tattoo-care/
 categories:
   - Branding and Design
@@ -21,7 +22,7 @@ What do you call a range of Tattoo aftercare products that Hydrates and protects
 
 ### Tattoo Aftercare Range
 
-We reintroduced the new identity for Coconut Republic’s tattoo aftercare range – HydratINK, SoothINK, and InvigoratINK – at the Rites of Passage Festival, where it looked right at home amongst the artists and creatives. Its colour-coded system is intuitive and visually striking – soothing blue for the hydrating balm, vibrant purple for the invigorating colour lotion, and green for the healing and soothing gel. 
+We reintroduced the new identity for Coconut Republic’s tattoo aftercare range – HydratINK, SoothINK, and InvigoratINK – at the Rites of Passage Festival, where it looked right at home amongst the artists and creatives. Its colour-coded system is intuitive and visually striking – soothing blue for the hydrating balm, vibrant purple for the invigorating colour lotion, and green for the healing and soothing gel.
 
 Custom typography mimics the body’s curves and a cheeky nod to traditional tattoo lettering and a colour-coded system is intuitive and visually striking-Blue for the hydrating and healing balm, Green for the soothing gel and vibrant Purple for the invigorating colour lotion.
 

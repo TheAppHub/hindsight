@@ -41,6 +41,13 @@ config.url.replace(/\/$/, '') + url_for(page.asset_dir + page.cover); } %>
 	<!-- Twitter  -->
 	<%- partial('_partials/head/twitter', {imageUrl}) %>
 
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+	/>
+
 	<!-- Schema.org -->
 	<script type="application/ld+json">
 		<%- jsonld(page, site, config) %>
