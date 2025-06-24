@@ -1,3 +1,16 @@
+// Suppress passive event listener warnings for GSAP/ScrollTrigger
+const originalWarn = console.warn;
+console.warn = function (...args) {
+	if (
+		args[0] &&
+		typeof args[0] === "string" &&
+		args[0].includes("passive event listener")
+	) {
+		return; // Suppress passive event listener warnings
+	}
+	originalWarn.apply(console, args);
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 // ——————————————————————————————————————————————————
@@ -111,25 +124,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // src/js/post-scroll.js
 document.addEventListener("DOMContentLoaded", () => {
+	console.log(
+		"🔍 DOMContentLoaded event fired - checking for animation elements",
+	);
+
 	if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-		console.error("GSAP and ScrollTrigger not loaded!");
+		console.error("❌ GSAP and ScrollTrigger not loaded!");
 		return;
 	}
 
+	console.log("✅ GSAP and ScrollTrigger are available");
+
 	ScrollTrigger.matchMedia({
 		"(min-width: 768px)": function () {
+			console.log(
+				"🖥️ Desktop/tablet media query matched - initializing animation",
+			);
+
 			// Apply on desktop/tablet
 
 			const scrollContainer = document.querySelector(".scroll-container");
+			console.log("📦 Scroll container found:", !!scrollContainer);
+
 			if (!scrollContainer) {
+				console.warn(
+					"⚠️ No scroll container found - animation will not initialize",
+				);
 				return;
 			}
 
 			const leftColumn = scrollContainer.querySelector(".left-column");
-			const leftContent = leftColumn.querySelector(".image-gallery-inner"); // The content to animate
+			const leftContent = leftColumn?.querySelector(".image-gallery-inner"); // The content to animate
 			const rightColumn = scrollContainer.querySelector(".right-column");
-			const rightContent = rightColumn.querySelector(".right-content-inner"); // The element to pin
-			const triggerElement = rightContent.querySelector(".post-title"); // H1 title as trigger
+			const rightContent = rightColumn?.querySelector(".right-content-inner"); // The element to pin
+			const triggerElement = rightContent?.querySelector(".post-title"); // H1 title as trigger
+
+			console.log("🔍 Animation elements found:", {
+				leftColumn: !!leftColumn,
+				leftContent: !!leftContent,
+				rightColumn: !!rightColumn,
+				rightContent: !!rightContent,
+				triggerElement: !!triggerElement,
+			});
 
 			if (
 				!leftColumn ||
@@ -138,58 +174,159 @@ document.addEventListener("DOMContentLoaded", () => {
 				!rightContent ||
 				!triggerElement
 			) {
-				console.warn("Scroll animation elements not found.");
+				console.warn(
+					"⚠️ Scroll animation elements not found - animation will not initialize",
+				);
 				return;
 			}
 
-			// Calculate the total height the left content needs to scroll *within its container*
-			const leftScrollDistance =
-				leftContent.scrollHeight - leftColumn.clientHeight;
+			console.log(
+				"✅ All animation elements found - waiting for images to load",
+			);
 
-			// Add a buffer to the end point to ensure the footer clears
-			const endBuffer = 400; // Adjust this value as needed (in pixels)
+			// Function to initialize the animation after images are loaded
+			function initializeScrollAnimation() {
+				console.log("🎬 Initializing scroll animation after images loaded");
 
-			// Only create the animation if there is scrollable content in the left column
-			if (leftScrollDistance > 0) {
-				const tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: triggerElement, // Start when H1 hits the top
-						start: "top top",
-						// Add the buffer to the end point
-						end: "+=" + (leftScrollDistance + endBuffer), // <--- MODIFIED LINE
-						scrub: true,
-						pin: rightContent, // Pin the right column content
-						pinSpacing: true, // Maintain space for the pinned element
-						// markers: true, // Uncomment for debugging
-						onToggle: (self) => {
-							if (self.isActive) {
-								leftColumn.classList.add("is-sticky-scrolling");
-							} else {
-								leftColumn.classList.remove("is-sticky-scrolling");
-							}
+				// Calculate the total height the left content needs to scroll *within its container*
+				const leftScrollDistance =
+					leftContent.scrollHeight - leftColumn.clientHeight;
+
+				console.log("📏 Scroll distance calculated:", {
+					leftContentScrollHeight: leftContent.scrollHeight,
+					leftColumnClientHeight: leftColumn.clientHeight,
+					leftScrollDistance: leftScrollDistance,
+				});
+
+				// Add a buffer to the end point to ensure the footer clears
+				const endBuffer = 400;
+
+				// Only create the animation if there is scrollable content in the left column
+				if (leftScrollDistance > 0) {
+					console.log("🎬 Creating scroll animation with timeline");
+
+					const tl = gsap.timeline({
+						scrollTrigger: {
+							trigger: triggerElement, // Start when H1 hits the top
+							start: "top top",
+							// Add the buffer to the end point
+							end: "+=" + (leftScrollDistance + endBuffer), // <--- MODIFIED LINE
+							scrub: true,
+							pin: rightContent, // Pin the right column content
+							pinSpacing: true, // Maintain space for the pinned element
+							// markers: true, // Uncomment for debugging
+							onToggle: (self) => {
+								console.log(
+									"🔄 ScrollTrigger toggled:",
+									self.isActive ? "active" : "inactive",
+								);
+								if (self.isActive) {
+									leftColumn.classList.add("is-sticky-scrolling");
+									console.log("📌 Added is-sticky-scrolling class");
+								} else {
+									leftColumn.classList.remove("is-sticky-scrolling");
+									console.log("📌 Removed is-sticky-scrolling class");
+								}
+							},
+							onRefresh: () => {
+								console.log("🔄 ScrollTrigger refreshed");
+							},
+							onRefreshInit: () => {
+								console.log("🔄 ScrollTrigger refresh initialized");
+							},
 						},
-					},
-				});
+					});
 
-				// Animate the translateY of the inner image gallery
-				// Ensure the animation duration matches the actual scrollable distance
-				tl.to(leftContent, { y: -leftScrollDistance }); // <--- Animation still uses leftScrollDistance
-			} else {
-				// Fallback: if left column content is shorter than the viewport,
-				// just pin the right column when the H1 reaches the top.
-				ScrollTrigger.create({
-					trigger: triggerElement,
-					start: "top top",
-					pin: rightContent,
-					pinSpacing: true,
-					// Add buffer to the fallback pin as well if it exists
-					end: "+=" + endBuffer, // <--- MODIFIED LINE for fallback
-					// markers: true // Uncomment for debugging
-				});
+					// Animate the translateY of the inner image gallery
+					// Ensure the animation duration matches the actual scrollable distance
+					tl.to(leftContent, { y: -leftScrollDistance }); // <--- Animation still uses leftScrollDistance
+
+					console.log("✅ Scroll animation timeline created successfully");
+				} else {
+					console.log(
+						"📏 No scrollable content - creating fallback pin animation",
+					);
+
+					// Fallback: if left column content is shorter than the viewport,
+					// just pin the right column when the H1 reaches the top.
+					ScrollTrigger.create({
+						trigger: triggerElement,
+						start: "top top",
+						pin: rightContent,
+						pinSpacing: true,
+						// Add buffer to the fallback pin as well if it exists
+						end: "+=" + endBuffer, // <--- MODIFIED LINE for fallback
+						// markers: true // Uncomment for debugging
+					});
+
+					console.log("✅ Fallback pin animation created");
+				}
 			}
+
+			// Check if all images are already loaded
+			const images = leftContent.querySelectorAll("img");
+			console.log("🖼️ Found", images.length, "images in gallery");
+
+			if (images.length === 0) {
+				console.log("⚠️ No images found - initializing animation immediately");
+				initializeScrollAnimation();
+				return;
+			}
+
+			let loadedImages = 0;
+			let hasInitialized = false;
+
+			// Function to check if all images are loaded and initialize animation
+			function checkAllImagesLoaded() {
+				if (hasInitialized) return;
+
+				if (loadedImages === images.length) {
+					console.log("✅ All images loaded - initializing animation");
+					hasInitialized = true;
+
+					// Small delay to ensure DOM is fully updated
+					setTimeout(() => {
+						initializeScrollAnimation();
+					}, 50);
+				}
+			}
+
+			// Check each image
+			images.forEach((img, index) => {
+				if (img.complete && img.naturalHeight !== 0) {
+					loadedImages++;
+					console.log(`🖼️ Image ${index + 1} already loaded`);
+					checkAllImagesLoaded();
+				} else {
+					img.addEventListener("load", () => {
+						loadedImages++;
+						console.log(
+							`🖼️ Image ${index + 1} loaded (${loadedImages}/${images.length})`,
+						);
+						checkAllImagesLoaded();
+					});
+
+					img.addEventListener("error", () => {
+						console.warn(`❌ Image ${index + 1} failed to load`);
+						loadedImages++; // Count as loaded to prevent infinite waiting
+						checkAllImagesLoaded();
+					});
+				}
+			});
+
+			// Fallback: if images take too long to load, initialize anyway
+			setTimeout(() => {
+				if (!hasInitialized) {
+					console.log("⏰ Timeout reached - initializing animation anyway");
+					hasInitialized = true;
+					initializeScrollAnimation();
+				}
+			}, 3000); // 3 second timeout
 		},
 
 		"(max-width: 767px)": function () {
+			console.log("📱 Mobile media query matched - killing ScrollTrigger");
+
 			// Kill ScrollTrigger on mobile
 			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 			document.querySelectorAll(".left-column").forEach((col) => {
@@ -197,6 +334,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		},
 	});
+});
+
+// Add window load event listener as additional fallback
+window.addEventListener("load", () => {
+	console.log("🌐 Window load event fired - all resources loaded");
+
+	// Check if we're on a work page and animation hasn't been initialized
+	const scrollContainer = document.querySelector(".scroll-container");
+	if (scrollContainer) {
+		console.log(
+			"📦 Window load: Scroll container found, checking if animation needs refresh",
+		);
+
+		// Force a refresh of ScrollTrigger after all images are loaded
+		setTimeout(() => {
+			console.log("🔄 Forcing ScrollTrigger refresh after window load");
+			ScrollTrigger.refresh();
+		}, 100);
+	}
 });
 
 document.addEventListener("DOMContentLoaded", () => {
