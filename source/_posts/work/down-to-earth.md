@@ -8,7 +8,7 @@ client: Kubota
 brief: Brand Campaign
 deliverables: Social Media Campaign, Publication Design
 permalink: /portfolio/down-to-earth/
-image: down-to-earth-1.jpg
+image: down-to-earth-slider.jpg
 categories:
  - Social Media Strategy
  - Packaging & Print

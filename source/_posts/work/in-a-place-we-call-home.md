@@ -8,7 +8,7 @@ client: Kubota
 brief: Creative Direction, Video Production
 deliverables: National Television Commercial, Digital Media
 permalink: /portfolio/in-a-place-we-call-home/
-image: kubota-1.jpg
+image: kubota-slider.jpg
 categories:
   - Video & Production
 tags:
