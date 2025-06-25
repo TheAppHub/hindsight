@@ -16,11 +16,11 @@ categories:
 tags:
 ---
 
-## Happily Ever Aftercare
+## Happily Ever Aftercare.
 
 What do you call a range of Tattoo aftercare products that Hydrates and protects, Soothes the itch and Colour enhances and moisturises? Easy…HydratINK, SoothINK, and InvigoratINK.
 
-### Tattoo Aftercare Range
+### Tattoo Aftercare Range.
 
 We reintroduced the new identity for Coconut Republic’s tattoo aftercare range – HydratINK, SoothINK, and InvigoratINK – at the Rites of Passage Festival, where it looked right at home amongst the artists and creatives. Its colour-coded system is intuitive and visually striking – soothing blue for the hydrating balm, vibrant purple for the invigorating colour lotion, and green for the healing and soothing gel.
 

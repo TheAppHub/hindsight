@@ -7,7 +7,7 @@ description: Discover how we created Cult Club gear's brand identity and digital
 client: Cult Club Gear
 brief: Brand & Apparel Design
 deliverables: Custom Sports Apparel & Merchandising
-image: cult-2.jpg
+image: cult.jpg
 permalink: /portfolio/cult/
 categories:
   - Branding and Design

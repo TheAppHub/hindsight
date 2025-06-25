@@ -7,7 +7,7 @@ description: Developing a skincare range from scratch.
 client: Coconut Republic
 brief: Brand Refresh
 deliverables: Brand Identity, Merchandising, Packaging Design
-image: coconut-republic7.jpg
+image: coconut-republic6.jpg
 permalink: /portfolio/coconut-republic/
 categories:
   - Branding and Design

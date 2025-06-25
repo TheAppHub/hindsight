@@ -15,7 +15,7 @@ categories:
 tags:
 ---
 
-## Designed to defend and stand out
+## Designed to defend and stand out.
 
 We dove deep into research to create a brand identity that reflects the strength and protection for Sharkguard by Trident.
 
@@ -23,7 +23,7 @@ From competitor analysis to naming the product, we crafted a bold identity that 
 
 We didn’t stop there—our team also developed names like Great White, Mako, Manta, and Bull for the anti-climb fence profiles, further tying the branding to the Sharkguard theme.
 
-### It's not what you sell - it's how you sell it
+### It's not what you sell - it's how you sell it.
 
 We didn’t just develop a brand identity for Sharkguard by Trident - we brought it to life with stunning 3D renders that showcase the precision of their galvanised steel profiles.
 

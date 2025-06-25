@@ -14,6 +14,6 @@ categories:
 tags:
 ---
 
-## Designing and visualising event spaces and collateral
+## Designing and visualising event spaces and collateral.
 
 Hindsight works with SEN to design and create event spaces that work within required branding specifications.

@@ -15,6 +15,6 @@ categories:
 tags:
 ---
 
-## Why did the chicken get a new pack?
+## What came first, the chicken or the pack?
 
 Hindsight participated in a pitch to Coles for an update to their existing roast chicken pack.

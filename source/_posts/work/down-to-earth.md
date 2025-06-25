@@ -12,6 +12,7 @@ image: down-to-earth-1.jpg
 categories:
  - Social Media Strategy
  - Packaging & Print
+ - Digital Marketing
 tags:
 ---
 ## Kubota’s brand evolution—More show and tell.
@@ -29,4 +30,5 @@ We complemented the publication with a targeted social media campaign and strate
 
 Our strategic approach kept Kubota’s brand top-of-mind and highlighted the real-life joys of Kubota ownership. Supporting the publication design with a digital media strategy instantly lifted Kubota’s brand awareness, drove greater engagement, boosted traffic and fostered deeper customer appreciation.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YUmZunwkABo?si=_hqb6aXC5eyXfA3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+<div class='embed-container'><iframe src='https://www.youtube.com/embed/YUmZunwkABo?si=_hqb6aXC5eyXfA3M' frameborder='0' allowfullscreen></iframe></div>

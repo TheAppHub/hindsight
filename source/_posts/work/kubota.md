@@ -14,11 +14,11 @@ categories:
 tags:
 ---
 
-## Realising Kubota’s vision for a scalable website
+## Realising Kubota’s vision for a scalable website.
 
 In today’s digital landscape, with technology advancing user expectations, Kubota Australia identified a critical need for a website that would be scalable, adaptable, fast loading, editable and ‘future proof’ – accommodating growth, technological advancements and provide a seamless and optimal user experience across all devices and platforms.
 
-### Web design fuelled by logic and the user experience
+### Web design fuelled by logic and the user experience.
 
 
 An audit of Kubota’s previous website highlighted several key challenges in delivering a website to meet Kubota’s expectations for editing, ease of use, delivering promotions and allowing for future customer and dealer applications.
