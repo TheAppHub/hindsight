@@ -7,7 +7,7 @@ description: Designed to defend and stand out.
 client: Sharkguard
 brief: Create a Product Brand Name and Identity
 deliverables: Identity, Packaging, Brochures, Signage, 3D Renders and Website
-image: sharkguard-1
+image: sharkguard-1.jpg
 permalink: /portfolio/sharkguard/
 categories:
   - Branding and Design
