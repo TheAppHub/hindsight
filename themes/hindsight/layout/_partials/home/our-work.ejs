@@ -11,7 +11,7 @@
 		<div class="swiper-wrapper">
 			<% getWorkPosts().forEach(function(post, index) { %> <% if (post &&
 			post.carouselImage && post.__permalink) { %>
-			
+			<div class="swiper-slide">
 				<a href="<%= url_for(post.path) %>">
 					<img
 						src="<%- url_for(post.__permalink + post.carouselImage) %>"
@@ -22,7 +22,6 @@
 			</div>
 			<% } %> <% }); %>
 		</div>
-		<div class="swiper-pagination"></div>
 	</div>
 
 	<div class="text-center">
@@ -48,7 +47,7 @@
 </section>
 
 <script>
-	var swiper = new Swiper(".work", {
+	var workSwiper = new Swiper(".work", {
 		slidesPerView: 1.5,
 		spaceBetween: 30,
 		loop: true,
