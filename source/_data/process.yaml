@@ -1,0 +1,15 @@
+process:
+  - step: "Understanding"
+    description: "The first step involves gaining a thorough understanding of your needs and requirements. We pose the right questions to comprehend your vision, overarching brand, project goals, and the intended target audience. Working closely with our clients, we determine all the essential elements of their project."
+
+  - step: "Quote"
+    description: "Based on your requirements, we engage in brainstorming and industry research, focusing on your ideal customer base and competition. Subsequently, we create a detailed proposal and quote outlining the scope of work, timeline, costs, and any additional recommendations we may have."
+
+  - step: "Concepts"
+    description: "Once we are confident in our comprehensive understanding of your project, we proceed to develop a range of concepts. These may include sketches, wireframes, mock-ups, and/or samples."
+
+  - step: "Refinement"
+    description: "During this stage, we implement your feedback and begin to roll out the concepts into the finished project. Throughout this process, you'll stay informed with regular updates and will have an opportunity to provide a second round of feedback before final approvals (additional rounds of feedback are available when required)."
+
+  - step: "Final Approval"
+    description: "Upon everyone's satisfaction with the completed project, we obtain the final sign-off from you, and depending on the project, we either hand over the deliverables or proceed with the launch!"

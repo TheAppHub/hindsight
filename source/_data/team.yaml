@@ -1,0 +1,64 @@
+intro:
+  title: "Our people make us great"
+  description: "You'll interact with talented professionals, you can challenge to solve difficult problems and think in new and creative ways."
+
+team:
+  - name: "Andy Abson"
+    position: "Creative Director"
+    image: "Andy-1.jpg"
+    image-bw: "Andy.jpg"
+    bio: "Andy likes his coffee instant, often several times reheated, with extra milk please. On a typical Friday night, you'll find him relishing in the company of his family or a few close mates on his outdoor deck, cheering on their favourite seasonal sport. With a penchant for classic design, his favourite font is the timeless Avant Garde. While Andy's most utilised office tool is InDesign, he also gives the microwave a good workout. Andy's dream holiday would include the exploration of archaeological wonders somewhere fascinating like the Polynesian Islands or Mexico, and his favourite thing about Hindsight is the light-hearted banter and open collaboration which permeates his team, creating an environment where creativity flourishes."
+
+  - name: "Colleen"
+    position: "CFO"
+    image: "Colleen-1.jpg"
+    image-bw: "Colleen.jpg"
+    bio: "Colleen indulges in a steaming mug of Chai, made with soymilk, to add a touch of warmth to her workdays. On a typical Friday night, you'll often find her chillaxing at home with precious pup Cleo. Her favourite program is Xero, but we also think she's a bit of a wizard when it comes to Excel. She's the Queen of the books and keeps a tight ship. Next up on her holiday bucket list is a luxurious trip to The Philippines and she says her favourite part about working at Hindsight is the phenomenal team that she proudly calls her own."
+
+  - name: "Melanie"
+    position: "Account Director"
+    image: "Mel-1.jpg"
+    image-bw: "Mel-2.jpg"
+    bio: "Mel needs a strong flat white with oat milk to deal with the studio mayhem, she's the team member who keeps everyone in check and on a typical Friday night you'll find her unwinding with a quiet G&T surrounded by friends and family. With organisational finesse, Mel's favourite program is Monday, even if that is her least favourite day of the week. The vibrant New York beckons as the next location on her holiday bucket list, and her favourite part of working at Hindsight is the great company culture, she's also a pretty big fan of our incredible clients."
+
+  - name: "Adam"
+    position: "Senior Account Manager"
+    image: "Adam.jpg"
+    image-bw: "Adam-1.jpg"
+    bio: "Adam savours his coffee as a long black, in a tulip cup, not a bucket, thank you very much! On a typical Friday night, you'll find him either in his beloved La-Z-Boy, or embarking on culinary adventures at the latest boujee restaurant. Adam's favourite program is Adobe Dimension, but he also has the uncanny ability to fix any technical issue the team may be having, simply by walking towards the issue. Japan is next on Adam's Holiday bucket list, even if the thought of him leaving the office for an extended period has the team looking nervously at the printers. Adam's favourite thing about working at Hindsight is the camaraderie between the staff, as well as the free-flowing creativity displayed by the team."
+
+  - name: "Frank"
+    position: "Senior Designer"
+    image: "Frank-1.jpg"
+    image-bw: "Frank-2-1.jpg"
+    bio: "Frank's coffee preference and Friday night activities are still being discovered, but his creative talents are well-established in the team."
+
+  - name: "Steph"
+    position: "Designer"
+    image: "Steph-1.jpg"
+    image-bw: "Steph.jpg"
+    bio: "Steph brings her unique perspective and design skills to the Hindsight team, contributing to our creative projects with passion and dedication."
+
+  - name: "Holly"
+    position: "Project Manager"
+    image: "HollyA.jpg"
+    image-bw: "Holly-May.jpg"
+    bio: "Holly's mornings start with the creamy indulgence of an oat latte but on a typical Friday night, you'll often catch her out wining and dining. She's either savouring the delights of a new restaurant or creating a cosy atmosphere at home with a captivating movie. Notion is Holly's trusted companion, aiding her in coordinating the needs of the clients and the team. When she's not off camping with her hubby-to-be, Holly's dreams of a return visit to Ireland. In the office, Holly cherishes the ritual of making morning coffee with Karen, a joyful start to each day."
+
+  - name: "Peter"
+    position: "Senior Designer"
+    image: "Pete.jpg"
+    image-bw: "Peter-2.jpg"
+    bio: "Peter awakens his creativity with a refreshing protein iced coffee, which perfectly complements the calm and cool energy he brings to the office. On a typical Friday night, you'll find him skilfully negotiating with young children, expertly navigating the intricate realm of dinner choices and bedtime routines. In the office, Peter's end goal & big picture approach to design empowers him to craft visual masterpieces, if we do say so ourselves. At Hindsight, Peter loves the freedom of imagination, where no idea is too crazy to be considered. It's this boundless creativity which fuels his passion and makes every project an exciting adventure."
+
+  - name: "Karen"
+    position: "Administration Officer"
+    image: "Karen-1.jpg"
+    image-bw: "Karen-2.jpg"
+    bio: 'Karen''s mornings are invigorated by an extra hot latte, which she definitely needs to help tackle her ever-long list of administrative duties. In the office she''s our go-to gal, but on a typical Friday night, you''ll find her embracing adventure with her man and her cherished caravan "Franny." What Karen treasures most about working at Hindsight is the vibrant working environment, where the team''s personalities shine through each interaction. It''s the perfect blend of camaraderie and support that makes every day at Hindsight a joyous journey.'
+
+  - name: "Breanna"
+    position: "Graphic Designer"
+    image: "Breanna.jpeg"
+    image-bw: "Breanna.jpg"
+    bio: "No coffee for this gal, Breanna starts her day with a nice cup of tea. Her creative endeavours thrive in the realm of Adobe Illustrator, where she breathes life into her imaginative designs. On a typical Friday night, you'll find her unwinding over dinner with her beloved gal pals, indulging in good food and even better company. Next up on Breanna's holiday hit list is Europe, beckoning her with its rich tapestry of cultures and experiences. At Hindsight, Breanna adores the vibrant office energy, where the team's close knit nature creates a sense of family. It's this harmonious synergy which fuels her creativity and makes every project a delightful collaboration."
