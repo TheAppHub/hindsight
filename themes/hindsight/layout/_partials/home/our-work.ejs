@@ -11,7 +11,7 @@
 		<div class="swiper-wrapper">
 			<% getWorkPosts().forEach(function(post, index) { %> <% if (post &&
 			post.carouselImage && post.__permalink) { %>
-			<div class="swiper-slide">
+			
 				<a href="<%= url_for(post.path) %>">
 					<img
 						src="<%- url_for(post.__permalink + post.carouselImage) %>"
