@@ -3,7 +3,7 @@ layout: work
 title: Redheads
 date: 2025-05-01T01:21:42.768Z
 subtitle: The Redheads Rollout
-description: With the completion of a major rebrand Redheads required a major design rollout.
+description: With the completion of a major rebrand Redheads required a major design rollout
 client: Redheads
 brief: Brand Rollout
 deliverables: Packaging Design

@@ -2,7 +2,7 @@
 layout: work
 title: Sharkguard Security Protection
 date: 2025-05-01T01:37:06.031Z
-subtitle: Designed to defend and stand out.
+subtitle: Designed to defend and stand out
 description: Designed to defend and stand out.
 client: Sharkguard
 brief: Create a Product Brand Name and Identity

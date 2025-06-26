@@ -12,7 +12,6 @@ permalink: /portfolio/mt-pleasant/
 categories:
   - Branding and Design
   - Packaging & Print
-  - Website Design
 tags:
 ---
 

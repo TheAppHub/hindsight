@@ -6,37 +6,16 @@
   answer: "Yes! While we're proudly Melbourne-based, we work with clients across Australia and beyond. Our flexible communication and project management processes make it easy to collaborate remotely and deliver outstanding results wherever you're located."
   service: "General"
 
-- question: "How do I know which service is right for my business?"
-  answer: "We start every project with a discovery phase to understand your goals, audience and challenges. From there, we recommend a tailored mix of services to support your strategy - whether that's a brand refresh, a digital campaign or something more specialised."
-  service: "General"
 
 - question: "Can you manage our entire brand and marketing strategy?"
   answer: "Absolutely. We work as an extension of your team to manage everything from high-level brand strategy and creative direction to ongoing content creation and digital campaign execution. Our goal is to provide a cohesive approach that delivers results."
   service: "General"
 
-- question: "What is the typical timeline for a project?"
-  answer: "Timelines vary depending on the scope, but most projects range from 2 to 8 weeks. We'll provide a detailed schedule upfront, keep you updated throughout, and work efficiently to meet your deadlines without compromising on quality."
-  service: "General"
-
-- question: "Do you offer ongoing support or retainer packages?"
-  answer: "Yes. We offer flexible ongoing partnerships for businesses that need consistent design, marketing or content support. Retainers ensure priority service, predictable costs, and a collaborative team who knows your brand inside out."
-  service: "General"
-
-- question: "How much do your services cost?"
-  answer: "Our pricing is tailored to the scope and complexity of your project. We'll always provide a detailed proposal upfront, so you know exactly what's included. We also offer package rates and ongoing retainer options for long-term support."
-  service: "General"
 
 - question: "What industries do you specialise in?"
   answer: "We work across a wide range of industries including construction, beauty, retail, health, professional services and creative industries. Our approach is strategic and adaptable, allowing us to deliver results across sectors."
   service: "General"
 
-- question: "Do you collaborate with internal marketing teams?"
-  answer: "Yes. Whether you need us to fill gaps, extend your team's capacity or bring in specialist skills, we collaborate closely with in-house teams to deliver seamless results. We're here to complement, not compete with, your internal resources."
-  service: "General"
-
-- question: "How do you ensure our brand stays consistent across all touchpoints?"
-  answer: "We take a strategic and systemised approach to brand consistency, starting with strong brand guidelines and thorough planning. Every asset we create is aligned to your voice, visuals and goals, ensuring a cohesive brand experience."
-  service: "General"
 
 - question: "What is your process for starting a new project?"
   answer: "We begin with a discovery session to understand your business, audience and objectives. From there, we create a project roadmap outlining strategy, deliverables and timelines, making sure you're involved and informed every step of the way."
@@ -46,41 +25,21 @@
   answer: "Yes! We offer fully integrated marketing support. From website and social media campaigns to brochures, signage and event collateral, we make sure your brand is consistent across all channels."
   service: "General"
 
-- question: "How involved will I need to be during the project?"
-  answer: "That's up to you. We welcome collaboration but are also happy to take the lead. We'll agree on the level of involvement that works best for you, with clear checkpoints and regular updates throughout."
-  service: "General"
-
-- question: "What makes Hindsight Creative different from other agencies?"
-  answer: "We combine creative thinking with strategic insight and a genuinely collaborative approach. We're big enough to offer full-service expertise, but small enough to stay agile, responsive and invested in your success."
-  service: "General"
-
-- question: "Do you offer standalone design or copywriting services?"
-  answer: "We do. While we often work across entire campaigns or branding projects, we also offer standalone creative services including graphic design, content creation, video production, digital ads and more."
-  service: "General"
 
 - question: "Can you work within existing brand guidelines?"
   answer: "Absolutely. We're happy to work within your established brand guidelines to create new assets that are on-brand, consistent and effective. If you need help refining or expanding your guidelines, we can support that too."
   service: "General"
 
-- question: "How do you measure the success of your campaigns?"
-  answer: "We track performance based on clear, agreed-upon KPIs - whether that's traffic, conversions, engagement, leads or something else. We also provide regular reports and insights to help you understand what's working and why."
-  service: "General"
 
 - question: "Do you offer content creation, including photography and video?"
   answer: "Yes. We offer full content production including branded photography, videography, motion graphics and editing. Whether you need a campaign shoot or scroll-stopping social content, our team has you covered."
   service: "General"
 
-- question: "Is there a minimum project size or budget?"
-  answer: "We work with businesses of all sizes, but most of our projects start from $3,000. We're happy to discuss what's possible within your budget and recommend a solution that delivers value and results."
-  service: "General"
 
 - question: "What is the difference between brand strategy and brand identity?"
   answer: "Brand strategy is the blueprint that defines who you are, what you stand for, and how you communicate with your audience. It includes your purpose, positioning, values and tone of voice. Brand identity brings this strategy to life visually and verbally, through logos, colour palettes, typography and messaging. Together, they form a consistent and meaningful brand presence."
   service: "Branding and Design"
 
-- question: "Why is brand strategy important for business growth?"
-  answer: "Strategic branding helps you attract the right customers, build trust, and stand out in a crowded market. It aligns your messaging with your business goals and creates a foundation for every marketing effort that follows. With a clear brand strategy, your business can grow with purpose and consistency."
-  service: "Branding and Design"
 
 - question: "What's involved in a typical brand strategy process?"
   answer: "Our process includes discovery workshops, competitor analysis, audience research, and brand positioning. We then develop a strategic framework which includes your purpose, values, tone of voice and brand personality. From there, we create messaging and visual guidelines to guide consistent communication."
@@ -94,17 +53,12 @@
   answer: "Definitely. If your brand visuals are in place but you lack a clear brand strategy, we can help you define or refine your positioning, messaging and brand personality. Our strategy-first approach ensures that your existing brand identity works harder and connects more effectively."
   service: "Branding and Design"
 
-- question: "How do you ensure the brand identity reflects our values?"
-  answer: "We begin every project by understanding your business, audience and core values. These insights are woven into every part of your brand - from your visual style to your messaging tone. Our collaborative process ensures the final outcome feels authentic, relevant and aligned with your vision."
-  service: "Branding and Design"
 
 - question: "What are brand guidelines and why do they matter?"
   answer: "Brand guidelines are your internal brand rulebook. They outline how to use your logo, colours, fonts, messaging and imagery. This ensures your brand is consistent and professional, no matter who's creating content or where it's being seen. They're essential for maintaining brand integrity as you grow."
   service: "Branding and Design"
 
-- question: "Can you refresh an existing brand without starting from scratch?"
-  answer: "Absolutely. We offer brand refresh services for businesses that have an existing identity but need a strategic update. We can evolve your visuals, reposition your messaging, or modernise your look while retaining the elements that still work."
-  service: "Branding and Design"
+
 
 - question: "What's the difference between packaging design and print design?"
   answer: "Packaging design focuses on the physical wrapping, boxing or container used to present a product - think custom boxes, labels, or swing tags. Print design, on the other hand, includes materials like brochures, flyers, signage and branded merchandise. At Hindsight Creative, we offer both, ensuring your packaging and print collateral are cohesive and brand-aligned."
@@ -118,13 +72,7 @@
   answer: "Absolutely. We offer end-to-end packaging and print services, including print production coordination. From selecting materials and liaising with suppliers to preparing print-ready files and overseeing production, we manage the entire process to make things easy for you."
   service: "Packaging & Print"
 
-- question: "What types of packaging do you design?"
-  answer: "We design all kinds of custom product packaging - boxes, cartons, labels, swing tags, sleeves and more. Whether you're launching a new product or refreshing your existing packaging, we'll create packaging that's practical, brand-aligned and visually striking."
-  service: "Packaging & Print"
 
-- question: "How long does the packaging and print design process take?"
-  answer: "Timelines depend on the scope of the project, but most packaging and print design jobs take between 2 – 6 weeks from concept to final artwork. If we're coordinating production too, we'll factor that into your schedule and manage it for you."
-  service: "Packaging & Print"
 
 - question: "Do you help with event or trade show print collateral?"
   answer: "Yes, we do. We design event collateral including signage, banners, handouts, booth graphics and promotional items to help you make a strong impression at expos, activations and trade shows."
@@ -134,13 +82,7 @@
   answer: "Definitely. We specialise in brand consistency across all mediums. Whether you've already got established brand guidelines or need help refining your visual identity, we'll ensure your packaging and print materials feel cohesive and instantly recognisable."
   service: "Packaging & Print"
 
-- question: "What file types do you supply for print production?"
-  answer: "We supply industry-standard print-ready files including PDF, AI, EPS and packaged InDesign files with crop marks and bleeds. We can also work with printer-specific dielines and ensure files meet all technical requirements."
-  service: "Packaging & Print"
 
-- question: "What makes packaging design effective?"
-  answer: "Effective packaging design is clear, eye-catching, brand-aligned and easy to understand. It communicates your product's value quickly, supports shelf appeal, and creates a memorable brand experience. We combine strategy and creativity to deliver packaging that helps sell."
-  service: "Packaging & Print"
 
 - question: "What platforms do you create strategies for?"
   answer: "We build custom social media strategies for all major platforms including Instagram, Facebook, LinkedIn, TikTok, and Pinterest. Each platform is treated with its own creative approach, ensuring your content is optimised for the audience, format, and algorithm."
@@ -154,13 +96,7 @@
   answer: "We track key performance indicators like reach, engagement rate, follower growth, website traffic and conversions. Every strategy includes regular analytics and reporting, so you know what's working and where to optimise for even better results."
   service: "Social Media Strategy"
 
-- question: "Can you help improve engagement and follower growth?"
-  answer: "Absolutely. We use a combination of content strategy, platform insights, and audience interaction to increase engagement and build a loyal following. From hashtag research to audience engagement, our approach is designed to help your brand grow organically."
-  service: "Social Media Strategy"
 
-- question: "How do you make sure the content fits our brand?"
-  answer: "Before we create anything, we get to know your brand voice, tone and visual identity. We use custom-designed templates and clearly defined content pillars to maintain consistency across posts, stories and platforms, so every piece of content feels uniquely you."
-  service: "Social Media Strategy"
 
 - question: "Do you offer social media management or just strategy?"
   answer: "We offer both. Our full-service social media management includes everything from strategy and scheduling to content creation, posting and reporting. Whether you need a partner to run it all or just a strategy to follow, we've got you covered."
@@ -182,40 +118,25 @@
   answer: "Absolutely. We specialise in short-form video content optimised for platforms like Instagram, TikTok, LinkedIn and YouTube. Our social videos are designed to be engaging, mobile-friendly and formatted to perform across feed, stories and reels."
   service: "Video & Production"
 
-- question: "What's included in your content creation packages?"
-  answer: "Our content creation packages include everything you need to create cohesive, branded visuals, such as photography, video production, editing, and motion graphics. We'll work with you to develop a plan aligned with your content calendar and marketing goals."
-  service: "Video & Production"
 
 - question: "Do you help with scripting and storyboarding?"
   answer: "Yes. We guide you through the pre-production process with support on scripting, storyboarding and creative direction. Whether you've got a clear idea or need help shaping the story, we'll make sure the concept is strong before we ever hit record."
   service: "Video & Production"
 
-- question: "How do you ensure the video content matches our brand?"
-  answer: "We spend time upfront getting to know your brand's voice, tone and visual identity. Every asset we produce, from typography to music to motion style, is crafted to reflect your brand's personality and values. Consistency is built into our process."
-  service: "Video & Production"
 
 - question: "Can you create videos for events or product launches?"
   answer: "Yes! We regularly film product launches, activations, conferences and corporate events. We offer both raw footage and polished promotional edits, so you can use the content long after the event ends."
   service: "Video & Production"
 
-- question: "What sets Hindsight Creative apart from other video production companies?"
-  answer: "We're a Melbourne-based video production team who blend strategy, creativity and commercial insight. Our work is driven by purpose, not just aesthetics, every video we create is designed to engage your audience, tell your story and deliver results across platforms."
-  service: "Video & Production"
 
-- question: "What's the difference between UI and UX design?"
-  answer: "UI (User Interface) design focuses on the visual layout of a digital product, things like buttons, typography, colour schemes and spacing. UX (User Experience) design is about the overall journey and usability, making sure your site or app is intuitive, efficient, and enjoyable to use. We combine both to ensure users feel confident and comfortable at every interaction."
-  service: "Website Design"
 
 - question: "Do you offer website redesign services?"
   answer: "Yes, we do. Whether your current site feels outdated or no longer reflects your brand, we offer full website redesign services which modernise your look, improve user experience, and boost performance. From structure to SEO, we ensure your updated site is better aligned with your business goals."
   service: "Website Design"
 
-- question: "Can you design websites that are mobile-friendly?"
-  answer: "Absolutely. Responsive design is a standard part of every website we build. That means your site will automatically adapt to different screen sizes, mobile, tablet or desktop, so every visitor has a seamless experience no matter how they access it."
-  service: "Website Design"
 
 - question: "What platforms do you build websites on?"
-  answer: "We design and develop websites across a range of platforms including WordPress, Shopify, Square and fully custom builds. The right platform depends on your needs, whether it's content-heavy, product-based or highly interactive. We'll recommend the best fit based on your goals."
+  answer: "We design and develop websites across a range of platforms including WordPress, Shopify, Square Space and fully custom builds. The right platform depends on your needs, whether it's content-heavy, product-based or highly interactive. We'll recommend the best fit based on your goals."
   service: "Website Design"
 
 - question: "What is SEO and how does it fit into website design?"
@@ -230,9 +151,6 @@
   answer: "Yes. In collaboration with our sister business, The App Hub, we offer full app design and development. From UX and UI design to custom functionality and testing, we build mobile and web apps that are intuitive, responsive and purpose-built."
   service: "Website Design"
 
-- question: "How do you make sure the design matches our brand?"
-  answer: "We begin with a deep dive into your brand's tone, style and goals. Every website or app we create is custom-designed to reflect your identity, from colour palette and typography to layout and imagery. Consistency is key to building trust, and we make sure every touchpoint feels cohesive and on-brand."
-  service: "Website Design"
 
 - question: "What's the difference between digital marketing and digital design?"
   answer: "Digital marketing focuses on strategy, targeting and content to drive traffic, generate leads and convert customers. Digital design is the creative execution that supports this strategy, everything from landing pages to ads and email templates. At Hindsight Creative, we ensure both work together seamlessly for maximum impact."
@@ -242,21 +160,11 @@
   answer: "We offer both. Our digital marketing services include strategy, design, content creation and optimisation. Whether you need a full campaign or support with digital design assets, we're here to help across the entire marketing funnel."
   service: "Digital Marketing"
 
-- question: "Can you design and build landing pages which convert?"
-  answer: "Yes. We design high-converting landing pages that are visually aligned with your brand and optimised for lead generation. Using strong UX principles, strategic messaging and SEO best practices, we create pages that guide users toward action."
-  service: "Digital Marketing"
 
 - question: "What platforms do you create digital advertising assets for?"
   answer: "We design digital ad creative for Meta, LinkedIn, Google Display Network, YouTube, and more. Each platform has unique requirements, and we tailor the format, visuals and messaging to suit the audience and maximise results."
   service: "Digital Marketing"
 
-- question: "How do you ensure digital content matches our brand?"
-  answer: "We start with your brand guidelines or help develop them if needed. Each email, ad, and banner are designed with your brand identity in mind, from tone of voice to colour palette, so your digital presence stays cohesive and consistent across platforms."
-  service: "Digital Marketing"
-
-- question: "Do you offer SEO as part of your design services?"
-  answer: "Yes. Every digital asset we create is optimised for performance and discoverability. From technical SEO considerations to keyword-rich content design, we build with search in mind, helping you rank better and convert more."
-  service: "Digital Marketing"
 
 - question: "Can you design email templates which work across platforms?"
   answer: "Absolutely. We create responsive, mobile-friendly EDM templates that work across platforms like Mailchimp, Klaviyo and Campaign Monitor. Whether it's a monthly newsletter or an automated email series, we design for higher open and click-through rates."
@@ -266,6 +174,4 @@
   answer: "Good UX design makes it easy for users to take action. From intuitive navigation to clear calls-to-action, we use user-first design to reduce friction, increase engagement and improve conversion rates. It's where design meets ROI."
   service: "Digital Marketing"
 
-- question: "Can you refresh my current digital assets without starting from scratch?"
-  answer: "Yes. We can audit your existing digital assets and recommend updates that enhance performance without a full overhaul. Whether it's modernising visuals, updating messaging or optimising for mobile, we'll help you get more from what you've already built."
-  service: "Digital Marketing"
+

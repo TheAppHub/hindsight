@@ -2,16 +2,17 @@
 layout: work
 title: Coconut Republic
 date: 2025-05-01T01:37:06.031Z
-subtitle: Developing a skincare range from scratch.
+subtitle: Developing a skincare range from scratch
 description: Developing a skincare range from scratch.
 client: Coconut Republic
 brief: Brand Refresh
 deliverables: Brand Identity, Merchandising, Packaging Design
-image: coconut-republic6.jpg
+image: coconut-republic3.jpg
 permalink: /portfolio/coconut-republic/
 categories:
   - Branding and Design
   - Packaging & Print
+  - Social Media Strategy
 tags:
 ---
 

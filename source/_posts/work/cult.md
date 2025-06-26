@@ -2,7 +2,7 @@
 layout: work
 title: Cult Club Gear
 date: 2025-05-01T01:37:06.031Z
-subtitle: Sport a new look and become a Cult Figure.
+subtitle: Sport a new look and become a Cult Figure
 description: Discover how we created Cult Club gear's brand identity and digital presence
 client: Cult Club Gear
 brief: Brand & Apparel Design
