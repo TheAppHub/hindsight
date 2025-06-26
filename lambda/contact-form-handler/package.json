@@ -1,0 +1,22 @@
+{
+	"name": "contact-form-handler",
+	"version": "1.0.0",
+	"description": "AWS Lambda function to handle contact form submissions",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"package": "zip -r contact-form-handler.zip ."
+	},
+	"dependencies": {
+		"aws-sdk": "^2.1450.0"
+	},
+	"keywords": [
+		"aws",
+		"lambda",
+		"ses",
+		"email",
+		"contact-form"
+	],
+	"author": "Hindsight Creative",
+	"license": "MIT"
+}

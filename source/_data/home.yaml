@@ -9,10 +9,8 @@ behind_brand:
     - "We love working closely with clients from start to finish, whether it’s a one-off project or acting as your extended marketing team. We focus on understanding your goals and audience to create authentic brand experiences that perform."
     - "This relationship-first approach means we deliver creative that’s strategic, impactful and tailored to your growth."
   images:
-    - src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-      alt: "office content 1"
-    - src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-      alt: "office content 2"
+    - src: "img/hindsight-entry.jpg"
+      alt: "Hindsight Creative Melbourne"
 
 services:
   heading: "How We Make It Happen"

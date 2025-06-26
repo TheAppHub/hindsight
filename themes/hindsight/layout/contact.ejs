@@ -268,10 +268,76 @@
 	// Handle form submission
 	document
 		.getElementById("contactForm")
-		.addEventListener("submit", function (e) {
+		.addEventListener("submit", async function (e) {
 			e.preventDefault();
-			// Add your form submission logic here
-			alert("Thank you for your message. We will get back to you soon!");
-			this.reset();
+
+			// Get form data
+			const formData = {
+				name: document.getElementById("name").value.trim(),
+				email: document.getElementById("email").value.trim(),
+				subject: document.getElementById("subject").value.trim(),
+				message: document.getElementById("message").value.trim(),
+			};
+
+			// Basic validation
+			if (
+				!formData.name ||
+				!formData.email ||
+				!formData.subject ||
+				!formData.message
+			) {
+				alert("Please fill in all required fields.");
+				return;
+			}
+
+			// Email validation
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailRegex.test(formData.email)) {
+				alert("Please enter a valid email address.");
+				return;
+			}
+
+			// Show loading state
+			const submitButton = this.querySelector('button[type="submit"]');
+			const originalText = submitButton.textContent;
+			submitButton.textContent = "Sending...";
+			submitButton.disabled = true;
+
+			try {
+				// Replace with your actual API Gateway URL
+				const apiUrl = "YOUR_API_GATEWAY_URL_HERE"; // You'll need to replace this with the actual URL
+
+				const response = await fetch(apiUrl, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(formData),
+				});
+
+				const result = await response.json();
+
+				if (response.ok && result.success) {
+					alert("Thank you for your message! We'll get back to you soon.");
+					this.reset();
+				} else {
+					// Handle validation errors
+					if (result.errors && result.errors.length > 0) {
+						const errorMessages = result.errors
+							.map((error) => error.message)
+							.join("\n");
+						alert("Please fix the following errors:\n" + errorMessages);
+					} else {
+						alert("Failed to send message. Please try again later.");
+					}
+				}
+			} catch (error) {
+				console.error("Error submitting form:", error);
+				alert("Failed to send message. Please try again later.");
+			} finally {
+				// Reset button state
+				submitButton.textContent = originalText;
+				submitButton.disabled = false;
+			}
 		});
 </script>

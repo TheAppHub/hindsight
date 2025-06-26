@@ -1,0 +1,251 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Contact Form Handler Lambda Function with API Gateway"
+
+Parameters:
+  FromEmail:
+    Type: String
+    Description: Email address to send from (must be verified in SES)
+    Default: noreply@yourdomain.com
+
+  ToEmail:
+    Type: String
+    Description: Email address to send contact form submissions to
+    Default: contact@hindsight.com.au
+
+  Environment:
+    Type: String
+    Description: Environment name
+    Default: production
+    AllowedValues:
+      - development
+      - staging
+      - production
+
+Resources:
+  # Lambda Function
+  ContactFormHandler:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub "${Environment}-contact-form-handler"
+      Runtime: nodejs18.x
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk');
+          const ses = new AWS.SES({ region: process.env.AWS_REGION || 'us-east-1' });
+
+          exports.handler = async (event) => {
+              const headers = {
+                  'Access-Control-Allow-Origin': '*',
+                  'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                  'Access-Control-Allow-Methods': 'POST,OPTIONS',
+                  'Content-Type': 'application/json'
+              };
+              
+              if (event.httpMethod === 'OPTIONS') {
+                  return {
+                      statusCode: 200,
+                      headers: headers,
+                      body: JSON.stringify({ message: 'OK' })
+                  };
+              }
+              
+              try {
+                  const body = JSON.parse(event.body);
+                  const { name, email, subject, message } = body;
+                  
+                  if (!name || !email || !subject || !message) {
+                      return {
+                          statusCode: 400,
+                          headers: headers,
+                          body: JSON.stringify({
+                              error: 'Missing required fields',
+                              errors: [
+                                  { field: 'name', message: !name ? 'Name is required' : null },
+                                  { field: 'email', message: !email ? 'Email is required' : null },
+                                  { field: 'subject', message: !subject ? 'Subject is required' : null },
+                                  { field: 'message', message: !message ? 'Message is required' : null }
+                              ].filter(error => error.message)
+                          })
+                      };
+                  }
+                  
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  if (!emailRegex.test(email)) {
+                      return {
+                          statusCode: 400,
+                          headers: headers,
+                          body: JSON.stringify({
+                              error: 'Invalid email format',
+                              errors: [{ field: 'email', message: 'Please enter a valid email address' }]
+                          })
+                      };
+                  }
+                  
+                  const emailParams = {
+                      Source: process.env.FROM_EMAIL,
+                      Destination: {
+                          ToAddresses: [process.env.TO_EMAIL]
+                      },
+                      Message: {
+                          Subject: {
+                              Data: `New Contact Form Submission: ${subject}`,
+                              Charset: 'UTF-8'
+                          },
+                          Body: {
+                              Html: {
+                                  Data: '<html><head><style>body{font-family:Arial,sans-serif;line-height:1.6;color:#333}.container{max-width:600px;margin:0 auto;padding:20px}.header{background-color:#f8f9fa;padding:20px;border-radius:5px;margin-bottom:20px}.field{margin-bottom:15px}.label{font-weight:bold;color:#555}.value{background-color:#f8f9fa;padding:10px;border-radius:3px}.message-box{background-color:#f8f9fa;padding:15px;border-radius:3px;white-space:pre-wrap}</style></head><body><div class="container"><div class="header"><h2>New Contact Form Submission</h2><p>A new message has been submitted through your website contact form.</p></div><div class="field"><div class="label">Name:</div><div class="value">' + name + '</div></div><div class="field"><div class="label">Email:</div><div class="value">' + email + '</div></div><div class="field"><div class="label">Subject:</div><div class="value">' + subject + '</div></div><div class="field"><div class="label">Message:</div><div class="message-box">' + message + '</div></div><div style="margin-top:30px;padding-top:20px;border-top:1px solid #eee;color:#666;font-size:12px;"><p>This message was sent from your website contact form at ' + new Date().toLocaleString() + '</p></div></div></body></html>',
+                                  Charset: 'UTF-8'
+                              },
+                              Text: {
+                                  Data: 'New Contact Form Submission\n\nName: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject + '\n\nMessage:\n' + message + '\n\n---\nThis message was sent from your website contact form at ' + new Date().toLocaleString(),
+                                  Charset: 'UTF-8'
+                              }
+                          }
+                      }
+                  };
+                  
+                  await ses.sendEmail(emailParams).promise();
+                  
+                  return {
+                      statusCode: 200,
+                      headers: headers,
+                      body: JSON.stringify({
+                          message: 'Message sent successfully!',
+                          success: true
+                      })
+                  };
+                  
+              } catch (error) {
+                  console.error('Error sending email:', error);
+                  
+                  return {
+                      statusCode: 500,
+                      headers: headers,
+                      body: JSON.stringify({
+                          error: 'Failed to send message. Please try again later.',
+                          success: false
+                      })
+                  };
+              }
+          };
+      Environment:
+        Variables:
+          FROM_EMAIL: !Ref FromEmail
+          TO_EMAIL: !Ref ToEmail
+          AWS_REGION: !Ref AWS::Region
+      Timeout: 30
+      MemorySize: 128
+
+  # IAM Role for Lambda
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${Environment}-contact-form-lambda-role"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: SESPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ses:SendEmail
+                  - ses:SendRawEmail
+                Resource: "*"
+
+  # API Gateway
+  ApiGateway:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: !Sub "${Environment}-contact-form-api"
+      Description: API Gateway for contact form submissions
+
+  # API Gateway Resource
+  ApiResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref ApiGateway
+      ParentId: !GetAtt ApiGateway.RootResourceId
+      PathPart: contact
+
+  # API Gateway Method
+  ApiMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref ApiGateway
+      ResourceId: !Ref ApiResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ContactFormHandler.Arn}/invocations"
+      RequestParameters:
+        method.request.header.Content-Type: true
+
+  # OPTIONS method for CORS
+  ApiOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref ApiGateway
+      ResourceId: !Ref ApiResource
+      HttpMethod: OPTIONS
+      AuthorizationType: NONE
+      Integration:
+        Type: MOCK
+        RequestTemplates:
+          application/json: '{"statusCode": 200}'
+        IntegrationResponses:
+          - StatusCode: "200"
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Methods: "'POST,OPTIONS'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        PassthroughBehavior: WHEN_NO_MATCH
+        ContentHandling: CONVERT_TO_TEXT
+      MethodResponses:
+        - StatusCode: "200"
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: true
+            method.response.header.Access-Control-Allow-Methods: true
+            method.response.header.Access-Control-Allow-Origin: true
+
+  # Lambda Permission for API Gateway
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref ContactFormHandler
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGateway}/*/*"
+
+  # API Gateway Deployment
+  ApiDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn: ApiMethod
+    Properties:
+      RestApiId: !Ref ApiGateway
+      StageName: !Ref Environment
+
+Outputs:
+  ApiUrl:
+    Description: API Gateway URL for contact form submissions
+    Value: !Sub "https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/${Environment}/contact"
+    Export:
+      Name: !Sub "${AWS::StackName}-ApiUrl"
+
+  LambdaFunctionArn:
+    Description: Lambda Function ARN
+    Value: !GetAtt ContactFormHandler.Arn
+    Export:
+      Name: !Sub "${AWS::StackName}-LambdaArn"
