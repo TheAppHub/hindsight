@@ -20,16 +20,58 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", () => {
 	const hamburger = document.querySelector("#hamburger");
 	const nav = document.querySelector("#nav");
-	const navLi = document.querySelectorAll("#nav > li");
+	const mobileOverlay = document.querySelector("#mobile-overlay");
+	const navLinks = document.querySelectorAll("#nav a");
+
+	// Toggle mobile menu
 	hamburger.addEventListener("click", () => {
-		hamburger.classList.toggle("mobile-hamburger");
-		nav.classList.toggle("show-nav");
+		const isMenuOpen = !nav.classList.contains("translate-x-full");
+
+		if (isMenuOpen) {
+			// Close menu
+			closeMobileMenu();
+		} else {
+			// Open menu
+			nav.classList.remove("translate-x-full");
+			mobileOverlay.classList.remove("hidden");
+			document.body.style.overflow = "hidden";
+
+			// Animate hamburger to X
+			const lines = hamburger.querySelectorAll(".hamburger-line");
+			lines[0].style.transform = "rotate(45deg) translate(-1px, 9px)";
+			lines[1].style.opacity = "0";
+			lines[2].style.transform = "rotate(-45deg) translate(-1px, -9px)";
+		}
 	});
-	navLi.forEach((li) => {
-		li.addEventListener("click", () => {
-			nav.classList.remove("show-nav");
-			hamburger.classList.remove("mobile-hamburger");
-		});
+
+	// Close mobile menu
+	function closeMobileMenu() {
+		nav.classList.add("translate-x-full");
+		mobileOverlay.classList.add("hidden");
+		document.body.style.overflow = "";
+
+		// Reset hamburger animation
+		const lines = hamburger.querySelectorAll(".hamburger-line");
+		lines[0].style.transform = "";
+		lines[1].style.opacity = "";
+		lines[2].style.transform = "";
+	}
+
+	// Close menu when clicking overlay
+	if (mobileOverlay) {
+		mobileOverlay.addEventListener("click", closeMobileMenu);
+	}
+
+	// Close menu when clicking on navigation links
+	navLinks.forEach((link) => {
+		link.addEventListener("click", closeMobileMenu);
+	});
+
+	// Close menu on escape key
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape" && !nav.classList.contains("translate-x-full")) {
+			closeMobileMenu();
+		}
 	});
 });
 

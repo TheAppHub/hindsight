@@ -27,6 +27,29 @@
 		url("/fonts/retro-signature.woff") format("woff");
 }
 
+/* Mobile Navigation Styles */
+.hamburger-line {
+	transition: all 0.3s ease-in-out;
+}
+
+/* Ensure mobile menu is above other content */
+#nav {
+	z-index: 50;
+}
+
+#mobile-overlay {
+	z-index: 40;
+}
+
+#hamburger {
+	z-index: 60;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+	overflow: hidden;
+}
+
 .left-column.is-sticky-scrolling {
 	box-sizing: border-box;
 }

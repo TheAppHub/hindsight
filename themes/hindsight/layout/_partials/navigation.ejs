@@ -11,39 +11,69 @@
 			>
 		</a>
 
-		<ul
+		<!-- Mobile menu overlay -->
+		<div
+			id="mobile-overlay"
+			class="fixed inset-0 bg-black/70 z-40 hidden md:hidden"
+		></div>
+
+		<!-- Mobile menu -->
+		<div
 			id="nav"
-			class="invisible opacity-0 uppercase flex flex-col z-100 fixed top-0 left-0 right-0 bottom-0 items-center gap-6 text-primary-800 text-2xl justify-center bg-gradient-to-b from-primary-400 to-primary-800 md:visible md:opacity-100 md:static md:flex-row md:bg-none md:flex-1 md:justify-end md:text-tittle-primary-500 md:text-sm lg:gap-12 xl:gap-12 transition-all duration-700"
+			class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:w-auto md:h-auto md:bg-transparent md:shadow-none"
 		>
-			<% for(name in theme.menu) { %>
-			<li class="text-primary-700 hover:text-primary-500">
-				<a href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
-			</li>
-			<% } %>
-			<a
-				href="<%= url_for('/contact/') %>"
-				class="bg-primary-800 text-primary-50 hover:bg-primary-700 px-7 py-3 mr-4"
-				>Get in touch</a
+			<!-- Mobile menu header -->
+			<div class="flex justify-between items-center p-6 border-b md:hidden">
+				<span class="text-lg font-semibold text-gray-800">Menu</span>
+			</div>
+
+			<!-- Navigation links -->
+			<ul
+				class="flex flex-col md:flex-row md:items-center md:gap-6 lg:gap-12 xl:gap-12"
 			>
-		</ul>
+				<li class="border-b border-gray-100 md:border-none">
+					<a
+						href="/"
+						class="block px-6 py-4 text-gray-800 hover:text-primary-600 transition-colors md:px-0 md:py-0 md:text-sm md:uppercase md:text-primary-700 md:hover:text-primary-500"
+					>
+						Home
+					</a>
+				</li>
+				<% for(name in theme.menu) { %>
+				<li class="border-b border-gray-100 md:border-none">
+					<a
+						href="<%- url_for(theme.menu[name]) %>"
+						class="block px-6 py-4 text-gray-800 hover:text-primary-600 transition-colors md:px-0 md:py-0 md:text-sm md:uppercase md:text-primary-700 md:hover:text-primary-500"
+					>
+						<%= name %>
+					</a>
+				</li>
+				<% } %>
+				<li class="border-b border-gray-100 md:border-none">
+					<a
+						href="<%= url_for('/contact/') %>"
+						class="block px-6 py-4 bg-primary-800 text-white hover:bg-primary-700 transition-colors md:px-7 md:py-3 md:mr-4 md:inline-block"
+					>
+						Get in touch
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Hamburger menu button -->
 		<div class="flex md:hidden flex-1 justify-end mr-4 mb-2">
-			<button type="button" id="hamburger" class="z-200">
-				<svg
-					class="w-6 h-6 text-gray-800"
-					aria-hidden="true"
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-				>
-					<path
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M18 6H6m12 4H6m12 4H6m12 4H6"
-					/>
-				</svg>
+			<button type="button" id="hamburger" class="z-50 relative">
+				<div class="w-6 h-6 flex flex-col justify-center items-center">
+					<span
+						class="hamburger-line w-6 h-0.5 bg-gray-800 rounded transition-all duration-300"
+					></span>
+					<span
+						class="hamburger-line w-6 h-0.5 bg-gray-800 rounded transition-all duration-300 mt-1"
+					></span>
+					<span
+						class="hamburger-line w-6 h-0.5 bg-gray-800 rounded transition-all duration-300 mt-1"
+					></span>
+				</div>
 			</button>
 		</div>
 	</nav>
