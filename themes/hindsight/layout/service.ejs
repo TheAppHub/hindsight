@@ -12,8 +12,10 @@
 			<% }); %>
 		</div>
 	</div>
+</section>
 
-	<!-- Images -->
+<section class="bg-white">
+	<% if (service.image_set_1) { %>
 	<div class="sm:py-16 lg:px-6">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<% service.image_set_1.forEach(function(imageItem) { %>
@@ -27,19 +29,30 @@
 			<% }); %>
 		</div>
 	</div>
+	<% } %>
 
+	<!-- prettier-ignore -->
+	<% if (service.core_services) { %>
+		<%- partial('_partials/service/core-services', { core_services: service.core_services }) %>
+	<% } %>
+</section>
+
+<section class="bg-white">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 		<div class="max-w-screen-md mb-12">
 			<h3 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
-				Description
+				<%= service.content_1.heading %>
 			</h3>
-			<% service.content_1.forEach(function(paragraph) { %>
+			<% if (service.content_1 && Array.isArray(service.content_1.copy)) {
+			service.content_1.copy.forEach(function(paragraph) { %>
 			<p class="mb-4 font-light text-gray-500 sm:text-lg"><%= paragraph %></p>
-			<% }); %>
+			<% }); } %>
 		</div>
 	</div>
+</section>
 
-	<!-- Images -->
+<section class="bg-white">
+	<% if (service.image_set_2) { %>
 	<div class="sm:py-16 lg:px-6">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<% service.image_set_2.forEach(function(imageItem) { %>
@@ -53,34 +66,32 @@
 			<% }); %>
 		</div>
 	</div>
+	<% } %>
+</section>
 
+<section class="bg-white">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 		<div class="max-w-screen-md mb-12">
 			<h3 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
-				Description
+				<%= service.content_2.heading %>
 			</h3>
-			<% service.content_2.forEach(function(paragraph) { %>
+			<% if (service.content_2 && Array.isArray(service.content_2.copy)) {
+			service.content_2.copy.forEach(function(paragraph) { %>
 			<p class="mb-4 font-light text-gray-500 sm:text-lg"><%= paragraph %></p>
-			<% }); %>
+			<% }); } %>
 		</div>
 	</div>
 </section>
 
+<!-- prettier-ignore -->
 <% if (service.prices) { %>
-<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-	<div class="max-w-screen-md mb-12">
-		<h3 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">Prices</h3>
-		<% service.prices.forEach(function(price) { %>
-		<div class="mb-4">
-			<h4 class="mb-2 text-lg tracking-tight font-bold text-gray-900">
-				<%= price.title %>
-			</h4>
-			<p class="mb-4 font-light text-gray-500 sm:text-lg"><%= price.price %></p>
-		</div>
-		<% }); %>
-	</div>
-</div>
+	<%- partial('_partials/service/prices', { prices: service.prices }) %>
 <% } %>
 
 <!-- prettier-ignore -->
-<%- include('_partials/service-projects', { category: page.title }) %>
+<% if (service.add_to_package) { %>
+	<%- partial('_partials/service/add-ons', { add_to_package: service.add_to_package }) %>
+<% } %>
+
+<!-- prettier-ignore -->
+<%- partial('_partials/service-projects', { category: page.title }) %>
