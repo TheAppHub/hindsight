@@ -35,31 +35,31 @@ core_services:
   services:
     - title: Social Media Strategy
       description: We work closely with you and your business to create a custom social media strategy tailored to your unique brand and objectives.
-      icon: /icons/analytics.svg
+      icon: /icons/strategy.svg
     - title: Content Creation
       description: We capture your products and services with compelling videos and striking static visuals that resonate with your audience.
-      icon: /icons/analytics.svg
+      icon: /icons/content-creation.svg
     - title: Videography
       description: Our videography brings your ideas to life through captivating social content that connects and converts across platforms.
-      icon: /icons/analytics.svg
+      icon: /icons/videography.svg
     - title: Photography
       description: We bring your products and services to life with high-quality videos, eye-catching static visuals, engaging content, and captions that connect to your audience.
-      icon: /icons/analytics.svg
+      icon: /icons/photography.svg
     - title: Concept Ideation
       description: Original concepts and scroll-stopping ideas, crafted by our team to match your brand, drive your goals and connect with your audience.
-      icon: /icons/analytics.svg
+      icon: /icons/concept-ideation.svg
     - title: Copywriting
       description: Social media copy that reflects your brand's personality and speaks to your audience, from engaging captions to persuasive campaign messaging.
-      icon: /icons/analytics.svg
+      icon: /icons/copy-writing.svg
     - title: Competitor & Market Analysis
       description: We analyse your competitors and current market trends to uncover opportunities, benchmarks, and insights, giving your strategy a competitive edge.
-      icon: /icons/analytics.svg
+      icon: /icons/competitor-trends.svg
     - title: Content Scheduling
       description: Our team plan and schedule your content strategically to ensure it reaches the right audience at the right time, driving consistent engagement.
-      icon: /icons/analytics.svg
+      icon: /icons/scheduling.svg
     - title: Social Media Insights & Reporting
       description: In-depth performance metrics and insights help optimise your content, drive engagement and grow your online presence.
-      icon: /icons/analytics.svg
+      icon: /icons/statistics.svg
 
 prices:
   heading: Turn Strategy into Growth
@@ -74,7 +74,7 @@ prices:
         - Manage scheduling and posting content and content calendar
         - Monthly performance report with key insights
         - Monthly content calendar outlining what to post and when
-        - 60 minutes a week of community engagement (liking, following etc) excludes inbox management
+        
     - title: Standard Package
       price: $2400
       most_popular: true
@@ -89,32 +89,37 @@ prices:
     - title: Premium Package
       price: $3200
       description:
-        - 6 static feed posts across 2 chosen social media platforms
+        - 10 static feed posts across 2 chosen social media platforms
         - 4 reels across 2 chosen social media platforms
         - Captions written with platform specific hashtags & keywords
         - 6 hour content creation day on site (quarterly)
         - Manage scheduling and posting content and content calendar
         - Expanded monthly performance report with key insights
         - Monthly strategy check-in to adjust strategy
+        - 60 minutes a week of community engagement (liking, following etc) excludes inbox management
+        
+
 
 add_to_package:
   heading: Add more value to your package
   services:
-    - title: Custom Social Media Package
-      description: Use the packages as a starting point, then tailor a social media strategy to suit specific goals and needs. A plan will be built with exactly what should be included.
-      price: Starting from $1200 per Month
     - title: Full day on-site Content Creation
       description: A full-day shoot that covers both photo and video, edited and ready to use. Travel costs apply if the location is more than 30km from Hindsight Studio. (6-8 hour shoot - depending on travel time)
-      price: Starting from $1000 per Month
+      price: 
+      icon: /icons/content-creation-day.svg
     - title: Paid Social Media Advertising
       description: A customised paid advertising plan that amplifies and complements your wider marketing strategy.
-      price: Starting from $1000 per Month
+      price: 
+      icon: /icons/paid-advertising.svg
     - title: Inbox Management
       description: For two chosen platforms, direct messages and comments will be monitored. Relevant questions will be passed on for expert answers, and an automatic reply will be set for after hours so customers always feel supported.
-      price: Starting from $500 per Month
+      price: 
+      icon: /icons/inbox-management.svg
     - title: UGC or Influencer Outreach
       description: Based on your social media strategy, we'll craft a pitch and reach out to the right people to share your product on their platforms.
-      price: Starting from $500 per Month
+      price: 
+      icon: /icons/content-creation.svg
     - title: Social Media Management Workshop
       description: A practical session in-person or over zoom to help manage a strategy in-house. This training covers how to schedule, post and keep social accounts running smoothly. Session length is flexible and tailored to your experience level.
-      price: Starting from $500
+      price: 
+      icon: /icons/workshop.svg
