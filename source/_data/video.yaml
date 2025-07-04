@@ -18,11 +18,9 @@ videos:
   - youtube_id: p2mbqGrVdY0
   - youtube_id: IapCg_xEmI8
   - youtube_id: oGD7nUtFrbs
+  - youtube_id: t1L1mdqXUwU
 
-image_set_2:
-  - image: /img/OmniMedical-Hero1.jpg
-  - image: /img/Eggs2-Hero1.jpg
-  - image: /img/FruitBubbles2-Hero1.jpg
+
 
 content_2:
   heading: Content That Connects

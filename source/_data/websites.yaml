@@ -1,26 +1,94 @@
 intro:
   title: Websites
   copy:
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
+    - Whether you’re launching a new brand or overhauling an outdated site, we’ll help you build a digital presence that’s made to perform. From custom web design and eCommerce platforms to mobile apps and SEO, we combine strategy, creativity and functionality to create digital tools that reflect your brand and move people to action.
 
 image_set_1:
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
+  - image: /img/kubota-website.jpg
+  - image: /img/cult-website.jpg
 
 content_1:
+  heading: Stories Worth Watching
+  copy:
   - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
   - This is sample description copy for the second section. You can add more description items here as needed.
 
 image_set_2:
-  - image: /img/OmniMedical-Hero1.jpg
-  - image: /img/Eggs2-Hero1.jpg
-  - image: /img/FruitBubbles2-Hero1.jpg
+  - image: /img/kubota-website.jpg
+  - image: /img/cult-website.jpg
 
 content_2:
+  heading: Stories Worth Watching
+  copy:
   - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
   - This is sample description copy for the second section. You can add more description items here as needed.
+
+
+prices:
+  heading: Turn Strategy into Growth
+  intro: Choose a package to complement your Brand Strategy and let us build a seamless, results-driven social presence for your brand.
+  packages:
+    - title: Starter Package
+      price: $1200
+      description:
+        - 6 static feed posts across 2 chosen social media platforms using supplied or stock images
+        - Captions written with platform specific hashtags & keywords
+        - Strategic and creative prompts to create content in house
+        - Manage scheduling and posting content and content calendar
+        - Monthly performance report with key insights
+        
+    - title: Level-up Package
+      price: $2400
+      most_popular:
+      description:
+        - 8 static feed posts across 2 chosen social media platforms
+        - 2 reels across 2 chosen social media platforms
+        - Captions written with platform specific hashtags & keywords
+        - 2 hour content creation on site (Travel fee if outside 30kms)
+        - Manage scheduling and posting content and content calendar
+        - Monthly performance report with key insights
+        - Monthly strategy check-in to adjust strategy
+    - title: Scale Package
+      price: $3200
+      description:
+        - 10 static feed posts across 2 chosen social media platforms
+        - 4 reels across 2 chosen social media platforms
+        - Captions written with platform specific hashtags & keywords
+        - 6 hour content creation day on site (quarterly)
+        - Manage scheduling and posting content and content calendar
+        - Expanded monthly performance report with key insights
+        - Monthly strategy check-in to adjust strategy
+        - 60 minutes a week of community engagement (liking, following etc) excludes inbox management
+
+
+core_services:
+  heading: What we offer
+  intro: Our team of social media experts craft social media strategies that earn trust, start conversations and grow your business.
+  services:
+    - title: Social Media Strategy
+      description: We work closely with you and your business to create a custom social media strategy tailored to your unique brand and objectives.
+      icon: /icons/strategy.svg
+    - title: Content Creation
+      description: We capture your products and services with compelling videos and striking static visuals that resonate with your audience.
+      icon: /icons/content-creation.svg
+    - title: Videography
+      description: Our videography brings your ideas to life through captivating social content that connects and converts across platforms.
+      icon: /icons/videography.svg
+    - title: Photography
+      description: We bring your products and services to life with high-quality videos, eye-catching static visuals, engaging content, and captions that connect to your audience.
+      icon: /icons/photography.svg
+    - title: Concept Ideation
+      description: Original concepts and scroll-stopping ideas, crafted by our team to match your brand, drive your goals and connect with your audience.
+      icon: /icons/concept-ideation.svg
+    - title: Copywriting
+      description: Social media copy that reflects your brand's personality and speaks to your audience, from engaging captions to persuasive campaign messaging.
+      icon: /icons/copy-writing.svg
+    - title: Competitor & Market Analysis
+      description: We analyse your competitors and current market trends to uncover opportunities, benchmarks, and insights, giving your strategy a competitive edge.
+      icon: /icons/competitor-trends.svg
+    - title: Content Scheduling
+      description: Our team plan and schedule your content strategically to ensure it reaches the right audience at the right time, driving consistent engagement.
+      icon: /icons/scheduling.svg
+    - title: Social Media Insights & Reporting
+      description: In-depth performance metrics and insights help optimise your content, drive engagement and grow your online presence.
+      icon: /icons/statistics.svg
