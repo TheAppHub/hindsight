@@ -9,12 +9,15 @@ image_set_1:
   - image: /img/kubota-3.jpg
   - image: /img/kubota-6.jpg
 
-
 content_1:
   heading: Stories Worth Watching
   copy:
-  - We work with businesses of all sizes and industries to create visual content to build trust, drive engagement, and elevate your brand across web, social, and broadcast platforms. Video production is a powerful way to educate, entertain and convert your audience.
+    - We work with businesses of all sizes and industries to create visual content to build trust, drive engagement, and elevate your brand across web, social, and broadcast platforms. Video production is a powerful way to educate, entertain and convert your audience.
 
+videos:
+  - youtube_id: p2mbqGrVdY0
+  - youtube_id: IapCg_xEmI8
+  - youtube_id: oGD7nUtFrbs
 
 image_set_2:
   - image: /img/OmniMedical-Hero1.jpg
@@ -24,5 +27,4 @@ image_set_2:
 content_2:
   heading: Content That Connects
   copy:
-  - From brand stories to social reels, product explainers and event coverage, our video production services are built to be flexible, high-impact and audience-first. Whether you're after one standout piece or a full content suite, we’ll help you create visuals that speak clearly, look sharp and perform across every platform.
-
+    - From brand stories to social reels, product explainers and event coverage, our video production services are built to be flexible, high-impact and audience-first. Whether you're after one standout piece or a full content suite, we’ll help you create visuals that speak clearly, look sharp and perform across every platform.

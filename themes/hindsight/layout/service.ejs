@@ -52,6 +52,48 @@
 </section>
 <% } %>
 
+<!-- prettier-ignore -->
+<% if (service.videos) { %>
+<section class="bg-white">
+	<div class="py-8 px-4 sm:py-16 lg:px-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<% service.videos.forEach(function(video) { %>
+			<div class="w-full">
+				<div class="relative w-full" style="padding-bottom: 56.25%">
+					<iframe
+						class="absolute top-0 left-0 w-full h-full"
+						src="https://www.youtube.com/embed/<%= video.youtube_id %>"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					>
+					</iframe>
+				</div>
+			</div>
+			<% }); %>
+		</div>
+	</div>
+</section>
+<% } %>
+
+<!-- prettier-ignore -->
+<% if (service.content_1 && service.content_1.heading) { %>
+<section class="bg-white">
+	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+		<div class="max-w-screen-md mb-12">
+			<h3 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
+				<%= service.content_1.heading %>
+			</h3>
+			<% service.content_1.copy.forEach(function(paragraph) { %>
+			<p class="mb-4 font-light text-gray-500 sm:text-lg"><%= paragraph %></p>
+			<% }); %>
+		</div>
+	</div>
+</section>
+<% } %>
+
 <section class="bg-white">
 	<% if (service.image_set_2) { %>
 	<div class="sm:py-16 lg:px-6">
