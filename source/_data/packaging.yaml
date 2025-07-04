@@ -1,26 +1,29 @@
 intro:
   title: Thinking Inside The Box
   copy:
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
-
+    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience.
+    - Whether you're launching a new product, refreshing your current packaging, or building a suite of branded print materials, we design with purpose. Every label, box, brochure or branded asset is created to tell your story, elevate your brand, and capture attention.
 image_set_1:
+  - image: /img/redheads-packaging3.jpg
+  - image: /img/mr-tucker-packaging1.jpg
+  - image: /img/coles-chicken2.jpg
+  - image: /img/sharkguard-packaging.jpg
   - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
+  - image: /img/happy-nappy-packaging-range1.jpg
 
 content_1:
-  - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-  - This is sample description copy for the second section. You can add more description items here as needed.
+  heading: Packaging with Purpose
+  copy:
+  - We have worked across a multitude of industries and services, offering tailored print and packaging solutions that not only look great but perform in real-world settings.
+  - Our team specialises in creating custom product packaging and print collateral that’s aligned with your budget and that resonates with your audience.
 
 image_set_2:
-  - image: /img/OmniMedical-Hero1.jpg
+  - image: /img/coconut-republic-packaging.jpg
   - image: /img/Eggs2-Hero1.jpg
-  - image: /img/FruitBubbles2-Hero1.jpg
+  - image: /img/Aloe_vera_essentials_bottle.jpg
 
 content_2:
-  - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-  - This is sample description copy for the second section. You can add more description items here as needed.
+  heading: More Than a First Impression
+  copy:
+  - From the unboxing experience to the collateral you hand out at events, every touchpoint should reinforce your brand identity, communicate your value, and support your marketing strategy.
+  - When done well, product packaging becomes more than just a container, it becomes a brand moment. Great packaging and print material can influence purchasing decisions, enhance credibility, and create moments of connection between your brand and your audience.

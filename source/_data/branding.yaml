@@ -1,20 +1,22 @@
 intro:
   title: Branding
   copy:
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
+    - Our brand strategy and identity development services are designed to help your business stand out in a crowded market and connect thoughtfully with your audience.
+    - Whether you're launching a new venture, repositioning an existing business, or evolving to meet a new market, our strategic branding framework goes beyond the visuals. We align purpose, positioning and messaging, designed to create brands that don’t just look good - they drive action.
 
 image_set_1:
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
+  - image: /img/Richfield-Village_1.jpg
+  - image: /img/Richfield-Village_2.jpg
+  - image: /img/richfield-village-4.jpg
+  - image: /img/kalevu-branding1.jpg
+  - image: /img/kalevu-branding2.jpg
+  - image: /img/kalevu-branding3.jpg
 
 content_1:
-  - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-  - This is sample description copy for the second section. You can add more description items here as needed.
+  heading: Strategy Meets Identity
+  copy:
+    - A strong brand starts with smart strategy. Brand strategy is the blueprint for how your brand communicates, behaves and is perceived by your target market. It informs every design choice, marketing message and customer interaction.
+    - At Hindsight, we work closely with you to uncover what makes your brand different - then bring it to life with clarity, creativity and consistency.
 
 image_set_2:
   - image: /img/OmniMedical-Hero1.jpg
@@ -22,5 +24,7 @@ image_set_2:
   - image: /img/FruitBubbles2-Hero1.jpg
 
 content_2:
-  - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-  - This is sample description copy for the second section. You can add more description items here as needed.
+  heading: Why Choose Hindsight Creative?
+  copy:
+  - We partner with startups, growing businesses and established brands looking to evolve. Our team is curious, collaborative and insight-led, and we’re genuinely invested in helping your brand stand out with confidence.
+  - If you’re ready to create a brand that drives recognition, trust and long-term growth, let’s make it happen.

@@ -1,34 +1,29 @@
 intro:
   title: Social Media
   copy:
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
-    - From concept to creation, we specialise in delivering packaging designs that not only showcase your product but also leave a lasting impression on your audience. Elevate your packaging to the top shelf with us today!
+    - Smart social starts with a strategy. We help you create an authentic presence across your chosen platforms, supported by compelling visuals, consistent content and data-led insights.
+    - Whether you're looking for a clear strategy to guide your in-house team, or want hands-on support managing your social channels, we’ll meet you where you’re at. The result? A social media presence that grows with your business.
 
 image_set_1:
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
+  - image: /img/kalevu-1.png
+  - image: /img/kalevu-2.jpg
+  - image: /img/kalevu-3.jpg
+  - image: /img/supergroups1.jpg
+  - image: /img/supergroups2.jpg
+  - image: /img/supergroups3.jpg
 
 content_1:
-  heading: Heading
+  heading: Start with Strategy
   copy:
-    - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-    - This is sample description copy for the second section. You can add more description items here as needed.
-
+    - Every social media package begins with a Custom Brand Strategy because successful social media needs more than just good content — it needs direction. For a one-time investment of $2200, we’ll deliver a tangible, brand-specific strategy you can use to guide your content, structure your socials and align your team. 
+    - It includes a digital audit, competitor and market analysis, audience personas, platform recommendations, content pillars, tone of voice, strategic themes, caption examples, updates to your bio and highlights — and more. Whether you're managing your socials in-house or working with us long-term, this becomes the foundation for better content, stronger engagement and lasting results.
 image_set_2:
-  - image: /img/OmniMedical-Hero1.jpg
-  - image: /img/Eggs2-Hero1.jpg
-  - image: /img/FruitBubbles2-Hero1.jpg
+  - image: /img/think-coconut1.jpg
+  - image: /img/think-coconut2.jpg
+  - image: /img/think-coconut3.jpg
 
-content_2:
-  heading: Heading
-  copy:
-    - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-    - This is sample description copy for the second section. You can add more description items here as needed.
 
+   
 core_services:
   heading: What we offer
   intro: Our team of social media experts craft social media strategies that earn trust, start conversations and grow your business.
@@ -65,7 +60,7 @@ prices:
   heading: Turn Strategy into Growth
   intro: Choose a package to complement your Brand Strategy and let us build a seamless, results-driven social presence for your brand.
   packages:
-    - title: Basic Package
+    - title: Starter Package
       price: $1200
       description:
         - 6 static feed posts across 2 chosen social media platforms using supplied or stock images
@@ -73,11 +68,10 @@ prices:
         - Strategic and creative prompts to create content in house
         - Manage scheduling and posting content and content calendar
         - Monthly performance report with key insights
-        - Monthly content calendar outlining what to post and when
         
-    - title: Standard Package
+    - title: Level-up Package
       price: $2400
-      most_popular: true
+      most_popular:
       description:
         - 8 static feed posts across 2 chosen social media platforms
         - 2 reels across 2 chosen social media platforms
@@ -86,7 +80,7 @@ prices:
         - Manage scheduling and posting content and content calendar
         - Monthly performance report with key insights
         - Monthly strategy check-in to adjust strategy
-    - title: Premium Package
+    - title: Scale Package
       price: $3200
       description:
         - 10 static feed posts across 2 chosen social media platforms

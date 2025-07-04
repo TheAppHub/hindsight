@@ -37,19 +37,20 @@
 	<% } %>
 </section>
 
+<% if (service.content_1 && service.content_1.heading) { %>
 <section class="bg-white">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 		<div class="max-w-screen-md mb-12">
 			<h3 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
 				<%= service.content_1.heading %>
 			</h3>
-			<% if (service.content_1 && Array.isArray(service.content_1.copy)) {
-			service.content_1.copy.forEach(function(paragraph) { %>
+			<% service.content_1.copy.forEach(function(paragraph) { %>
 			<p class="mb-4 font-light text-gray-500 sm:text-lg"><%= paragraph %></p>
-			<% }); } %>
+			<% }); %>
 		</div>
 	</div>
 </section>
+<% } %>
 
 <section class="bg-white">
 	<% if (service.image_set_2) { %>
@@ -69,19 +70,20 @@
 	<% } %>
 </section>
 
+<% if (service.content_2 && service.content_2.heading) { %>
 <section class="bg-white">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 		<div class="max-w-screen-md mb-12">
 			<h3 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
 				<%= service.content_2.heading %>
 			</h3>
-			<% if (service.content_2 && Array.isArray(service.content_2.copy)) {
-			service.content_2.copy.forEach(function(paragraph) { %>
+			<% service.content_2.copy.forEach(function(paragraph) { %>
 			<p class="mb-4 font-light text-gray-500 sm:text-lg"><%= paragraph %></p>
-			<% }); } %>
+			<% }); %>
 		</div>
 	</div>
 </section>
+<% } %>
 
 <!-- prettier-ignore -->
 <% if (service.prices) { %>
