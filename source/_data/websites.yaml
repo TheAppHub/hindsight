@@ -7,31 +7,31 @@ image_set_1:
   - image: /img/kubota-website.jpg
   - image: /img/cult-website.jpg
 
-
 image_set_2:
   - image: /img/kubota-website.jpg
   - image: /img/cult-website.jpg
-
-
 
 prices:
   heading: Flexible Website Packages
   intro: Website solutions tailored to your stage of growth. Whether you need a one-pager or a full custom build, we’ll help you get it right.
   packages:
     - title: Single Page Website
-      price: $3000
+      price: $2995
+      price_per_month: false
+      price_from: true
       description:
         - Custom designed tailored to your brand
         - Responsive build (mobile, tablet and desktop)
         - One-page scroll layout with clear navigation
         - Contact form or call-to-action section
-        - Built with performance and speed in mind 
+        - Built with performance and speed in mind
         - Basic SEO set up
         - 2 rounds of revisions
-        
+
     - title: 5 Page Website
-      price: $7000
-      most_popular:
+      price: $6995
+      price_per_month: false
+      price_from: true
       description:
         - Custom designed tailored to your brand
         - Responsive build (mobile, tablet and desktop)
@@ -43,6 +43,8 @@ prices:
         - 2 rounds of revisions
     - title: Custom Website
       price: Priced on scope
+      price_per_month: false
+      price_from: false
       description:
         - Custom designed tailored to your brand
         - Responsive build (mobile, tablet and desktop)
@@ -52,7 +54,6 @@ prices:
         - Custom integrations (CRM, email marketing, etc.)
         - 3 rounds of revisions included
         - Ongoing support and maintenance options available
-
 
 core_services:
   heading: What we offer
