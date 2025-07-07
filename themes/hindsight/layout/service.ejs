@@ -1,5 +1,4 @@
-<% const service = site.data[page.title.toLowerCase().replace(/\s+/g,
-'-').replace(/[^a-z0-9-]/g, '')] %>
+<% const service = site.data[page.slug]; %>
 
 <section class="bg-white">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -56,7 +55,7 @@
 <% if (service.videos) { %>
 <section class="bg-white">
 	<div class="py-8 px-4 sm:py-16 lg:px-6">
-		<div class="grid grid-cols-1 md:grid-cols-2  gap-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<% service.videos.forEach(function(video) { %>
 			<div class="w-full">
 				<div class="relative w-full" style="padding-bottom: 56.25%">
@@ -77,8 +76,6 @@
 	</div>
 </section>
 <% } %>
-
-
 
 <section class="bg-white">
 	<% if (service.image_set_2) { %>
