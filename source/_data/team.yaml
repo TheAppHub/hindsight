@@ -3,7 +3,7 @@ intro:
   description: "You'll interact with talented professionals, you can challenge to solve difficult problems and think in new and creative ways."
 
 team:
-  - name: "Andy Abson"
+  - name: "Andy"
     position: "Creative Director"
     image: "Andy-1.jpg"
     image-bw: "Andy.jpg"
@@ -27,12 +27,6 @@ team:
     image-bw: "Adam-1.jpg"
     bio: "Adam savours his coffee as a long black, in a tulip cup, not a bucket, thank you very much! On a typical Friday night, you'll find him either in his beloved La-Z-Boy, or embarking on culinary adventures at the latest boujee restaurant. Adam's favourite program is Adobe Dimension, but he also has the uncanny ability to fix any technical issue the team may be having, simply by walking towards the issue. Japan is next on Adam's Holiday bucket list, even if the thought of him leaving the office for an extended period has the team looking nervously at the printers. Adam's favourite thing about working at Hindsight is the camaraderie between the staff, as well as the free-flowing creativity displayed by the team."
 
-  - name: "Frank"
-    position: "Senior Designer"
-    image: "Frank-1.jpg"
-    image-bw: "Frank-2-1.jpg"
-    bio: "Frank's coffee preference and Friday night activities are still being discovered, but his creative talents are well-established in the team."
-
   - name: "Steph"
     position: "Designer"
     image: "Steph-1.jpg"
@@ -50,12 +44,6 @@ team:
     image: "Pete.jpg"
     image-bw: "Peter-2.jpg"
     bio: "Peter awakens his creativity with a refreshing protein iced coffee, which perfectly complements the calm and cool energy he brings to the office. On a typical Friday night, you'll find him skilfully negotiating with young children, expertly navigating the intricate realm of dinner choices and bedtime routines. In the office, Peter's end goal & big picture approach to design empowers him to craft visual masterpieces, if we do say so ourselves. At Hindsight, Peter loves the freedom of imagination, where no idea is too crazy to be considered. It's this boundless creativity which fuels his passion and makes every project an exciting adventure."
-
-  - name: "Karen"
-    position: "Administration Officer"
-    image: "Karen-1.jpg"
-    image-bw: "Karen-2.jpg"
-    bio: 'Karen''s mornings are invigorated by an extra hot latte, which she definitely needs to help tackle her ever-long list of administrative duties. In the office she''s our go-to gal, but on a typical Friday night, you''ll find her embracing adventure with her man and her cherished caravan "Franny." What Karen treasures most about working at Hindsight is the vibrant working environment, where the team''s personalities shine through each interaction. It''s the perfect blend of camaraderie and support that makes every day at Hindsight a joyous journey.'
 
   - name: "Breanna"
     position: "Graphic Designer"
