@@ -4,15 +4,14 @@ intro:
     - Whether you're looking to increase traffic, boost conversions or build brand awareness, we bring clarity to your digital strategy and confidence to every campaign. Our work connects the dots between creativity, data and growth — always insight-led, performance-focused and tailored to your goals.
 
 image_set_1:
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
-  - image: /img/bottle.jpg
+  - image: /img/kalevu-7.jpg
+  - image: /img/down-to-earth-6.jpg
+
 
 
 image_set_2:
-  - image: /img/OmniMedical-Hero1.jpg
-  - image: /img/Eggs2-Hero1.jpg
-  - image: /img/FruitBubbles2-Hero1.jpg
+  - image: /img/kalevu-7.jpg
+  - image: /img/down-to-earth-6.jpg
 
 core_services:
   heading: What we offer
@@ -23,7 +22,7 @@ core_services:
       icon: /icons/strategy.svg
     - title: Paid Advertising
       description: Across Google, Meta and LinkedIn, we create targeted ad campaigns that capture attention, drive traffic and deliver real results.
-      icon: /icons/content-creation.svg
+      icon: /icons/paid-advertising.svg
     - title: Email & EDM Campaigns
       description: Our email marketing is designed to engage — with smart segmentation, strong creative and strategies that drive clicks and conversions.
       icon: /icons/inbox-management.svg
