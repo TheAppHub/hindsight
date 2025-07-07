@@ -25,8 +25,9 @@ prices:
         - One-page scroll layout with clear navigation
         - Contact form or call-to-action section
         - Built with performance and speed in mind
-        - Basic SEO set up
-        - 2 rounds of revisions
+        - Basic on-page SEO
+        - Ongoing support and maintenance options available
+
 
     - title: 5 Page Website
       price: $6995
@@ -35,14 +36,15 @@ prices:
       description:
         - Custom designed tailored to your brand
         - Responsive build (mobile, tablet and desktop)
-        - Up to 5 custom designed pages (Home, About, Services, Contact, Blog)
+        - Up to 5 custom designed pages (e.g. Home, About, Services, Contact, Blog)
         - Blog setup with content management system
-        - Basic SEO set up for all pages
+        - Basic on-page SEO
         - Social media integration
         - Custom icons or visual elements
-        - 2 rounds of revisions
-    - title: Custom Website
-      price: Priced on scope
+        - Ongoing support and maintenance options available
+
+    - title: Need more?
+      price: Custom
       price_per_month: false
       price_from: false
       description:
@@ -50,9 +52,8 @@ prices:
         - Responsive build (mobile, tablet and desktop)
         - Unlimited pages with custom layouts
         - Advanced features (eCommerce, booking systems, etc.)
-        - Full SEO optimisation
+        - Extensive on-page SEO
         - Custom integrations (CRM, email marketing, etc.)
-        - 3 rounds of revisions included
         - Ongoing support and maintenance options available
 
 core_services:
@@ -67,7 +68,7 @@ core_services:
       description: SSL, 2FA, secure plugins and backups — everything you need to keep your site and data protected.
       icon: /icons/security.svg
 
-    - title: SEO Setup
+    - title: On-Page SEO
       description: Technical and on-page SEO built in from the start, helping your site rank better and attract the right traffic.
       icon: /icons/seo.svg
 
