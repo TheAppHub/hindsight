@@ -142,13 +142,10 @@
 		document.getElementById('map').innerHTML = '<div class="flex items-center justify-center h-full bg-gray-100 text-gray-500">Failed to load map</div>';
 	}
 </script>
-<script>
-	// Debug: Log the API key to see if it's being rendered correctly
-	console.log("API Key:", "<%= config.google_maps_api_key %>");
-</script>
+
 <script
 	async
 	defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpdXh0vdUjjRNwWM63SoxJ2o_L1By7g38&libraries=marker&callback=initMap&v=weekly&loading=async"
+	src="https://maps.googleapis.com/maps/api/js?key=<%= config.google_maps_api_key %>&libraries=marker&callback=initMap&v=weekly&loading=async"
 	onerror="handleMapError()"
 ></script>

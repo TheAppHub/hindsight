@@ -23,7 +23,10 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run build
+        run: |
+          # Replace the Google Maps API key placeholder with the secret
+          sed -i 's/YOUR_GOOGLE_MAPS_API_KEY/${{ secrets.GOOGLE_MAPS_API_KEY }}/g' _config.yml
+          npm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
