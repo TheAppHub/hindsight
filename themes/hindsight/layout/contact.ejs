@@ -14,70 +14,7 @@
 			<!-- Contact Form and Info Section -->
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
 				<!-- Contact Form -->
-				<div class="bg-white p-6 h-full">
-					<form id="contactForm" class="space-y-6 h-full flex flex-col">
-						<div>
-							<label
-								for="name"
-								class="block mb-2 text-sm font-medium text-gray-900"
-								>Your name</label
-							>
-							<input
-								type="text"
-								id="name"
-								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5"
-								required
-							/>
-						</div>
-						<div>
-							<label
-								for="email"
-								class="block mb-2 text-sm font-medium text-gray-900"
-								>Your email</label
-							>
-							<input
-								type="email"
-								id="email"
-								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5"
-								required
-							/>
-						</div>
-						<div>
-							<label
-								for="subject"
-								class="block mb-2 text-sm font-medium text-gray-900"
-								>Subject</label
-							>
-							<input
-								type="text"
-								id="subject"
-								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5"
-								required
-							/>
-						</div>
-						<div class="flex-grow">
-							<label
-								for="message"
-								class="block mb-2 text-sm font-medium text-gray-900"
-								>Your message</label
-							>
-							<textarea
-								id="message"
-								rows="4"
-								class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-black focus:border-black block w-full p-2.5 h-full"
-								required
-							></textarea>
-						</div>
-						<div class="mt-8">
-							<button
-								type="submit"
-								class="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5 focus:outline-none"
-							>
-								Send message
-							</button>
-						</div>
-					</form>
-				</div>
+				<%- include('_partials/contact-form') %>
 
 				<!-- Contact Information -->
 				<div class="bg-white p-6 h-full">
@@ -141,6 +78,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
 <!-- Google Maps -->
+<!-- prettier-ignore -->
 <script>
 	function initMap() {
 		const location = { lat: <%= config.coordinates.lat %>, lng: <%= config.coordinates.lng %> };
@@ -263,81 +201,3 @@
 	defer
 	src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
 ></script>
-
-<script>
-	// Handle form submission
-	document
-		.getElementById("contactForm")
-		.addEventListener("submit", async function (e) {
-			e.preventDefault();
-
-			// Get form data
-			const formData = {
-				name: document.getElementById("name").value.trim(),
-				email: document.getElementById("email").value.trim(),
-				subject: document.getElementById("subject").value.trim(),
-				message: document.getElementById("message").value.trim(),
-			};
-
-			// Basic validation
-			if (
-				!formData.name ||
-				!formData.email ||
-				!formData.subject ||
-				!formData.message
-			) {
-				alert("Please fill in all required fields.");
-				return;
-			}
-
-			// Email validation
-			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-			if (!emailRegex.test(formData.email)) {
-				alert("Please enter a valid email address.");
-				return;
-			}
-
-			// Show loading state
-			const submitButton = this.querySelector('button[type="submit"]');
-			const originalText = submitButton.textContent;
-			submitButton.textContent = "Sending...";
-			submitButton.disabled = true;
-
-			try {
-				// Replace with your actual API Gateway URL
-				const apiUrl = "YOUR_API_GATEWAY_URL_HERE"; // You'll need to replace this with the actual URL
-
-				const response = await fetch(apiUrl, {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formData),
-				});
-
-				const result = await response.json();
-
-				if (response.ok && result.success) {
-					alert("Thank you for your message! We'll get back to you soon.");
-					this.reset();
-				} else {
-					// Handle validation errors
-					if (result.errors && result.errors.length > 0) {
-						const errorMessages = result.errors
-							.map((error) => error.message)
-							.join("\n");
-						alert("Please fix the following errors:\n" + errorMessages);
-					} else {
-						alert("Failed to send message. Please try again later.");
-					}
-				}
-			} catch (error) {
-				console.error("Error submitting form:", error);
-				alert("Failed to send message. Please try again later.");
-			} finally {
-				// Reset button state
-				submitButton.textContent = originalText;
-				submitButton.disabled = false;
-			}
-		});
-</script>
