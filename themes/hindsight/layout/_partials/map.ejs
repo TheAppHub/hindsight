@@ -10,8 +10,9 @@
 <!-- prettier-ignore -->
 <script>
 	function initMap() {
-		// Check if API key is available
-		if (!'<%= config.google_maps_api_key %>' || '<%= config.google_maps_api_key %>' === 'YOUR_GOOGLE_MAPS_API_KEY') {
+		// Check if API key is available and properly configured
+		const apiKey = '<%= config.google_maps_api_key %>';
+		if (!apiKey || apiKey === 'YOUR_GOOGLE_MAPS_API_KEY' || apiKey === '') {
 			console.error('Google Maps API key not configured');
 			document.getElementById('map').innerHTML = '<div class="flex items-center justify-center h-full bg-gray-100 text-gray-500">Google Maps API key not configured</div>';
 			return;
