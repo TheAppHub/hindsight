@@ -2,7 +2,8 @@
 title: Packaging & Print
 layout: service
 slug: packaging-and-print
-subtitle: Eye-catching packaging and print design that brings your brand to life and leaves a lasting impression.
-description: Hindsight Creative strives to create captivating packaging and print elements designed to enhance your brand's identity and leave a lasting impression. Our expert team combines creativity, attention to detail, and a deep understanding of your brand to deliver custom packaging designs and print collateral that truly represent your unique offerings. Whether you need eye-catching product packaging, label designs, or professional print collateral, we have the expertise to create stunning solutions that leave a lasting impact.
+permalink: services/packaging-and-print/
+subtitle: Creative packaging and print design that captivates and communicates.
+description: We design packaging and print materials that not only look stunning but also effectively communicate your brand message and drive sales. From product packaging to marketing collateral, we create designs that stand out on shelves and in mailboxes.
 image: /img/packaging-print.jpg
 ---

@@ -1,8 +1,9 @@
 ---
 title: Social Media Strategy
-slug: social-media-strategy
 layout: service
-subtitle: Smart social media strategies that grow your audience, spark engagement, and elevate your brand online.
-description: At Hindsight Creative, we understand the power of social media in connecting brands with their target audience and driving meaningful engagement. Our expert team develops comprehensive social media strategies tailored to your brand's unique goals and objectives. From content curation to campaign management, we employ data-driven techniques that amplify your brand's reach, foster engagement, and deliver measurable results.
+slug: social-media-strategy
+permalink: services/social-media-strategy/
+subtitle: Strategic social media that builds communities and drives engagement.
+description: We create comprehensive social media strategies that connect with your audience and build lasting relationships. From content creation to community management, we help brands establish meaningful connections and drive engagement across all social platforms.
 image: /img/social-media-strategy.jpg
 ---
