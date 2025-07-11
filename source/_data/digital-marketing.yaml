@@ -4,14 +4,11 @@ intro:
     - Whether you're looking to increase traffic, boost conversions or build brand awareness, we bring clarity to your digital strategy and confidence to every campaign. Our work connects the dots between creativity, data and growth — always insight-led, performance-focused and tailored to your goals.
 
 image_set_1:
-  - image: /img/kalevu-7.jpg
-  - image: /img/down-to-earth-6.jpg
+  - image: /img/kalevu-edm.jpg
+  - image: /img/supergroups-carousel.jpg
 
 
 
-image_set_2:
-  - image: /img/kalevu-7.jpg
-  - image: /img/down-to-earth-6.jpg
 
 core_services:
   heading: What we offer
@@ -37,8 +34,3 @@ core_services:
       icon: /icons/analytics.svg
 
 
-content_2:
-  heading: Transform Your Packaging
-  copy:
-  - With meticulous attention to detail and a passion for delivering a package that transforms ordinary to extraordinary, we craft packaging solutions for a wide range of products into irresistible must-haves that stand out on the shelf
-  - This is sample description copy for the second section. You can add more description items here as needed.

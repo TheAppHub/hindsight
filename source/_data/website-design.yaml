@@ -10,7 +10,8 @@ image_set_1:
 
 image_set_2:
   - image: /img/FinerTimberDoors_website.jpg
-  - image: /img/cult-website.jpg
+  - image: /img/seaspray-pools-website.jpg
+  - image: /img/cult-gear-website.jpg
 
 prices:
   heading: Flexible Website Packages
