@@ -1,0 +1,187 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Contact Form Lambda Function with API Gateway"
+
+Parameters:
+  FromEmail:
+    Type: String
+    Description: "Email address to send from (must be verified in SES)"
+    Default: "website@hindsight.com.au"
+
+  ToEmail:
+    Type: String
+    Description: "Email address to receive contact form submissions"
+    Default: "christoph@hindsight.com.au"
+
+Resources:
+  # Lambda Function
+  ContactFormFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: hindsight-contact-form-handler
+      Runtime: nodejs18.x
+      Handler: hindsight-contact-form-handler.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk');
+
+          const ses = new AWS.SES({
+            region: process.env.AWS_REGION || 'ap-southeast-2'
+          });
+
+          exports.handler = async (event) => {
+            const headers = {
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Headers': 'Content-Type, Accept, Authorization, X-Requested-With',
+              'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
+              'Access-Control-Max-Age': '86400',
+              'Content-Type': 'application/json'
+            };
+            
+            if (event.httpMethod === 'OPTIONS') {
+              return {
+                statusCode: 200,
+                headers,
+                body: ''
+              };
+            }
+            
+            try {
+              const body = JSON.parse(event.body);
+              const { name, email, subject, message } = body;
+              
+              if (!name || !email || !subject || !message) {
+                return {
+                  statusCode: 400,
+                  headers,
+                  body: JSON.stringify({
+                    error: 'Missing required fields'
+                  })
+                };
+              }
+              
+              const params = {
+                Source: '${FromEmail}',
+                Destination: {
+                  ToAddresses: ['${ToEmail}']
+                },
+                Message: {
+                  Subject: {
+                    Data: `New Contact Form Submission: ${subject}`,
+                    Charset: 'UTF-8'
+                  },
+                  Body: {
+                    Text: {
+                      Data: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n---\nThis message was sent from your website contact form.`,
+                      Charset: 'UTF-8'
+                    },
+                    Html: {
+                      Data: `<h2>New Contact Form Submission</h2><p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Subject:</strong> ${subject}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p><hr><p><em>This message was sent from your website contact form.</em></p>`,
+                      Charset: 'UTF-8'
+                    }
+                  }
+                }
+              };
+              
+              await ses.sendEmail(params).promise();
+              
+              return {
+                statusCode: 200,
+                headers,
+                body: JSON.stringify({
+                  message: 'Email sent successfully'
+                })
+              };
+              
+            } catch (error) {
+              console.error('Error sending email:', error);
+              return {
+                statusCode: 500,
+                headers,
+                body: JSON.stringify({
+                  error: 'Failed to send email'
+                })
+              };
+            }
+          };
+      Environment:
+        Variables:
+          FROM_EMAIL: !Ref FromEmail
+          TO_EMAIL: !Ref ToEmail
+      Timeout: 30
+
+  # IAM Role for Lambda
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: SESPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ses:SendEmail
+                  - ses:SendRawEmail
+                Resource: "*"
+
+  # API Gateway
+  ApiGateway:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: hindsight-contact-form-api
+      Description: "API Gateway for contact form Lambda function"
+
+  # API Gateway Resource
+  ApiResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref ApiGateway
+      ParentId: !GetAtt ApiGateway.RootResourceId
+      PathPart: contact
+
+  # API Gateway Method
+  ApiMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref ApiGateway
+      ResourceId: !Ref ApiResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ContactFormFunction.Arn}/invocations"
+
+  # API Gateway Deployment
+  ApiDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn: ApiMethod
+    Properties:
+      RestApiId: !Ref ApiGateway
+      StageName: prod
+
+  # Lambda Permission for API Gateway
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref ContactFormFunction
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGateway}/*/POST/contact"
+
+Outputs:
+  ApiEndpoint:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/prod/contact"
+    Export:
+      Name: !Sub "${AWS::StackName}-ApiEndpoint"

@@ -111,6 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Determine which form was submitted
 		const submittedForm = event.target;
 
+		// Skip if this is the contact form (it has its own handler)
+		if (submittedForm.id === "contactForm") {
+			return;
+		}
+
 		if (loadingStatus) loadingStatus.classList.remove("hidden");
 		if (formSuccess) formSuccess.classList.add("hidden");
 		if (errorStatus) errorStatus.classList.add("hidden");
