@@ -7,7 +7,7 @@ description: Branding concepts and visuals of a selection of cured beef snacks.
 client: Legacy 1841
 brief: Packaging Design
 deliverables: Packaging design across four flavours, including custom 3D mockups
-image: Legacy1841_Web Mockups1.jpg
+image: legacy1841-beef-jerky1.jpg
 permalink: /portfolio/legacy-1841/
 categories:
   - Packaging & Print

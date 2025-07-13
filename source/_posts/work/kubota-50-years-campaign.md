@@ -7,7 +7,7 @@ description: A Milestone Worth Celebrating
 client: Kubota Australia
 brief: Celebrate 50 years of Kubota Construction with a national campaign that drives engagement and sales.
 deliverables: Campaign, National TVC, META ad creative, Videography
-image: 50 Years Project images.jpg
+image: kubota-50-years-campaign1.jpg
 permalink: /portfolio/kubota-50-years-campaign/
 categories:
   - Video & Production
@@ -32,3 +32,5 @@ We delivered a full suite of creative, including video and photography captured 
 ### Results Worth the Heat.
 
 Despite filming through 40-degree heat, the results were worth it. Kubota saw a significant lift in year-on-year excavator sales and exceptionally strong click-through rates across all paid creative.
+
+<div class='embed-container'><iframe src='https://www.youtube.com/embed/IkH9g1hFbNg' frameborder='0' allowfullscreen></iframe></div>
