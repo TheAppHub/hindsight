@@ -5,12 +5,7 @@ const ses = new AWS.SES({
 	region: process.env.AWS_REGION || "ap-southeast-2",
 });
 
-const ALLOWED_ORIGINS = [
-	"http://localhost:4000",
-	"http://localhost:3000",
-	"http://localhost",
-	"https://hindsight.com.au",
-];
+const ALLOWED_ORIGINS = ["http://localhost:4000", "https://hindsight.com.au"];
 
 const REQUIRED_FIELDS = ["name", "email", "subject", "message"];
 
