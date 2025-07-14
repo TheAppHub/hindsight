@@ -105,8 +105,7 @@ deploy:
   type: ""
 
 #sitemap
-sitemap:
-  path: sitemap.xml
+sitemap: sitemap.xml
 
 # Contact
 address:
