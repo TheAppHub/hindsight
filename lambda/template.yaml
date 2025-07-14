@@ -29,33 +29,54 @@ Resources:
             region: process.env.AWS_REGION || 'ap-southeast-2'
           });
 
-          exports.handler = async (event) => {
-            const headers = {
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Headers': 'Content-Type, Accept, Authorization, X-Requested-With',
-              'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
-              'Access-Control-Max-Age': '86400',
-              'Content-Type': 'application/json'
+          const ALLOWED_ORIGINS = [
+            'http://localhost:4000', 
+            'https://staging.hindsight.com.au',
+            'https://hindsight.com.au'
+          ];
+
+          const REQUIRED_FIELDS = ['name', 'email', 'subject', 'message'];
+
+          function getCorsHeaders(origin) {
+            const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : '';
+            return {
+              'Access-Control-Allow-Origin': allowedOrigin,
+              'Access-Control-Allow-Headers': 'Content-Type',
+              'Access-Control-Allow-Methods': 'POST, OPTIONS'
             };
-            
+          }
+
+          exports.handler = async (event) => {
+            const origin = event.headers?.origin || '';
+
             if (event.httpMethod === 'OPTIONS') {
               return {
                 statusCode: 200,
-                headers,
+                headers: getCorsHeaders(origin),
                 body: ''
               };
             }
             
             try {
-              const body = JSON.parse(event.body);
-              const { name, email, subject, message } = body;
-              
-              if (!name || !email || !subject || !message) {
+              if (!event.body) {
+                console.warn('No body in request');
                 return {
                   statusCode: 400,
-                  headers,
+                  headers: getCorsHeaders(origin),
+                  body: JSON.stringify({ message: 'Missing request body' })
+                };
+              }
+
+              const data = JSON.parse(event.body);
+
+              const missingFields = REQUIRED_FIELDS.filter((field) => !data[field]);
+              if (missingFields.length > 0) {
+                console.warn('Missing required fields:', missingFields);
+                return {
+                  statusCode: 400,
+                  headers: getCorsHeaders(origin),
                   body: JSON.stringify({
-                    error: 'Missing required fields'
+                    message: `Missing required fields: ${missingFields.join(', ')}`
                   })
                 };
               }
@@ -67,16 +88,16 @@ Resources:
                 },
                 Message: {
                   Subject: {
-                    Data: `New Contact Form Submission: ${subject}`,
+                    Data: `New Contact Form Submission: ${data.subject}`,
                     Charset: 'UTF-8'
                   },
                   Body: {
                     Text: {
-                      Data: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n---\nThis message was sent from your website contact form.`,
+                      Data: `Name: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\n\nMessage:\n${data.message}\n\n---\nThis message was sent from your website contact form.`,
                       Charset: 'UTF-8'
                     },
                     Html: {
-                      Data: `<h2>New Contact Form Submission</h2><p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Subject:</strong> ${subject}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p><hr><p><em>This message was sent from your website contact form.</em></p>`,
+                      Data: `<h2>New Contact Form Submission</h2><p><strong>Name:</strong> ${data.name}</p><p><strong>Email:</strong> ${data.email}</p><p><strong>Subject:</strong> ${data.subject}</p><p><strong>Message:</strong></p><p>${data.message.replace(/\n/g, '<br>')}</p><hr><p><em>This message was sent from your website contact form.</em></p>`,
                       Charset: 'UTF-8'
                     }
                   }
@@ -85,22 +106,19 @@ Resources:
               
               await ses.sendEmail(params).promise();
               
+              console.log('Form submission successful');
               return {
                 statusCode: 200,
-                headers,
-                body: JSON.stringify({
-                  message: 'Email sent successfully'
-                })
+                headers: getCorsHeaders(origin),
+                body: JSON.stringify({ message: 'Form submitted successfully!' })
               };
               
             } catch (error) {
-              console.error('Error sending email:', error);
+              console.error('Unexpected error in Lambda:', error);
               return {
                 statusCode: 500,
-                headers,
-                body: JSON.stringify({
-                  error: 'Failed to send email'
-                })
+                headers: getCorsHeaders(origin),
+                body: JSON.stringify({ message: 'Error processing form.' })
               };
             }
           };
@@ -149,7 +167,7 @@ Resources:
       ParentId: !GetAtt ApiGateway.RootResourceId
       PathPart: contact
 
-  # API Gateway Method
+  # API Gateway POST Method
   ApiMethod:
     Type: AWS::ApiGateway::Method
     Properties:
@@ -162,13 +180,46 @@ Resources:
         IntegrationHttpMethod: POST
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ContactFormFunction.Arn}/invocations"
 
+  # API Gateway OPTIONS Method (MOCK for CORS)
+  ApiOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref ApiGateway
+      ResourceId: !Ref ApiResource
+      HttpMethod: OPTIONS
+      AuthorizationType: NONE
+      Integration:
+        Type: MOCK
+        RequestTemplates:
+          application/json: '{"statusCode": 200}'
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type'"
+              method.response.header.Access-Control-Allow-Methods: "'OPTIONS,POST'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+            ResponseTemplates:
+              application/json: ""
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: true
+            method.response.header.Access-Control-Allow-Methods: true
+            method.response.header.Access-Control-Allow-Origin: true
+          ResponseModels:
+            application/json: "Empty"
+
   # API Gateway Deployment
   ApiDeployment:
     Type: AWS::ApiGateway::Deployment
-    DependsOn: ApiMethod
+    DependsOn:
+      - ApiMethod
+      - ApiOptionsMethod
     Properties:
       RestApiId: !Ref ApiGateway
       StageName: prod
+      Description: "Deployment with CORS support"
+      DeploymentId: "cors-deployment-1"
 
   # Lambda Permission for API Gateway
   LambdaPermission:
@@ -177,7 +228,7 @@ Resources:
       FunctionName: !Ref ContactFormFunction
       Action: lambda:InvokeFunction
       Principal: apigateway.amazonaws.com
-      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGateway}/*/POST/contact"
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGateway}/*/*/contact"
 
 Outputs:
   ApiEndpoint:

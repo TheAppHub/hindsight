@@ -5,38 +5,54 @@ const ses = new AWS.SES({
 	region: process.env.AWS_REGION || "ap-southeast-2",
 });
 
-exports.handler = async (event) => {
-	// Enable CORS with more comprehensive headers
-	const headers = {
-		"Access-Control-Allow-Origin": "*",
-		"Access-Control-Allow-Headers":
-			"Content-Type, Accept, Authorization, X-Requested-With",
-		"Access-Control-Allow-Methods": "POST, OPTIONS, GET",
-		"Access-Control-Max-Age": "86400",
-		"Content-Type": "application/json",
-	};
+const ALLOWED_ORIGINS = [
+	"http://localhost:4000",
+	"https://staging.hindsight.com.au",
+	"https://hindsight.com.au",
+];
 
-	// Handle preflight requests
+const REQUIRED_FIELDS = ["name", "email", "subject", "message"];
+
+function getCorsHeaders(origin) {
+	const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : "";
+	return {
+		"Access-Control-Allow-Origin": allowedOrigin,
+		"Access-Control-Allow-Headers": "Content-Type",
+		"Access-Control-Allow-Methods": "POST, OPTIONS",
+	};
+}
+
+exports.handler = async (event) => {
+	const origin = event.headers?.origin || "";
+
 	if (event.httpMethod === "OPTIONS") {
 		return {
 			statusCode: 200,
-			headers,
+			headers: getCorsHeaders(origin),
 			body: "",
 		};
 	}
 
 	try {
-		// Parse the request body
-		const body = JSON.parse(event.body);
-		const { name, email, subject, message } = body;
-
-		// Validate required fields
-		if (!name || !email || !subject || !message) {
+		if (!event.body) {
+			console.warn("No body in request");
 			return {
 				statusCode: 400,
-				headers,
+				headers: getCorsHeaders(origin),
+				body: JSON.stringify({ message: "Missing request body" }),
+			};
+		}
+
+		const data = JSON.parse(event.body);
+
+		const missingFields = REQUIRED_FIELDS.filter((field) => !data[field]);
+		if (missingFields.length > 0) {
+			console.warn("Missing required fields:", missingFields);
+			return {
+				statusCode: 400,
+				headers: getCorsHeaders(origin),
 				body: JSON.stringify({
-					error: "Missing required fields",
+					message: `Missing required fields: ${missingFields.join(", ")}`,
 				}),
 			};
 		}
@@ -49,18 +65,18 @@ exports.handler = async (event) => {
 			},
 			Message: {
 				Subject: {
-					Data: `New Contact Form Submission: ${subject}`,
+					Data: `New Contact Form Submission: ${data.subject}`,
 					Charset: "UTF-8",
 				},
 				Body: {
 					Text: {
 						Data: `
-Name: ${name}
-Email: ${email}
-Subject: ${subject}
+Name: ${data.name}
+Email: ${data.email}
+Subject: ${data.subject}
 
 Message:
-${message}
+${data.message}
 
 ---
 This message was sent from your website contact form.
@@ -70,11 +86,11 @@ This message was sent from your website contact form.
 					Html: {
 						Data: `
 <h2>New Contact Form Submission</h2>
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Subject:</strong> ${subject}</p>
+<p><strong>Name:</strong> ${data.name}</p>
+<p><strong>Email:</strong> ${data.email}</p>
+<p><strong>Subject:</strong> ${data.subject}</p>
 <p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, "<br>")}</p>
+<p>${data.message.replace(/\n/g, "<br>")}</p>
 <hr>
 <p><em>This message was sent from your website contact form.</em>
             `,
@@ -87,22 +103,18 @@ This message was sent from your website contact form.
 		// Send email via SES
 		await ses.sendEmail(params).promise();
 
+		console.log("Form submission successful");
 		return {
 			statusCode: 200,
-			headers,
-			body: JSON.stringify({
-				message: "Email sent successfully",
-			}),
+			headers: getCorsHeaders(origin),
+			body: JSON.stringify({ message: "Form submitted successfully!" }),
 		};
 	} catch (error) {
-		console.error("Error sending email:", error);
-
+		console.error("Unexpected error in Lambda:", error);
 		return {
 			statusCode: 500,
-			headers,
-			body: JSON.stringify({
-				error: "Failed to send email",
-			}),
+			headers: getCorsHeaders(origin),
+			body: JSON.stringify({ message: "Error processing form." }),
 		};
 	}
 };
