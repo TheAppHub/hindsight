@@ -1,1 +1,9 @@
-{"statusCode":200,"headers":{"Access-Control-Allow-Origin":"http://staging.hindsight.com.au","Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Methods":"POST, OPTIONS"},"body":"{\"message\":\"Form submitted successfully!\"}"}
+{
+	"statusCode": 200,
+	"headers": {
+		"Access-Control-Allow-Origin": "https://hindsight.com.au",
+		"Access-Control-Allow-Headers": "Content-Type",
+		"Access-Control-Allow-Methods": "POST, OPTIONS"
+	},
+	"body": "{\"message\":\"Form submitted successfully!\"}"
+}

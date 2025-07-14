@@ -9,8 +9,6 @@ const ALLOWED_ORIGINS = [
 	"http://localhost:4000",
 	"http://localhost:3000",
 	"http://localhost",
-	"http://staging.hindsight.com.au",
-	"https://staging.hindsight.com.au",
 	"https://hindsight.com.au",
 ];
 

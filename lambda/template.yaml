@@ -31,7 +31,6 @@ Resources:
 
           const ALLOWED_ORIGINS = [
             'http://localhost:4000', 
-            'https://staging.hindsight.com.au',
             'https://hindsight.com.au'
           ];
 
@@ -197,7 +196,7 @@ Resources:
             ResponseParameters:
               method.response.header.Access-Control-Allow-Headers: "'Content-Type'"
               method.response.header.Access-Control-Allow-Methods: "'OPTIONS,POST'"
-              method.response.header.Access-Control-Allow-Origin: "'http://staging.hindsight.com.au'"
+              method.response.header.Access-Control-Allow-Origin: "'https://hindsight.com.au'"
             ResponseTemplates:
               application/json: ""
       MethodResponses:
