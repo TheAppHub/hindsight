@@ -90,9 +90,9 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+include: []
+exclude: []
+ignore: []
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -139,4 +139,4 @@ google_tag_manager:
   id: "G-T6M39RQ3" # Replace with your GTM ID
 
 # Google Maps API Key
-google_maps_api_key: YOUR_GOOGLE_MAPS_API_KEY # Replace with your actual Google Maps API key
+google_maps_api_key: # Replace with your actual Google Maps API key

@@ -129,8 +129,8 @@
 			]
 		});
 
-		// Use the new AdvancedMarkerElement instead of deprecated Marker
-		const marker = new google.maps.marker.AdvancedMarkerElement({
+		// Use regular Marker (AdvancedMarkerElement requires Map ID)
+		const marker = new google.maps.Marker({
 			position: location,
 			map: map,
 			title: "Hindsight Creative"
@@ -147,6 +147,6 @@
 <script
 	async
 	defer
-	src="https://maps.googleapis.com/maps/api/js?key=<%= config.google_maps_api_key %>&libraries=marker&callback=initMap&v=weekly&loading=async"
+	src="https://maps.googleapis.com/maps/api/js?key=<%= config.google_maps_api_key %>&callback=initMap&v=weekly&loading=async"
 	onerror="handleMapError()"
 ></script>
