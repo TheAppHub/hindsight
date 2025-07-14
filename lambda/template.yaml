@@ -22,105 +22,7 @@ Resources:
       Handler: hindsight-contact-form-handler.handler
       Role: !GetAtt LambdaExecutionRole.Arn
       Code:
-        ZipFile: |
-          const AWS = require('aws-sdk');
-
-          const ses = new AWS.SES({
-            region: process.env.AWS_REGION || 'ap-southeast-2'
-          });
-
-          const ALLOWED_ORIGINS = [
-            'http://localhost:4000', 
-            'https://hindsight.com.au'
-          ];
-
-          const REQUIRED_FIELDS = ['name', 'email', 'subject', 'message'];
-
-          function getCorsHeaders(origin) {
-            const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : '';
-            return {
-              'Access-Control-Allow-Origin': allowedOrigin,
-              'Access-Control-Allow-Headers': 'Content-Type',
-              'Access-Control-Allow-Methods': 'POST, OPTIONS'
-            };
-          }
-
-          exports.handler = async (event) => {
-            const origin = event.headers?.origin || '';
-
-            if (event.httpMethod === 'OPTIONS') {
-              return {
-                statusCode: 200,
-                headers: getCorsHeaders(origin),
-                body: ''
-              };
-            }
-            
-            try {
-              if (!event.body) {
-                console.warn('No body in request');
-                return {
-                  statusCode: 400,
-                  headers: getCorsHeaders(origin),
-                  body: JSON.stringify({ message: 'Missing request body' })
-                };
-              }
-
-              const data = JSON.parse(event.body);
-
-              const missingFields = REQUIRED_FIELDS.filter((field) => !data[field]);
-              if (missingFields.length > 0) {
-                console.warn('Missing required fields:', missingFields);
-                return {
-                  statusCode: 400,
-                  headers: getCorsHeaders(origin),
-                  body: JSON.stringify({
-                    message: `Missing required fields: ${missingFields.join(', ')}`
-                  })
-                };
-              }
-              
-              const params = {
-                Source: '${FromEmail}',
-                Destination: {
-                  ToAddresses: ['${ToEmail}']
-                },
-                Message: {
-                  Subject: {
-                    Data: `New Contact Form Submission: ${data.subject}`,
-                    Charset: 'UTF-8'
-                  },
-                  Body: {
-                    Text: {
-                      Data: `Name: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\n\nMessage:\n${data.message}\n\n---\nThis message was sent from your website contact form.`,
-                      Charset: 'UTF-8'
-                    },
-                    Html: {
-                      Data: `<h2>New Contact Form Submission</h2><p><strong>Name:</strong> ${data.name}</p><p><strong>Email:</strong> ${data.email}</p><p><strong>Subject:</strong> ${data.subject}</p><p><strong>Message:</strong></p><p>${data.message.replace(/\n/g, '<br>')}</p><hr><p><em>This message was sent from your website contact form.</em></p>`,
-                      Charset: 'UTF-8'
-                    }
-                  }
-                }
-              };
-              
-              await ses.sendEmail(params).promise();
-              
-              console.log('Form submission successful');
-              return {
-                statusCode: 200,
-                headers: getCorsHeaders(origin),
-                body: JSON.stringify({ message: 'Form submitted successfully!' })
-              };
-              
-            } catch (error) {
-              console.error('Unexpected error in Lambda:', error);
-              return {
-                statusCode: 500,
-                headers: getCorsHeaders(origin),
-                body: JSON.stringify({ message: 'Error processing form.' })
-              };
-            }
-          };
+        ZipFile: function.zip
       Environment:
         Variables:
           FROM_EMAIL: !Ref FromEmail
@@ -179,7 +81,7 @@ Resources:
         IntegrationHttpMethod: POST
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ContactFormFunction.Arn}/invocations"
 
-  # API Gateway OPTIONS Method (MOCK for CORS)
+  # API Gateway OPTIONS Method (Simple CORS)
   ApiOptionsMethod:
     Type: AWS::ApiGateway::Method
     Properties:
@@ -194,17 +96,17 @@ Resources:
         IntegrationResponses:
           - StatusCode: 200
             ResponseParameters:
-              method.response.header.Access-Control-Allow-Headers: "'Content-Type'"
-              method.response.header.Access-Control-Allow-Methods: "'OPTIONS,POST'"
-              method.response.header.Access-Control-Allow-Origin: "'https://hindsight.com.au'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Methods: "'GET,POST,OPTIONS'"
             ResponseTemplates:
               application/json: ""
       MethodResponses:
         - StatusCode: 200
           ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: true
             method.response.header.Access-Control-Allow-Headers: true
             method.response.header.Access-Control-Allow-Methods: true
-            method.response.header.Access-Control-Allow-Origin: true
           ResponseModels:
             application/json: "Empty"
 
@@ -217,8 +119,8 @@ Resources:
     Properties:
       RestApiId: !Ref ApiGateway
       StageName: prod
-      Description: "Deployment with CORS support for production domain"
-      DeploymentId: "cors-deployment-2"
+      Description: "Deployment with simple CORS configuration"
+      DeploymentId: "cors-deployment-6"
 
   # Lambda Permission for API Gateway
   LambdaPermission:

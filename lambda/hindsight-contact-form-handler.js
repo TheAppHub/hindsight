@@ -5,12 +5,22 @@ const ses = new AWS.SES({
 	region: process.env.AWS_REGION || "ap-southeast-2",
 });
 
-const ALLOWED_ORIGINS = ["http://localhost:4000", "https://hindsight.com.au"];
+const ALLOWED_ORIGINS = [
+	"http://localhost:4000",
+	"http://localhost:3000",
+	"http://localhost:8080",
+	"https://hindsight.com.au",
+	"https://www.hindsight.com.au",
+];
 
 const REQUIRED_FIELDS = ["name", "email", "subject", "message"];
 
 function getCorsHeaders(origin) {
-	const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : "";
+	// Check if the origin is in our allowed list
+	const allowedOrigin = ALLOWED_ORIGINS.includes(origin)
+		? origin
+		: ALLOWED_ORIGINS[0];
+
 	return {
 		"Access-Control-Allow-Origin": allowedOrigin,
 		"Access-Control-Allow-Headers": "Content-Type",
