@@ -217,8 +217,8 @@ Resources:
     Properties:
       RestApiId: !Ref ApiGateway
       StageName: prod
-      Description: "Deployment with CORS support"
-      DeploymentId: "cors-deployment-1"
+      Description: "Deployment with CORS support for production domain"
+      DeploymentId: "cors-deployment-2"
 
   # Lambda Permission for API Gateway
   LambdaPermission:
