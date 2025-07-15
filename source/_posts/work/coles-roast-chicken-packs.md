@@ -1,6 +1,6 @@
 ---
 layout: work
-title: Coles Roast Chicken Packs
+title: Coles Roast Chicken Pitch
 date: 2025-05-01T01:37:06.031Z
 subtitle: Homestyle Season Roast Chicken Package Design
 description: Homestyle Season Roast Chicken Package Design
