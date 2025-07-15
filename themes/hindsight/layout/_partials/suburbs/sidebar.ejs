@@ -1,0 +1,58 @@
+<aside class="hidden md:block" aria-labelledby="sidebar-label">
+	<div class="md:w-[250px] lg:w-[300px] xl:w-[336px] sticky top-6">
+		<h3 id="sidebar-label" class="sr-only">Sidebar</h3>
+
+		<!-- Contact Info -->
+		<% if(contact === true) {%>
+		<div class="mb-8">
+			<h4 class="mb-2 text-sm font-bold text-gray-900 uppercase">
+				Hindsight Creative
+			</h4>
+			<p class="mb-4 text-sm text-gray-500">
+				Let's work together to create something great. We're here to help you
+				achieve your goals.
+			</p>
+			<a
+				href="/contact"
+				class="block text-white bg-primary-900 hover:bg-primary-700 font-medium text-sm px-5 py-2.5 mr-2 mb-2 text-center w-full"
+			>
+				Get in touch
+			</a>
+		</div>
+		<% } %>
+
+		<!-- Services -->
+		<div class="mb-12">
+			<h4 class="mb-4 text-sm font-bold text-gray-900 uppercase">
+				Our Services
+			</h4>
+			<% site.pages.filter(page => page.layout ===
+			'service').forEach(function(service, index) { %>
+			<div class="mb-6 flex items-start">
+				<div class="flex-shrink-0 mr-4">
+					<img
+						src="<%= service.image %>"
+						alt="<%= service.title %>"
+						class="w-28 h-28 object-cover"
+						loading="lazy"
+					/>
+				</div>
+				<div class="flex-1">
+					<h5 class="mb-2 text-lg font-bold leading-tight text-gray-900">
+						<%= service.title %>
+					</h5>
+					<p class="mb-2 text-sm text-gray-500">
+						<%= service.title %> services in <%= page.suburb %>
+					</p>
+					<a
+						href="/services/<%= service.title.toLowerCase().replace(/\s+/g, '-') %>"
+						class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline"
+					>
+						Learn more
+					</a>
+				</div>
+			</div>
+			<% }); %>
+		</div>
+	</div>
+</aside>
