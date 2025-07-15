@@ -43,6 +43,18 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 			latitude: page.latitude || -37.8846,
 			longitude: page.longitude || 145.2954,
 		},
+		// Enhanced local business properties
+		hasMap: `${config.url}/contact/`,
+		paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
+		currenciesAccepted: "AUD",
+		// Service area for suburb pages
+		...(isSuburbPage && {
+			serviceArea: {
+				"@type": "Place",
+				name: `${page.suburb} and surrounding suburbs`,
+				geoRadius: "25km",
+			},
+		}),
 		openingHoursSpecification: [
 			{
 				"@type": "OpeningHoursSpecification",
@@ -219,6 +231,41 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 		}
 	}
 
+	// FAQPage schema for suburb pages
+	let faqPage = null;
+	if (isSuburbPage) {
+		faqPage = {
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			mainEntity: [
+				{
+					"@type": "Question",
+					name: `What creative services do you offer in ${page.suburb}?`,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: `We offer comprehensive creative services in ${page.suburb} including branding and design, digital marketing, social media strategy, packaging and print design, video production, and website design. Our local team understands the ${page.suburb} market and can help your business stand out.`,
+					},
+				},
+				{
+					"@type": "Question",
+					name: `How can I get started with your creative services in ${page.suburb}?`,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: `Getting started is easy! Simply contact us for a free consultation where we'll discuss your business goals, target audience, and creative needs. We'll provide a tailored proposal for your ${page.suburb} business.`,
+					},
+				},
+				{
+					"@type": "Question",
+					name: `Do you work with businesses outside of ${page.suburb}?`,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: `Yes! While we specialize in serving ${page.suburb} and surrounding suburbs, we work with businesses across Melbourne's eastern suburbs and beyond. Our local knowledge combined with broader reach helps us deliver exceptional results.`,
+					},
+				},
+			],
+		};
+	}
+
 	// BreadcrumbList schema
 	const breadcrumbs = {
 		"@context": "https://schema.org",
@@ -277,6 +324,9 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 	const schemas = [localBusiness, organization, website, breadcrumbs];
 	if (article) {
 		schemas.push(article);
+	}
+	if (faqPage) {
+		schemas.push(faqPage);
 	}
 
 	// Add FAQ schema for FAQ pages

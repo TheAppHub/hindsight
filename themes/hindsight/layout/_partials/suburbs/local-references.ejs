@@ -1,0 +1,62 @@
+<!-- Local References for Suburb Pages -->
+<section class="bg-gray-50 py-12">
+	<div class="px-4 mx-auto max-w-screen-xl">
+		<div class="grid gap-8 lg:grid-cols-2">
+			<!-- Local Landmarks & References -->
+			<div>
+				<h3 class="text-xl font-bold text-gray-900 mb-4">
+					Local Knowledge for <%= suburb %> Businesses
+				</h3>
+				<div class="prose prose-gray max-w-none">
+					<p class="text-gray-600 mb-4">
+						As a creative agency serving <%= suburb %> and surrounding areas, we
+						understand the local business landscape. Our team works with
+						businesses across the eastern suburbs, from small local shops to
+						major manufacturers.
+					</p>
+
+					<h4 class="text-lg font-semibold text-gray-900 mb-2">
+						Why Choose Local Expertise?
+					</h4>
+					<ul class="text-gray-600 space-y-2">
+						<li>✓ Understanding of <%= suburb %> market dynamics</li>
+						<li>✓ Local business network and connections</li>
+						<li>✓ Knowledge of eastern suburbs business culture</li>
+						<li>✓ Convenient location for face-to-face meetings</li>
+						<li>✓ Support for local business community</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Nearby Suburbs -->
+			<div>
+				<h3 class="text-xl font-bold text-gray-900 mb-4">
+					Also Serving Nearby Areas
+				</h3>
+				<div class="grid grid-cols-2 gap-4">
+					<% const nearbySuburbs = getNearbySuburbs(suburb);
+					nearbySuburbs.forEach(function(nearbySuburb) { %>
+					<a
+						href="/creative-agency/<%= nearbySuburb.toLowerCase() %>/"
+						class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
+					>
+						<h4 class="font-semibold text-gray-900"><%= nearbySuburb %></h4>
+						<p class="text-sm text-gray-600">Creative services</p>
+					</a>
+					<% }); %>
+				</div>
+
+				<div class="mt-6 p-4 bg-primary-50 rounded-lg">
+					<h4 class="font-semibold text-primary-900 mb-2">
+						Melbourne Eastern Suburbs
+					</h4>
+					<p class="text-sm text-primary-800">
+						We serve the entire eastern suburbs region, from <%= suburb %> to
+						surrounding areas including Boronia, Wantirna, Ferntree Gully, and
+						beyond.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

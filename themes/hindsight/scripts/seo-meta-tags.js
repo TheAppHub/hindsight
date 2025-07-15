@@ -133,7 +133,19 @@ hexo.extend.helper.register("seoKeywords", function () {
 	} else if (page.layout === "service") {
 		pageKeywords = ["Service", "Creative Services"];
 	} else if (page.layout === "suburb") {
-		pageKeywords = [page.suburb, "Local Design", "Local Branding"];
+		pageKeywords = [
+			page.suburb,
+			`${page.suburb} Design Studio`,
+			`${page.suburb} Creative Agency`,
+			`${page.suburb} Branding`,
+			`${page.suburb} Graphic Design`,
+			`${page.suburb} Web Design`,
+			`${page.suburb} Digital Marketing`,
+			"Local Design",
+			"Local Branding",
+			"Melbourne Eastern Suburbs",
+			"VIC",
+		];
 	}
 
 	// Add category keywords
@@ -187,4 +199,15 @@ hexo.extend.helper.register("seoModifiedTime", function () {
 	}
 
 	return null;
+});
+
+// Helper for nearby suburbs (for internal linking)
+hexo.extend.helper.register("getNearbySuburbs", function (currentSuburb) {
+	const allSuburbs = this.site.pages
+		.filter((p) => p.layout === "suburb")
+		.map((p) => p.suburb)
+		.filter((suburb) => suburb !== currentSuburb);
+
+	// Return up to 5 nearby suburbs
+	return allSuburbs.slice(0, 5);
 });
