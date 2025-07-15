@@ -1,5 +1,7 @@
 hexo.extend.helper.register("jsonld", function (page, site, config) {
 	const isSuburbPage = page.layout === "suburb";
+	const isWorkPage = page.layout === "work";
+	const isServicePage = page.layout === "service";
 
 	const areaServed = isSuburbPage
 		? {
@@ -15,16 +17,19 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 					})),
 		  ];
 
-	const json = {
+	// Base LocalBusiness schema
+	const localBusiness = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		name: "Hindsight Creative - Melbourne Design Studio",
 		telephone: "03 9758 0207",
-		image: `${config.url}/img/logos/logo.png`,
-		url: page.path ? `${config.url}/${page.path}` : config.url,
+		image: `${config.url}/logos/logo.svg`,
+		url: page.path
+			? `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`
+			: config.url,
 		address: {
 			"@type": "PostalAddress",
-			addressLocality: "Ferntree Gully",
+			addressLocality: isSuburbPage ? page.suburb : "Ferntree Gully",
 			addressRegion: "VIC",
 			postalCode: "3156",
 			addressCountry: "AU",
@@ -48,17 +53,16 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 		],
 		priceRange: "$$",
 		description:
-			"Stratigic and creative design studio for inspired brands in Melbourne's Eastern suburbs with over 25 years experience in branding, graphic design, web design, and photography.",
+			"Strategic and creative design studio for inspired brands in Melbourne's Eastern suburbs with over 25 years experience in branding, graphic design, web design, and photography.",
 		sameAs: [
 			"https://www.facebook.com/HindsightDesign",
 			"https://www.instagram.com/hindsight_creative/",
 			"https://www.linkedin.com/company/hindsightdesign",
 		],
 		aggregateRating: {
-			// Optional: If you have reviews marked up
 			"@type": "AggregateRating",
-			ratingValue: "5", // Your average rating
-			reviewCount: "2", // Total number of reviews
+			ratingValue: "5",
+			reviewCount: "2",
 			bestRating: "5",
 			worstRating: "1",
 		},
@@ -120,45 +124,195 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 		],
 	};
 
-	return JSON.stringify(json, null, 2);
+	// Organization schema
+	const organization = {
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		name: "Hindsight Creative",
+		url: config.url,
+		logo: `${config.url}/logos/logo.svg`,
+		description: "Creative design studio in Melbourne's eastern suburbs",
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: config.address.street,
+			addressLocality: config.address.suburb,
+			addressRegion: config.address.state,
+			postalCode: config.address.postcode,
+			addressCountry: config.address.country,
+		},
+		contactPoint: {
+			"@type": "ContactPoint",
+			telephone: config.phone,
+			contactType: "customer service",
+			areaServed: "AU",
+			availableLanguage: "English",
+		},
+		sameAs: [
+			config.social.facebook,
+			config.social.instagram,
+			config.social.linkedin,
+		],
+	};
+
+	// WebSite schema
+	const website = {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		name: config.title,
+		url: config.url,
+		description: config.description,
+		publisher: {
+			"@type": "Organization",
+			name: "Hindsight Creative",
+			logo: `${config.url}/logos/logo.svg`,
+		},
+		potentialAction: {
+			"@type": "SearchAction",
+			target: `${config.url}/search?q={search_term_string}`,
+			"query-input": "required name=search_term_string",
+		},
+	};
+
+	// Article schema for work posts
+	let article = null;
+	if (isWorkPage && page.date) {
+		// Get image URL for work posts
+		let workImageUrl = null;
+		if (page.cover) {
+			workImageUrl =
+				config.url.replace(/\/$/, "") +
+				this.url_for(page.asset_dir + page.cover);
+		}
+
+		article = {
+			"@context": "https://schema.org",
+			"@type": "Article",
+			headline: page.title,
+			description: page.description,
+			image: workImageUrl || `${config.url}/logos/logo.png`,
+			author: {
+				"@type": "Organization",
+				name: config.author,
+			},
+			publisher: {
+				"@type": "Organization",
+				name: config.title,
+				logo: {
+					"@type": "ImageObject",
+					url: `${config.url}/logos/logo.svg`,
+				},
+			},
+			datePublished: page.date.toISOString(),
+			dateModified: page.updated
+				? page.updated.toISOString()
+				: page.date.toISOString(),
+			mainEntityOfPage: {
+				"@type": "WebPage",
+				"@id": `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`,
+			},
+		};
+
+		if (page.categories && page.categories.length > 0) {
+			article.articleSection = page.categories
+				.map((cat) => cat.name)
+				.join(", ");
+		}
+	}
+
+	// BreadcrumbList schema
+	const breadcrumbs = {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Home",
+				item: config.url,
+			},
+		],
+	};
+
+	// Add breadcrumbs based on page type
+	if (isWorkPage) {
+		breadcrumbs.itemListElement.push(
+			{
+				"@type": "ListItem",
+				position: 2,
+				name: "Portfolio",
+				item: `${config.url}/portfolio/`,
+			},
+			{
+				"@type": "ListItem",
+				position: 3,
+				name: page.title,
+				item: `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`,
+			},
+		);
+	} else if (isServicePage) {
+		breadcrumbs.itemListElement.push(
+			{
+				"@type": "ListItem",
+				position: 2,
+				name: "Services",
+				item: `${config.url}/services/`,
+			},
+			{
+				"@type": "ListItem",
+				position: 3,
+				name: page.title,
+				item: `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`,
+			},
+		);
+	} else if (isSuburbPage) {
+		breadcrumbs.itemListElement.push({
+			"@type": "ListItem",
+			position: 2,
+			name: page.suburb,
+			item: `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`,
+		});
+	}
+
+	// Combine all schemas
+	const schemas = [localBusiness, organization, website, breadcrumbs];
+	if (article) {
+		schemas.push(article);
+	}
+
+	// Add FAQ schema for FAQ pages
+	if (page.layout === "faq") {
+		const faqSchema = {
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			mainEntity: site.data.faq.map((faq) => ({
+				"@type": "Question",
+				name: faq.question,
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: faq.answer
+						.replace(/<[^>]*>/g, "")
+						.replace(/\s+/g, " ")
+						.trim(),
+				},
+			})),
+		};
+		schemas.push(faqSchema);
+	}
+
+	return JSON.stringify(schemas, null, 2);
 });
 
 hexo.extend.helper.register("faqJsonld", function (page) {
-	const sourceContent = typeof page._content === "string" ? page._content : "";
+	// Get FAQ data from the site data
+	const allFaqs = this.site.data.faq || [];
 
-	// --- FAQ Parsing ---
-	const faqs = [];
-	const lines = sourceContent.split("\n");
-	let current = null;
-
-	lines.forEach((line) => {
-		const trimmedLine = line.trim();
-		if (trimmedLine.startsWith("### ")) {
-			if (current) faqs.push(current);
-			current = {
-				question: trimmedLine.replace("### ", "").trim(),
-				answer: "",
-			};
-		} else if (current && trimmedLine.length > 0) {
-			current.answer += line + "\n";
-		} else if (
-			current &&
-			line.length === 0 &&
-			current.answer.length > 0 &&
-			!current.answer.endsWith("\n\n")
-		) {
-			current.answer += "\n";
-		}
-	});
-	if (current) faqs.push(current);
-
-	if (!faqs.length) return "";
+	if (!allFaqs.length) return "";
 
 	// --- Build FAQPage JSON-LD ---
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "FAQPage",
-		mainEntity: faqs.map((faq) => ({
+		mainEntity: allFaqs.map((faq) => ({
 			"@type": "Question",
 			name: faq.question,
 			acceptedAnswer: {

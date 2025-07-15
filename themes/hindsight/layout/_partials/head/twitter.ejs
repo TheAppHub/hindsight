@@ -1,0 +1,29 @@
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@hindsight_creative" />
+<meta name="twitter:creator" content="@hindsight_creative" />
+<meta name="twitter:title" content="<%= seoTwitterTitle() %>" />
+<meta name="twitter:description" content="<%= seoTwitterDescription() %>" />
+
+<% if (imageUrl) { %>
+<meta name="twitter:image" content="<%= imageUrl %>" />
+<meta
+	name="twitter:image:alt"
+	content="<%= page.title %> - <%= config.title %>"
+/>
+<% } else { %>
+<meta name="twitter:image" content="<%= config.url %>/logos/logo.png" />
+<meta
+	name="twitter:image:alt"
+	content="<%= config.title %> - Creative Design Studio"
+/>
+<% } %>
+
+<!-- Additional Twitter tags for business -->
+<meta name="twitter:label1" content="Address" />
+<meta
+	name="twitter:data1"
+	content="<%= config.address.street %>, <%= config.address.suburb %> <%= config.address.state %> <%= config.address.postcode %>"
+/>
+<meta name="twitter:label2" content="Phone" />
+<meta name="twitter:data2" content="<%= config.phone %>" />

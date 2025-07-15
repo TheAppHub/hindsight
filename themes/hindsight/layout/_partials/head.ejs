@@ -1,18 +1,43 @@
-<% const cleanedPath = url_for(page.path).replace(/index\.html$/,
-'').replace(/\.html$/, ''); let canonicalUrl = config.url.replace(/\/$/, '') +
-cleanedPath; %> <% let imageUrl = null; %> <% if (page.cover) { imageUrl =
-config.url.replace(/\/$/, '') + url_for(page.asset_dir + page.cover); } %>
+<!-- prettier-ignore -->
+<%
+// Generate canonical URL properly
+let canonicalUrl;
+if (page.path) {
+  // For pages with paths, construct the full URL
+  const cleanPath = url_for(page.path).replace(/index\.html$/, '').replace(/\.html$/, '');
+  canonicalUrl = config.url.replace(/\/$/, '') + cleanPath;
+} else {
+  // For the home page
+  canonicalUrl = config.url.replace(/\/$/, '');
+}
+let imageUrl = null;
+if (page.cover) {
+  imageUrl = config.url.replace(/\/$/, '') + url_for(page.asset_dir + page.cover);
+}
+%>
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+	/>
+	<meta name="format-detection" content="telephone=no" />
 
 	<title><%= seoTitle() %></title>
 
 	<meta name="description" content="<%= seoDescription() %>" />
 	<meta name="author" content="<%= page.author || config.author %>" />
+	<meta name="keywords" content="<%= seoKeywords() %>" />
+	<meta
+		name="robots"
+		content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+	/>
+	<meta name="googlebot" content="index, follow" />
 
+	<!-- Favicon -->
 	<link rel="icon" href="/logos/favicon.png" type="image/png" />
+	<link rel="apple-touch-icon" href="/logos/favicon.png" />
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />

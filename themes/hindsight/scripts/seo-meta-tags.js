@@ -106,3 +106,85 @@ hexo.extend.helper.register("seoTwitterTitle", function () {
 hexo.extend.helper.register("seoTwitterDescription", function () {
 	return this.seoDescription();
 });
+
+// New helper functions for enhanced SEO
+hexo.extend.helper.register("seoKeywords", function () {
+	const page = this.page;
+	const config = this.config;
+
+	const baseKeywords = [
+		"Hindsight Creative",
+		"Creative Design Studio",
+		"Branding and Design",
+		"Digital Marketing",
+		"Social Media Strategy",
+		"Packaging and Print",
+		"Website Design",
+		"Web Design Melbourne",
+		"Graphic Design Melbourne",
+		"Branding Melbourne",
+		"Melbourne Design Studio",
+	];
+
+	// Add page-specific keywords
+	let pageKeywords = [];
+	if (page.layout === "work") {
+		pageKeywords = ["Portfolio", "Case Study", "Creative Work"];
+	} else if (page.layout === "service") {
+		pageKeywords = ["Service", "Creative Services"];
+	} else if (page.layout === "suburb") {
+		pageKeywords = [page.suburb, "Local Design", "Local Branding"];
+	}
+
+	// Add category keywords
+	if (page.categories && page.categories.length > 0) {
+		page.categories.forEach((category) => {
+			pageKeywords.push(category.name);
+		});
+	}
+
+	// Add tag keywords
+	if (page.tags && page.tags.length > 0) {
+		page.tags.forEach((tag) => {
+			pageKeywords.push(tag.name);
+		});
+	}
+
+	const allKeywords = [...baseKeywords, ...pageKeywords];
+	return allKeywords.join(", ");
+});
+
+hexo.extend.helper.register("seoImageUrl", function () {
+	const page = this.page;
+	const config = this.config;
+
+	if (page.cover) {
+		return (
+			config.url.replace(/\/$/, "") + this.url_for(page.asset_dir + page.cover)
+		);
+	}
+
+	return `${config.url}/logos/logo.png`;
+});
+
+hexo.extend.helper.register("seoPublishedTime", function () {
+	const page = this.page;
+
+	if (page.date) {
+		return page.date.toISOString();
+	}
+
+	return null;
+});
+
+hexo.extend.helper.register("seoModifiedTime", function () {
+	const page = this.page;
+
+	if (page.updated) {
+		return page.updated.toISOString();
+	} else if (page.date) {
+		return page.date.toISOString();
+	}
+
+	return null;
+});
