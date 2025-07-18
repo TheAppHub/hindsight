@@ -9,6 +9,7 @@ brief: Packaging Design
 deliverables: Packaging design across four flavours, including custom 3D mockups
 image: legacy1841-beef-jerky1.jpg
 permalink: /portfolio/legacy-1841/
+carouselImage: legacy-beef-jerky-packaging.jpg
 categories:
   - Packaging & Print
 
@@ -22,4 +23,5 @@ Legacy 1841 came to us with a clear vision - to honour a family legacy that date
 Our design approach balanced rugged authenticity with refined restraint. Each element was considered to reflect the product’s origins - from farm to flavour, with a focus on hand-selected cattle, full end-to-end traceability, and a deep-rooted family story.
 
 ## Breaking through a crowded market.
+
 In a saturated jerky market, storytelling and strategy became our biggest assets. By leaning into the product’s purity and origin, we created packaging that cut through the clutter of the snack aisle, and established Legacy 1841 as a brand that dishes out tradition, transparency and taste in equal measure.
