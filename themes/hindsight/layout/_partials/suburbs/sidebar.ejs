@@ -45,7 +45,7 @@
 						<%= service.title %> services in <%= page.suburb %>
 					</p>
 					<a
-						href="/services/<%= service.title.toLowerCase().replace(/\s+/g, '-') %>"
+						href="/services/<%= service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and') %>"
 						class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline"
 					>
 						Learn more
