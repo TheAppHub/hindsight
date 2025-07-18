@@ -37,7 +37,7 @@
 					<% const nearbySuburbs = getNearbySuburbs(suburb);
 					nearbySuburbs.forEach(function(nearbySuburb) { %>
 					<a
-						href="/creative-agency/<%= nearbySuburb.toLowerCase() %>/"
+						href="/creative-agency/<%= nearbySuburb.toLowerCase().replace(/\s+/g, '-') %>/"
 						class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
 					>
 						<h4 class="font-semibold text-gray-900"><%= nearbySuburb %></h4>
