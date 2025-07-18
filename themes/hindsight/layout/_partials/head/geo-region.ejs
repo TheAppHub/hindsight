@@ -8,3 +8,10 @@
 	name="ICBM"
 	content="<%= page.latitude || config.coordinates.lat || '-37.8846' %>, <%= page.longitude || config.coordinates.lng || '145.2954' %>"
 />
+<!-- Additional local SEO meta tags -->
+<meta name="geo.country" content="AU" />
+<meta name="geo.state" content="VIC" />
+<% if (page.suburb) { %>
+<meta name="geo.city" content="<%= page.suburb %>" />
+<meta name="geo.postal-code" content="<%= config.address.postcode %>" />
+<% } %>

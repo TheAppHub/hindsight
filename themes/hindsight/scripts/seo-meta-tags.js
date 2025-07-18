@@ -140,10 +140,19 @@ hexo.extend.helper.register("seoKeywords", function () {
 			`${page.suburb} Graphic Design`,
 			`${page.suburb} Web Design`,
 			`${page.suburb} Digital Marketing`,
+			`${page.suburb} Marketing Agency`,
+			`${page.suburb} Brand Design`,
+			`${page.suburb} Logo Design`,
+			`${page.suburb} Social Media`,
+			`${page.suburb} Website Design`,
+			`${page.suburb} Creative Services`,
 			"Local Design",
 			"Local Branding",
+			"Local Marketing",
 			"Melbourne Eastern Suburbs",
+			"Eastern Suburbs Melbourne",
 			"VIC",
+			"Victoria",
 		];
 	}
 

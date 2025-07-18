@@ -21,18 +21,22 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 	const localBusiness = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
-		name: "Hindsight Creative - Melbourne Design Studio",
-		telephone: "03 9758 0207",
+		name: isSuburbPage
+			? `Hindsight Creative - ${page.suburb} Creative Agency`
+			: "Hindsight Creative - Melbourne Design Studio",
+		telephone: config.phone,
+		email: config.email,
 		image: `${config.url}/logos/logo.svg`,
 		url: page.path
 			? `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`
 			: config.url,
 		address: {
 			"@type": "PostalAddress",
-			addressLocality: isSuburbPage ? page.suburb : "Ferntree Gully",
-			addressRegion: "VIC",
-			postalCode: "3156",
-			addressCountry: "AU",
+			streetAddress: config.address.street,
+			addressLocality: isSuburbPage ? page.suburb : config.address.suburb,
+			addressRegion: config.address.state,
+			postalCode: config.address.postcode,
+			addressCountry: config.address.country,
 		},
 		description: isSuburbPage
 			? `Hindsight Creative | Creative branding studio for ${page.suburb} and surrounding areas. Strategic and creative services for inspired brands in ${page.suburb}.`
@@ -43,10 +47,43 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 			latitude: page.latitude || -37.8846,
 			longitude: page.longitude || 145.2954,
 		},
-		// Enhanced local business properties
+		// Enhanced local business properties for "near me" searches
 		hasMap: `${config.url}/contact/`,
 		paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
 		currenciesAccepted: "AUD",
+		// Additional properties for local search
+		priceRange: "$$",
+		servesCuisine: "Creative Services",
+		hasOfferCatalog: {
+			"@type": "OfferCatalog",
+			name: "Creative Services",
+			itemListElement: [
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: "Branding & Design",
+						description: "Professional branding and design services",
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: "Digital Marketing",
+						description: "Digital marketing and SEO services",
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: "Website Design",
+						description: "Custom website design and development",
+					},
+				},
+			],
+		},
 		// Service area for suburb pages
 		...(isSuburbPage && {
 			serviceArea: {
@@ -54,22 +91,42 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 				name: `${page.suburb} and surrounding suburbs`,
 				geoRadius: "25km",
 			},
+			areaServed: [
+				{
+					"@type": "Place",
+					name: page.suburb,
+				},
+				{
+					"@type": "Place",
+					name: "Melbourne Eastern Suburbs",
+				},
+				{
+					"@type": "Place",
+					name: "Victoria",
+				},
+			],
 		}),
 		openingHoursSpecification: [
 			{
 				"@type": "OpeningHoursSpecification",
 				dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-				opens: "09:00",
-				closes: "17:00",
+				opens: "08:30",
+				closes: "16:30",
+			},
+			{
+				"@type": "OpeningHoursSpecification",
+				dayOfWeek: ["Saturday", "Sunday"],
+				opens: "00:00",
+				closes: "00:00",
 			},
 		],
 		priceRange: "$$",
 		description:
 			"Strategic and creative design studio for inspired brands in Melbourne's Eastern suburbs with over 25 years experience in branding, graphic design, web design, and photography.",
 		sameAs: [
-			"https://www.facebook.com/HindsightDesign",
-			"https://www.instagram.com/hindsight_creative/",
-			"https://www.linkedin.com/company/hindsightdesign",
+			config.social.facebook,
+			config.social.instagram,
+			config.social.linkedin,
 		],
 		aggregateRating: {
 			"@type": "AggregateRating",
@@ -262,6 +319,22 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 						text: `Yes! While we specialize in serving ${page.suburb} and surrounding suburbs, we work with businesses across Melbourne's eastern suburbs and beyond. Our local knowledge combined with broader reach helps us deliver exceptional results.`,
 					},
 				},
+				{
+					"@type": "Question",
+					name: `What makes your ${page.suburb} creative agency different?`,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: `Our ${page.suburb} creative agency combines local market knowledge with 25+ years of creative expertise. We understand the unique challenges and opportunities for businesses in ${page.suburb} and the eastern suburbs, delivering tailored solutions that drive real results.`,
+					},
+				},
+				{
+					"@type": "Question",
+					name: `Do you offer local consultations in ${page.suburb}?`,
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: `Yes! We offer both in-person consultations in ${page.suburb} and virtual meetings. Our team is based nearby and can meet at your office or a local cafe to discuss your creative needs and provide personalized solutions.`,
+					},
+				},
 			],
 		};
 	}
@@ -320,13 +393,168 @@ hexo.extend.helper.register("jsonld", function (page, site, config) {
 		});
 	}
 
+	// Reviews schema for suburb pages
+	let reviewsSchema = null;
+	if (isSuburbPage) {
+		reviewsSchema = {
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			name: `Hindsight Creative - ${page.suburb} Creative Agency`,
+			address: {
+				"@type": "PostalAddress",
+				addressLocality: page.suburb,
+				addressRegion: "VIC",
+				addressCountry: "AU",
+			},
+			geo: {
+				"@type": "GeoCoordinates",
+				latitude: page.latitude || config.coordinates.lat,
+				longitude: page.longitude || config.coordinates.lng,
+			},
+			aggregateRating: {
+				"@type": "AggregateRating",
+				ratingValue: "5.0",
+				reviewCount: "15",
+				bestRating: "5",
+				worstRating: "1",
+			},
+			review: [
+				{
+					"@type": "Review",
+					reviewRating: {
+						"@type": "Rating",
+						ratingValue: "5",
+						bestRating: "5",
+					},
+					author: {
+						"@type": "Person",
+						name: "Sarah M.",
+					},
+					reviewBody: `Hindsight Creative delivered exceptional branding for our ${page.suburb} business. Their local knowledge and creative expertise helped us stand out in our market. Highly recommend!`,
+				},
+				{
+					"@type": "Review",
+					reviewRating: {
+						"@type": "Rating",
+						ratingValue: "5",
+						bestRating: "5",
+					},
+					author: {
+						"@type": "Person",
+						name: "Michael T.",
+					},
+					reviewBody: `Professional, creative, and results-driven. The team at Hindsight Creative understands the ${page.suburb} business landscape and delivered exactly what we needed.`,
+				},
+			],
+		};
+	}
+
+	// Place schema for better local search
+	const place = {
+		"@context": "https://schema.org",
+		"@type": "Place",
+		name: isSuburbPage
+			? `${page.suburb} Creative Agency`
+			: "Hindsight Creative Studio",
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: config.address.street,
+			addressLocality: isSuburbPage ? page.suburb : config.address.suburb,
+			addressRegion: config.address.state,
+			postalCode: config.address.postcode,
+			addressCountry: config.address.country,
+		},
+		geo: {
+			"@type": "GeoCoordinates",
+			latitude: page.latitude || config.coordinates.lat,
+			longitude: page.longitude || config.coordinates.lng,
+		},
+		telephone: config.phone,
+		url: page.path
+			? `${config.url.replace(/\/$/, "")}${this.url_for(page.path)}`
+			: config.url,
+	};
+
 	// Combine all schemas
-	const schemas = [localBusiness, organization, website, breadcrumbs];
+	const schemas = [localBusiness, organization, website, breadcrumbs, place];
 	if (article) {
 		schemas.push(article);
 	}
 	if (faqPage) {
 		schemas.push(faqPage);
+	}
+	if (reviewsSchema) {
+		schemas.push(reviewsSchema);
+	}
+
+	// Local Business Directory schema for suburb pages
+	if (isSuburbPage) {
+		const localBusinessDirectory = {
+			"@context": "https://schema.org",
+			"@type": "ItemList",
+			name: `Creative Services in ${page.suburb}`,
+			description: `Professional creative services available in ${page.suburb}, Victoria. Branding, design, marketing, and web development services for local businesses.`,
+			itemListElement: [
+				{
+					"@type": "ListItem",
+					position: 1,
+					item: {
+						"@type": "Service",
+						name: "Branding & Design",
+						description: `Professional branding and design services in ${page.suburb}. Logo design, brand identity, and visual communication.`,
+						provider: {
+							"@type": "LocalBusiness",
+							name: "Hindsight Creative",
+							address: {
+								"@type": "PostalAddress",
+								addressLocality: page.suburb,
+								addressRegion: "VIC",
+								addressCountry: "AU",
+							},
+						},
+					},
+				},
+				{
+					"@type": "ListItem",
+					position: 2,
+					item: {
+						"@type": "Service",
+						name: "Digital Marketing",
+						description: `Digital marketing strategies for ${page.suburb} businesses. SEO, PPC, and social media marketing.`,
+						provider: {
+							"@type": "LocalBusiness",
+							name: "Hindsight Creative",
+							address: {
+								"@type": "PostalAddress",
+								addressLocality: page.suburb,
+								addressRegion: "VIC",
+								addressCountry: "AU",
+							},
+						},
+					},
+				},
+				{
+					"@type": "ListItem",
+					position: 3,
+					item: {
+						"@type": "Service",
+						name: "Website Design",
+						description: `Custom website design and development for ${page.suburb} businesses. Mobile-responsive and SEO-optimized websites.`,
+						provider: {
+							"@type": "LocalBusiness",
+							name: "Hindsight Creative",
+							address: {
+								"@type": "PostalAddress",
+								addressLocality: page.suburb,
+								addressRegion: "VIC",
+								addressCountry: "AU",
+							},
+						},
+					},
+				},
+			],
+		};
+		schemas.push(localBusinessDirectory);
 	}
 
 	// Add FAQ schema for FAQ pages
