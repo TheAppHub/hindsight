@@ -9,7 +9,7 @@ hexo.extend.helper.register("seoTitle", function () {
 	const suffixes = [
 		"Hindsight Creative",
 		"Creative Branding Studio",
-		"Melbourne",
+		"Creative Agency",
 	];
 
 	// Start with the page title
@@ -76,7 +76,6 @@ hexo.extend.helper.register("seoDescription", function () {
 		"Packaging and Print",
 		"Website & Web Design",
 		"Production & Video",
-		"Melbourne",
 	];
 
 	for (let keyword of keywords) {
