@@ -9,10 +9,13 @@
 			<!-- prettier-ignore -->
 			<% 
 			// category is passed in as a string
+			// Normalize the category name to handle ampersand vs "and" differences
+			var normalizedCategory = category.replace(/&/g, 'and').replace(/\s+/g, ' ');
 			var filteredPosts = site.posts.filter(function(post) {
 				var isWorkPost = post.layout === 'work';
 				var hasCategory = post.categories.some(function(cat) {
-					return cat.name === category;
+					var normalizedCatName = cat.name.replace(/&/g, 'and').replace(/\s+/g, ' ');
+					return normalizedCatName === normalizedCategory;
 				});
 				return isWorkPost && hasCategory;
 			});
