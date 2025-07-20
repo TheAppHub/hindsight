@@ -33,32 +33,32 @@ We work across industries, from professional services to education, tourism, tra
 ### Branding & Visual Identity
 We build brands that balance boldness with trust. Whether you're rebranding your trade business, launching a coastal lifestyle product, or refining your professional practice — we’ll create visuals that work across digital and physical. We develop complete brand systems including logo design, colour palettes, typography, brand voice and templates. Our goal is to ensure consistency across every customer touchpoint — from storefront to social media.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 We create websites that are fast, clear and built to convert — from booking-led service sites to ecommerce platforms. Our team combines beautiful UX design with the right keywords, so Geelong businesses get found and chosen. Whether you’re starting from scratch or rebuilding a legacy site, we handle everything from sitemap planning to responsive design, content upload, and SEO best practices.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Video Production & Content Creation
 Need to capture the personality of your brand, people or place? We plan, script and edit video content that showcases your products, explains your services and tells your story. From promotional reels to client testimonials, social media edits or long-form explainers, we produce versatile content that can be rolled out across multiple platforms and campaigns.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 We take the stress out of staying visible. From caption writing to content calendars and scheduling, we create posts that are on-brand, engaging and tailored for regional Victorian audiences. We can manage your social media month-to-month or provide you with the tools and templates to manage it in-house with confidence.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 Our team creates digital campaigns that reach the right people — and convert. From local SEO to Google Ads, Meta advertising and email automations, we help Geelong businesses get noticed and grow. We track performance through real data, optimise campaigns monthly, and ensure your digital spend is aligned with your business goals.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 Selling at a market? Launching in retail? Need signage or print flyers? We design packaging and print with real-world application — designed to be touched, seen and remembered. This includes product labels, shelf-ready packaging, take-home brochures, and custom signage solutions. Everything is created to align with your brand and deliver on form, function and impact.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## More Than Just Metro Thinking
 

@@ -27,32 +27,32 @@ From trade-based service businesses to light industrial suppliers and commercial
 ### Video Production & Content Creation
 Whether you're launching a new product or showcasing how your service works, video is a powerful tool. We produce professional video and content for Knoxfield businesses — including full-day shoots, editing, reels, stories, and campaign creative. We'll help you turn one day of filming into months of content.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Packaging & Print Design
 We specialise in high-impact packaging and print for trade, retail and wholesale. Whether you need product boxes, labels, instruction cards or branded flyers, we design with compliance, logistics and shelf presence in mind.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ### Website Design & Development
 We build smart websites that convert. From landing pages for paid campaigns to full custom builds, our sites are fast, responsive and built for search. We also offer ongoing support to help Knoxfield businesses grow their digital footprint.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Digital Marketing
 We drive targeted traffic with SEO, paid advertising, and integrated marketing strategies that suit B2B and trade environments. If you’re based in Knoxfield and need more leads, we’ll build a campaign that puts you in front of the right audience.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Branding & Visual Identity
 We help Knoxfield businesses build strong, professional brands. From logo design and colour palettes to full visual identity systems and brand guidelines — we make sure your brand reflects your capability and earns trust.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Social Media Strategy
 Social media doesn’t have to be time-consuming. We offer managed social strategies for Knoxfield businesses who want a consistent presence without the daily grind. From content creation to scheduling, we’ve got you covered.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ## Helping Knoxfield Businesses Do More
 

@@ -28,32 +28,32 @@ We work with businesses of all sizes and sectors — including trades, retail, h
 ### Branding & Visual Identity
 We build cohesive, confident brands that reflect who you are and what you stand for. From logo design and colour palettes to brand guidelines and asset creation, we help Rowville businesses develop strong brand foundations.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 A strong website builds credibility, supports growth and helps convert the right kind of leads. We create fast, mobile-optimised websites for Rowville businesses that are visually aligned with your brand and technically built to perform.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Social Media Strategy
 We help Rowville brands get more from social — from strategy and scheduling to content creation and community engagement. Whether you need an ongoing monthly package or just a one-off shoot, we’ll help you show up consistently and authentically.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 From SEO and email marketing to paid campaigns on Google and Meta, we tailor marketing strategies to your objectives. Whether you're targeting local clients or expanding online, we help Rowville businesses build visibility and drive results.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Video Production & Content Creation
 We script, shoot and edit content that connects. Need stories, reels, case studies or web content? We’ve got you. Our team helps Rowville businesses translate their work into clear, engaging and shareable content.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Packaging & Print Design
 From product labels and flyers to menus and point-of-sale materials, our print and packaging work balances creative impact with commercial clarity. Perfect for Rowville’s retail, hospitality and service-based industries.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## A Suburb on the Rise
 

@@ -27,32 +27,32 @@ From healthcare and wellness to home services, education, retail and professiona
 ### Branding & Visual Identity
 Build trust with branding that looks polished and feels like you. We develop logos, colour systems, fonts and brand guidelines that reflect your values and give your business confidence.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 Your website should make it easy for customers to find you, trust you and take the next step. We create fast, SEO-optimised websites for Wantirna businesses, from healthcare clinics to local trades.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Social Media Strategy
 Need help staying consistent online? We build content calendars, write captions, schedule posts and create content that reflects your brand across Instagram, Facebook and LinkedIn.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 Targeted, strategic and results-focused. From local SEO to paid Meta and Google campaigns, we help Wantirna businesses show up where it matters.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Video Production & Content Creation
 Video builds trust and helps people understand what you offer. From clinic walk-throughs to testimonials and social reels, we plan, shoot and edit branded video content tailored to your audience.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Packaging & Print Design
 We bring your brand to life through beautiful, functional design — from business cards and brochures to product packaging, POS displays and store signage.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## Wantirna’s Business Landscape
 

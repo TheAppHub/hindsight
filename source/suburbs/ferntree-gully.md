@@ -33,42 +33,42 @@ Your brand is more than just a logo — it's how people remember you. We create 
 
 We’ve helped Ferntree Gully businesses refresh their look to better reflect their values and connect with their community — from family-run services to local retailers.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Digital Marketing
 We combine data, strategy and creative to deliver digital marketing campaigns that actually perform. This includes paid media across Google and Meta, SEO strategies that bring in the right traffic, email marketing that builds trust, and campaign planning that aligns with your business goals. Whether you’re promoting a seasonal offer or a long-term service, we ensure every digital dollar works harder.
 
 For Ferntree Gully businesses looking to grow online visibility — from tradies and consultants to fitness studios and hospitality venues — our tailored digital strategies deliver.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Social Media Strategy
 We manage social media with strategy, not guesswork. Our team creates monthly content calendars, writes engaging captions, schedules posts and responds to your audience. We also run workshops for businesses who want to manage it in-house but need a framework to do it well. From Instagram reels for a retail store to LinkedIn content for a trades supplier, we tailor everything to your goals.
 
 Ferntree Gully businesses trust us to create scroll-stopping content that reflects their voice, highlights their services, and builds genuine community engagement.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Packaging & Print Design
 Product packaging is the handshake that gets your product off the shelf and into someone’s life. We design standout packaging and print collateral that blends creativity with compliance. This includes product labels, boxes, brochures, flyers, point-of-sale signage and more — all designed with a deep understanding of your target market and brand values.
 
 We’ve worked with producers and makers across Ferntree Gully to bring their physical brand touchpoints to life — from local café menus to boutique retail swing tags.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ### Video Production & Content Creation
 Content should do more than fill a feed — it should tell your story and drive results. We handle everything from concept and scripting to filming, editing and rollout. We offer full-day content shoots for social media, branded explainer videos, and product photography that helps you stand out online. From storytelling to strategy, our content is crafted to perform.
 
 With the Dandenongs on our doorstep, we’ve captured beautiful on-location shoots for Ferntree Gully brands wanting to blend authenticity with production value.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Website Design & Development
 Your website is often your first impression — make it count. We build beautiful, responsive websites that are easy to navigate, optimised for search engines, and designed to convert. Whether you need a custom WordPress build or a flexible Shopify storefront, we bring together UX design, visual polish and technical know-how to create a site that works hard for your business.
 
 For Ferntree Gully businesses ready to level up their online presence, we create digital experiences that reflect your brand and guide your visitors to take action.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ## Working With Businesses Across Ferntree Gully
 

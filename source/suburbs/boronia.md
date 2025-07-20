@@ -28,32 +28,32 @@ From high-street retailers to tradie service brands, Boronia is full of business
 ### Website Design & Development
 Your website is your digital shopfront — and it needs to do more than just look good. We design and build sites that are fast, mobile-friendly, and made to convert. Whether you’re running a local service business or launching a product online, we make sure your website reflects your brand and drives action.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Branding & Visual Identity
 We develop brand identities that make businesses memorable — from your logo and typography to signage, uniforms and socials. A strong brand builds trust, and trust drives growth. Whether you're a Boronia start-up or an established operator ready for a refresh, we’ll help you stand out for all the right reasons.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Social Media Strategy
 We create localised content that gets seen — from Instagram reels filmed in your workspace to educational content that builds trust in your field. With monthly content calendars, caption writing, hashtag strategy, and scheduling, we take the stress out of social.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Packaging & Print Design
 From label design and brochures to packaging that pops on shelves, we create print-ready design assets that help your product look as good as it performs. Whether you’re selling in-store or at markets around the Knox area, we’ll make sure your brand looks its best.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ### Digital Marketing
 We help you show up where it counts — on Google, Meta, and in your customers’ inboxes. From paid ad campaigns and SEO to email strategy and analytics, we create data-backed marketing that gets results for Boronia businesses.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Video Production & Content Creation
 Whether you're telling your story, showing your product or creating social content, we plan, shoot and edit video that captures attention. With full-day shoots available, we make it easy for Boronia businesses to build months of content in a single day.
 
-[Discover our Video Production and Content Creation](/services/video-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-production/)
 
 ## Supporting Boronia’s Business Community
 

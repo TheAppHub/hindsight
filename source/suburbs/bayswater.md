@@ -24,7 +24,7 @@ Your brand is more than just a logo—it’s how people feel when they interact 
 
 From initial concepts to complete brand systems, we design logos, style guides, colour palettes, and typography that align with your message and appeal to your audience. Our branding work doesn’t just look good—it works hard across packaging, signage, digital platforms and more to leave a lasting impression wherever your brand appears.
 
-[Explore our branding services](/services/branding-and-design/)
+[Explore our branding services](/creative-services/branding-and-design/)
 
 ### Digital Marketing
 
@@ -32,7 +32,7 @@ Digital marketing isn’t just about getting seen—it’s about getting seen by
 
 Whether it’s SEO to help you rank in local search, pay-per-click (PPC) campaigns to generate leads, or email marketing that nurtures your audience, we customise each campaign to your business goals. We believe in transparency, so you’ll always know what’s working—and what we’re improving next.
 
-[Learn more about our digital marketing solutions](/services/digital-marketing/)
+[Learn more about our digital marketing solutions](/creative-services/digital-marketing/)
 
 ### Social Media Strategy
 
@@ -40,7 +40,7 @@ Your social media presence is often the first touchpoint with your brand—so it
 
 We don’t believe in cookie-cutter templates. Instead, we craft content that reflects your brand's voice and goals—whether that’s sparking conversation, driving engagement or promoting your latest offer. With regular performance reviews and insights, we continuously refine your strategy so your socials work harder for your business.
 
-[View our social media services](/services/social-media-strategy/)
+[View our social media services](/creative-services/social-media-strategy/)
 
 ### Packaging and Print Design
 
@@ -64,7 +64,7 @@ Your website is your digital home base—and it should work as hard as you do. W
 
 Every website we build is mobile-responsive, SEO-friendly, and designed to convert. We use platforms like WordPress, Webflow or Shopify depending on your needs, and we never use off-the-shelf templates. The result? A site that’s not only beautiful but built to perform—on Google, on mobile, and in your customers’ eyes.
 
-[Discover our web design services](/services/website-design/)
+[Discover our web design services](/creative-services/website-design/)
 
 ## Why We Love Working with Bayswater Businesses
 

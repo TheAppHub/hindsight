@@ -27,32 +27,32 @@ We support sole traders, family-run businesses, consultants, educators and trade
 ### Branding & Visual Identity
 We design professional, personality-driven branding — from logos and colour palettes to business cards, uniforms and signage. Whether you're refining your existing identity or starting fresh, we’ll help you show up with confidence. For Lysterfield-based businesses, that might mean modernising a decades-old trade brand, or building something new that reflects your growth and values.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 We build clean, mobile-friendly websites that work just as well for local SEO as they do for customer conversion. Perfect for consultants, sole traders, trades and personal brands. We make it easy for customers to learn about your services, make contact, or request a quote — whether they’re on a laptop or checking your site on their phone in the driveway.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Content Creation & Video Production
 Need headshots? A services reel? A day-in-the-life style video? We produce content that helps customers understand who you are, what you offer and why they should choose you. Our team works on-site around Lysterfield to capture authentic footage, whether you're a solo tradie, fitness coach or creative service provider.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 We help you stay active, visible and engaging on the platforms that matter to your audience. From Instagram reels to Facebook content calendars, we create scroll-stopping content for growing businesses. Not sure what to post or how often? We’ll help you build a plan — or take it off your plate entirely — so your socials stay consistent without the stress.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 From building your first Google Ads campaign to cleaning up your SEO structure, we help Lysterfield businesses show up online — and stay there. We target the keywords your customers are actually searching for, help optimise your Google Business Profile, and run ads that drive calls, bookings or traffic — not just impressions.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 For product-based businesses and boutique brands, we design packaging, flyers, signage and more — all tailored to fit your identity and connect with your audience. Whether you’re selling handmade goods at a local market or launching a product from your home studio, we’ll make sure it looks as good as it performs.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## More Than Just a Logo or Website
 

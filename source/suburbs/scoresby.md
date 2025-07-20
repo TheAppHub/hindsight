@@ -27,32 +27,32 @@ We work with manufacturers, B2B service providers, suppliers, trades and logisti
 ### Packaging & Print Design
 We create compliant, functional and visually strong packaging and print materials — including product boxes, labels, instruction cards, capability brochures and business stationery. Whether you need bulk packaging for manufacturing supply chains or professional-grade brochures for tenders and sales, our designs balance practical requirements with visual appeal. We ensure your brand looks professional at every touchpoint, from trade show collateral to internal documentation.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ### Website Design & Development
 We design and build reliable websites that clearly communicate your services and make it easy for customers to get in touch. Whether it’s a multi-page site, an e-commerce platform, or a lead generation landing page, we focus on clarity, performance and usability. All sites are SEO-optimised, mobile responsive, and backed by analytics so you can track performance over time. We also provide ongoing support for updates, improvements and content changes.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Digital Marketing
 Scoresby businesses rely on targeted traffic — not vanity metrics. We create SEO plans, paid ad campaigns and EDM strategies that help you generate leads, attract buyers and stay visible in competitive markets. Whether you’re launching a product, building a quote pipeline or scaling your reach, our digital marketing services are built for ROI. We work with Google Ads, Meta campaigns, retargeting and automated email funnels to bring consistent value to your digital spend.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Branding & Visual Identity
 First impressions matter. We develop brand identities that reflect your capability, from logo design and typography to truck decals, branded uniforms and on-site signage. For Scoresby businesses operating in competitive B2B and trade sectors, a professional, consistent visual identity makes all the difference. We deliver full brand packages with guidelines and assets so your team, partners and suppliers can implement it easily and consistently.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Video Production & Content Creation
 We bring your operations and team to life through video — from capability reels and case studies to recruitment content and brand stories. Our full-day shoots can generate months of material across platforms. We offer pre-production planning, scripting, multi-location filming and post-production editing. Whether it’s a factory tour or a high-impact ad for LinkedIn, we deliver videos that fit seamlessly into your marketing strategy.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 We create consistent, relevant social media content for Scoresby businesses who want to stay front-of-mind. From trades to tech, we help you build trust and credibility online. Our packages include custom content calendars, platform-specific caption writing, strategic scheduling and community engagement options. We also offer performance tracking so you can see what’s working — and adjust accordingly.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ## Built for the Way You Work
 
