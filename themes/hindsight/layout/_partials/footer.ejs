@@ -80,19 +80,17 @@
 				</h2>
 				<ul class="text-gray-400">
 					<li class="mb-4">
+						<a href="/" class="hover:text-white hover:underline">Home</a>
+					</li>
+
+					<li class="mb-4">
 						<a
 							href="<%= url_for('/about/') %>"
 							class="hover:text-white hover:underline"
 							>About</a
 						>
 					</li>
-					<li class="mb-4">
-						<a
-							href="<%= url_for('/faq/') %>"
-							class="hover:text-white hover:underline"
-							>FAQs</a
-						>
-					</li>
+
 					<li class="mb-4">
 						<a
 							href="<%= url_for('/contact/') %>"
@@ -127,7 +125,7 @@
 						<a
 							href="/creative-services/branding-design/"
 							class="hover:underline"
-							>Branding</a
+							>Branding & Design</a
 						>
 					</li>
 					<li class="mb-4">
@@ -142,6 +140,13 @@
 							>Social Media Strategy</a
 						>
 					</li>
+					<li class="mb-4">
+						<a
+							href="/creative-services/packaging-and-print/"
+							class="hover:underline"
+							>Packaging & Print</a
+						>
+					</li>
 				</ul>
 			</div>
 			<div class="lg:mx-auto">
@@ -152,41 +157,62 @@
 				</h2>
 				<ul class="text-gray-500 dark:text-gray-400">
 					<li class="mb-4">
-						<a href="/portfolio/" class="hover:underline">All Work</a>
+						<a href="/portfolio/" class="hover:underline">All</a>
 					</li>
 					<li class="mb-4">
-						<a href="/categories/Branding-and-Design/" class="hover:underline"
+						<a href="/portfolio/branding-and-design/" class="hover:underline"
 							>Branding</a
 						>
 					</li>
 					<li class="mb-4">
-						<a href="/categories/Website-Design/" class="hover:underline"
+						<a href="/portfolio/social-media-strategy/" class="hover:underline"
+							>Social Media</a
+						>
+					</li>
+					<li class="mb-4">
+						<a href="/portfolio/website-design/" class="hover:underline"
 							>Web Design</a
+						>
+					</li>
+					<li class="mb-4">
+						<a href="/portfolio/video-and-production/" class="hover:underline"
+							>Video & Production</a
 						>
 					</li>
 				</ul>
 			</div>
-			<!-- <div class="lg:mx-auto">
+			<div class="lg:mx-auto">
 				<h2
 					class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
 				>
-					Blog
+					Info
 				</h2>
 				<ul class="text-gray-500 dark:text-gray-400">
 					<li class="mb-4">
-						<a href="<%= url_for('/blog/') %>" class="hover:underline"
-							>Latest Posts</a
+						<a
+							href="<%= url_for('/faq/') %>"
+							class="hover:text-white hover:underline"
+							>FAQs</a
+						>
+					</li>
+					<li class="mb-4">
+						<a href="/privacy-policy" class="hover:text-white hover:underline"
+							>Privacy Policy</a
+						>
+					</li>
+					<li class="mb-4">
+						<a href="/terms-of-use/" class="hover:text-white hover:underline"
+							>Terms of Use</a
 						>
 					</li>
 				</ul>
-			</div> -->
+			</div>
 		</div>
 		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 		<span class="block text-sm text-center text-gray-500 dark:text-gray-400">
 			© 2025
-			<a href="<%= url_for('/') %>" class="hover:underline"
-				>Hindsight Creative</a
-			>. All Rights Reserved.
+			<a href="/" class="hover:underline">Hindsight Creative</a>. All Rights
+			Reserved.
 		</span>
 	</div>
 </footer>
