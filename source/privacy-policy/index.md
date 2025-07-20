@@ -3,10 +3,9 @@ title: Privacy Policy
 layout: page
 ---
 
+**Hindsight Design Pty Ltd (ABN 38 166 321 286)** (“we“, “us” or the “Company“) is committed to privacy protection. At https://hindsight.com.au/ (“this site“), we understand the importance of keeping personal information private and secure. This privacy policy (“Privacy Policy“) describes generally how we manage personal information and safeguard privacy. If you would like more information, please don’t hesitate to contact us.
 
-**Hindsight Design Pty Ltd (ABN 38 166 321 286)** (“we“, “us” or the “Company“) is committed to privacy protection. At http://hindsight-2025.local/ (“this site“), we understand the importance of keeping personal information private and secure. This privacy policy (“Privacy Policy“) describes generally how we manage personal information and safeguard privacy. If you would like more information, please don’t hesitate to contact us.
-
-This Privacy Policy forms part of, and is subject to the provisions of, our [Website Terms of Use](http://hindsight-2025.local/privacy-policy/).
+This Privacy Policy forms part of, and is subject to the provisions of, our [Website Terms of Use](https://hindsight.com.au/privacy-policy/).
 
 ## We care about your privacy:
 
