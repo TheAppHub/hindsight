@@ -24,37 +24,37 @@ Whether you're based near The Glen, trading in Kingsway, or working remotely fro
 
 We help Glen Waverley businesses create memorable, professional brands — from logo design and visual systems to stationery, signage and online templates. Every brand we build reflects your tone, values and industry, whether you're a law firm, architect, clinic or startup. We take the time to understand your business inside and out, delivering a flexible visual toolkit that works across touchpoints — from LinkedIn banners and PowerPoint decks to storefront signage and packaging.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 
 We design clean, SEO friendly websites that attract leads and drive conversions. From one-page service sites to larger brochure builds, we create websites tailored to your needs and industry — with options to integrate bookings, payments or online catalogues. Our team writes the copy, sources visuals, and takes care of performance, so you can focus on running your business while your website does the heavy lifting.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Video Production & Content Creation
 
 Whether you’re updating your About page or launching a campaign, we create high-quality visual content that captures your brand’s personality. From headshots to reels, interviews to service explainers — we’ve got you covered. Our shoots are tailored to your space and audience, whether you're filming onsite at your Glen Waverley office or need a branded content series for social media.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 
 We help Glen Waverley businesses grow on platforms like LinkedIn, Instagram and Facebook — offering strategy sessions, full content planning, post templates and monthly management. Whether you’re looking to engage clients or build brand awareness, we’ll keep your content aligned and on-brand. We also provide caption writing, design, analytics and paid campaign support, so your social media becomes a real business tool.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 
 We manage campaigns across Google, Meta and email — generating measurable results and clear ROI. Whether you’re focused on growing your audience, launching a new service, or nurturing warm leads, we’ll build the strategy to get you there. Our local SEO services also help Glen Waverley businesses rank in map listings and search results, bringing more clients right to your door.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 
 Need business cards, capability brochures or physical signage? We design print materials that look sharp and stay consistent — perfect for client meetings, events, clinics or store fit-outs. Whether you’re printing a retail label, a service handout or a tradeshow banner, our design ensures your message lands clearly, no matter the medium.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## Built for Business Owners Who Expect More
 

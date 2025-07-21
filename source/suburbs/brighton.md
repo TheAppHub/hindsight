@@ -30,37 +30,37 @@ We understand that Brighton businesses expect more than just the basics. You wan
 
 We create sophisticated brand identities tailored to Brighton’s premium market. From bespoke logos and refined colour palettes to full brand systems and style guides, we ensure your brand reflects the elegance and personality of your business. Whether you’re a pilates studio, interior designer, health provider or retail space — we make your brand feel cohesive, luxurious and recognisable.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 
 Your website is your first impression. We build responsive, high-performing sites that combine visual elegance with strategic functionality — helping Brighton businesses attract and convert the right clientele. From ecommerce boutiques and wellness centres to consultants and creatives, our websites are designed to align with your customer experience.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Video Production & Content Creation
 
 In a suburb where image matters, we help you tell your story beautifully. From branded videos and reels to polished photography and editorial content, we create campaigns that feel stylish, intentional and effective. Whether you’re building your brand online or capturing your space in action, our production team delivers.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 
 We support Brighton brands with social media strategy, content planning, post templates and ongoing management — so you stay consistently visible to the right people. Whether you need to elevate your aesthetic, streamline your voice or scale your impact, we’ll help you show up with clarity and confidence.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 
 We run thoughtful, data-driven campaigns across Google, Meta, and email marketing — tailored to premium consumer behaviour. From SEO and search ads to Instagram lead campaigns and retargeting, we help Brighton businesses stay top of mind for high-intent audiences.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 
 From candle boxes to coffee menus, service brochures to street-front signage — we create packaging and print that complements your brand identity. Our team brings a tactile, high-end sensibility to every project, ensuring consistency and visual impact at every customer touchpoint.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## Your Creative Partner in Premium Branding
 

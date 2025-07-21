@@ -29,37 +29,37 @@ Whether you're launching, rebranding or scaling, we work with you to develop a s
 
 From education startups and local retailers to established clinics, we help Burwood brands develop a distinct visual identity. We craft logos, colour palettes, style guides and brand assets that make it easy for you to show up professionally across digital and print. Whether you're branding a tutoring program, launching a wellness product or reworking a community organisation's image, we make sure your visuals reflect your values and attract the right audience.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 
 We design websites that are clear, responsive and easy to manage. Whether you're booking tutoring sessions, sharing product info, or promoting your service, our websites are built for real-world usability and search performance. We can integrate online forms, payment gateways, appointment booking or ecommerce functionality — all backed by strong SEO and user experience design.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Video Production & Content Creation
 
 We create branded video, photography and social content to help you engage with your audience — whether it’s prospective students, clinic clients or customers. We manage everything from planning and filming to editing and rollout. We’ve created content for health practices, learning centres, food products and local retailers — all designed to reflect your personality, services and selling points.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 
 Need help managing your digital presence? We support Burwood businesses with ongoing content, monthly calendars, post design, and ad campaigns — designed to reach the right people and grow your audience. Whether you need hands-on help with Meta or LinkedIn, or just a strategy you can run with internally, we’ll guide you toward smart, consistent visibility.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 
 We run data-driven campaigns across Google, Meta and email to help local businesses grow. Whether you need SEO, retargeting, lead generation or ecomm sales — our team creates clear strategies that deliver. We use performance data to improve results every month, and offer fully managed services or flexible support depending on your in-house capacity.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 
 From student brochures to point-of-sale posters and service flyers, we design branded print that looks sharp and works hard. Our packaging and print work blends beauty with clarity to leave a lasting impression. Whether you're launching a product, promoting a school open day, or updating clinic materials, we’ll deliver consistent, high-quality assets that match your brand.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## Why Burwood Brands Choose Hindsight
 

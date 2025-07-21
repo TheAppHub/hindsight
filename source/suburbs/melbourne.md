@@ -38,37 +38,37 @@ Our team of strategists, designers, marketers and developers work closely with y
 
 We develop strategic, meaningful brand identities that speak to who you are and where you’re going. Whether you’re a startup in Brunswick, a consultancy on Collins Street or a shire council looking to refresh, we deliver tailored brand systems built for digital and print. From logo design to full brand architecture and style guides, we help your business show up consistently and confidently. Our Melbourne branding agency experience spans across industries, helping local businesses build long-term recognition and brand equity that drives growth.
 
-[Explore our Branding and Design services](/services/branding-and-design/)
+[Explore our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 
 Our Melbourne-based web team builds fast, functional and search-optimised websites that don’t just look sharp — they perform. We design with the user in mind, writing the copy, designing the visuals, and building seamless front-end experiences backed by smart strategy and on-page SEO.
 
-[Explore our Website Design & Development services](/services/website-design/)
+[Explore our Website Design & Development services](/creative-services/website-design/)
 
 ### Content Creation & Video Production
 
 Whether it’s product photography, founder interviews, corporate campaigns or fast-paced reels, we create content that tells your story with clarity and purpose. Our video and photo work supports brand awareness, digital ads, website UX and ongoing content marketing across channels.
 
-[View our Video and Content work](/services/video-and-production/)
+[View our Video and Content work](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 
 We build and manage social media strategies that align with your goals, voice and audience. From LinkedIn thought leadership and Instagram reels to monthly calendars and ad campaigns, we help Melbourne brands stay consistent, on-brand and visible where it counts.
 
-[Learn more about Social Media Strategy](/services/social-media-strategy/)
+[Learn more about Social Media Strategy](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 
 We plan and execute campaigns that get noticed — and deliver. Whether it’s lead generation for property developers, SEO for retail brands, or Meta campaigns for local events, our team delivers tailored strategies and performance insights that grow your bottom line.
 
-[See our Digital Marketing approach](/services/digital-marketing/)
+[See our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 
 We create tactile, eye-catching print and packaging that captures attention — whether it’s an FMCG shelf presence, council report, or promotional flyer. Our work blends beauty with clarity to ensure your message is clear across every channel. As a creative agency in Melbourne, we design packaging that aligns with your branding and enhances your customer experience — from retail products to marketing materials and event signage.
 
-[View our Packaging and Print Design work](/services/packaging-and-print/)
+[View our Packaging and Print Design work](/creative-services/packaging-and-print/)
 
 ## We Think Bigger So You Can Grow Smarter
 

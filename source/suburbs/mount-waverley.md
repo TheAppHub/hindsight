@@ -28,37 +28,37 @@ We work with legal practices, educators, allied health providers, builders, reta
 
 From logo development and colour palettes to full brand systems, we create visual identities that communicate clearly and confidently. We tailor every design to reflect your industry, your audience and your ambition — whether that’s trust, innovation, or growth. For Mount Waverley professionals, this means ensuring your brand feels polished and cohesive across business cards, signage, presentation decks and social media.
 
-[Learn more about our Branding and Design services](/services/branding-and-design/)
+[Learn more about our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 
 Our websites are designed to convert. We create responsive, fast-loading websites optimised for search, user experience and conversion. Whether you’re a local accountant, medical clinic, builder or online retailer, we’ll deliver a digital presence that works. We can integrate contact forms, booking tools, ecommerce platforms and service portals — all tailored to your brand and backed by strong copywriting and SEO.
 
-[Check out our Website Design services](/services/website-design/)
+[Check out our Website Design services](/creative-services/website-design/)
 
 ### Video Production & Content Creation
 
 Tell your story through branded video, team photography, service explainers or social content. We help Mount Waverley businesses communicate their value with sharp, strategic content designed to build trust and drive engagement. We manage everything in-house — from scripting and storyboarding to filming and editing — to ensure your content is clear, authentic and aligned with your goals.
 
-[Discover our Video Production and Content Creation](/services/video-and-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ### Social Media Strategy
 
 We make it easier to stay visible online with tailored content calendars, social post templates, campaign planning and caption writing. Whether you want support month-to-month or a one-off content boost, we’ve got a solution. We also offer platform audits and strategy sessions for Mount Waverley businesses that want to do it themselves — but smarter.
 
-[See our Social Media Strategy services](/services/social-media-strategy/)
+[See our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Digital Marketing
 
 We create targeted digital campaigns that generate leads and visibility — not just clicks. From Google Ads and SEO to Meta campaigns and remarketing, we help Mount Waverley businesses grow strategically. Our reporting is clear and actionable, and we’ll continuously refine your campaigns to ensure your marketing spend delivers tangible outcomes.
 
-[Explore our Digital Marketing approach](/services/digital-marketing/)
+[Explore our Digital Marketing approach](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 
 If your business needs flyers, brochures, signage or product packaging, we create on-brand assets that work in real life — from office walls to retail shelves. We design for clarity, consistency and effectiveness — ensuring every printed piece reflects your professionalism and strengthens your visibility within the Mount Waverley community.
 
-[View our Packaging and Print work](/services/packaging-and-print/)
+[View our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## Built for Busy, Professional Brands
 

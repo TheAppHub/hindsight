@@ -37,7 +37,7 @@ We create flexible, professional brand systems for local government departments,
 
 We also help clarify your brand voice, define your visual personality, and build strong brand guidelines — so everything from your signage to your social media posts feels consistent and intentional. As a regional branding agency, we craft identities that stand out both locally and across Victoria.
 
-[Explore our Branding and Design services](/services/branding-and-design/)
+[Explore our Branding and Design services](/creative-services/branding-and-design/)
 
 ### Website Design & Development
 
@@ -45,7 +45,7 @@ We design and build SEO-friendly, mobile-first websites that showcase your busin
 
 Our websites are built with strategy at their core — from wireframing and copywriting to testing and launch support — giving you a tool that works as hard as you do. We support Bendigo businesses with responsive web design, local SEO and seamless user experiences to grow online visibility.
 
-[View our Website Design services](/services/website-design/)
+[View our Website Design services](/creative-services/website-design/)
 
 ### Social Media Strategy
 
@@ -53,7 +53,7 @@ We work with regional teams to develop social strategies, content calendars, pos
 
 Our social media services for Bendigo businesses include strategic planning, platform management, scheduling and reporting — helping you grow your audience and keep engagement consistent.
 
-[Discover our Social Media Strategy services](/services/social-media-strategy/)
+[Discover our Social Media Strategy services](/creative-services/social-media-strategy/)
 
 ### Content Creation & Video
 
@@ -61,19 +61,19 @@ Our team produces high-quality video and photography for campaigns, websites, so
 
 We handle the whole process — scripting, shoot planning, editing and rollout — ensuring that the final product not only looks sharp, but supports your wider brand and marketing strategy. We help Bendigo businesses build a content library that performs across channels.
 
-[See our Video Production and Content work](/services/video-and-production/)
+[See our Video Production and Content work](/creative-services/video-and-production/)
 
 ### Digital Marketing
 
 We build regional-focused digital campaigns that cut through. From Google Ads and Meta to SEO and email flows, we help you find and convert the right audience with clear strategy and easy-to-read reporting. For Bendigo businesses, we create integrated digital marketing strategies that drive traffic, build brand awareness, and deliver real leads — backed by measurable results.
 
-[Explore our Digital Marketing services](/services/digital-marketing/)
+[Explore our Digital Marketing services](/creative-services/digital-marketing/)
 
 ### Packaging & Print Design
 
 We design brochures, signage, product packaging, annual reports and more — helping Bendigo businesses communicate clearly and look professional at every touchpoint. Whether you're updating in-store materials or preparing an important stakeholder report, our designs balance brand impact with clarity and quality. Our creative agency supports local producers, event organisers and retailers with custom packaging and printed communications that align with your brand identity.
 
-[Check out our Packaging and Print work](/services/packaging-and-print/)
+[Check out our Packaging and Print work](/creative-services/packaging-and-print/)
 
 ## Local Knowledge. National Capability.
 
