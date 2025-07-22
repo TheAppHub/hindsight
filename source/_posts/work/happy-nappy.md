@@ -15,6 +15,6 @@ categories:
 tags:
 ---
 
-## A brand identity for a new entry into an established market.
+## A brand identity for a new entry into an established market
 
 Visually, the aesthetic is both informative and creative, like a breath of fresh air in a staid marketplace. 

@@ -15,7 +15,7 @@ categories:
 tags:
 ---
 
-## Packaging and marketing concepts.
+## Packaging and marketing concepts
 
 Mr Tucker needed branding concepts and visuals for their marketing of a selection of cured beef snacks.
 

@@ -20,11 +20,11 @@ tags:
 
 In the wake of the pandemic, it was time to bring people together again. ‘Down to Earth’ was our answer — a publication that shifted focus from hard selling to telling varied and engaging stories about the Kubota lifestyle.
 
-### Publication design with heart.
+### Publication design with heart
 
 We worked closely alongside Kubota’s marketing department to bring its Down to Earth magazine to life. In it, the brand takes a back seat to tales in favour of Kubota owners about living and working with a Kubota machine.
 
-### Engaging audiences through social storytelling.
+### Engaging audiences through social storytelling
 
 We complemented the publication with a targeted social media campaign and strategy. We shared Down to Earth’s rich imagery, video content and captivating stories across multiple platforms. Carousels highlighted feature stories and promoted product categories.
 
