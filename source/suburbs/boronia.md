@@ -53,7 +53,7 @@ We help you show up where it counts — on Google, Meta, and in your customers�
 ### Video Production & Content Creation
 Whether you're telling your story, showing your product or creating social content, we plan, shoot and edit video that captures attention. With full-day shoots available, we make it easy for Boronia businesses to build months of content in a single day.
 
-[Discover our Video Production and Content Creation](/creative-services/video-production/)
+[Discover our Video Production and Content Creation](/creative-services/video-and-production/)
 
 ## Supporting Boronia’s Business Community
 
