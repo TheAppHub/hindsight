@@ -7,7 +7,7 @@ description: Flamin’ Good’s Bold New Identity
 client: Charcoal Chicken
 brief: Premises Fitout & Branding
 deliverables: Branding, Shop Fitout and Signage
-image: Charcoal-Chicken_Tile1.jpg
+image: flamin_good_charcoal_chicken_logo.jpg
 permalink: /portfolio/charcoal-chicken/
 categories:
   - Branding and Design

@@ -7,8 +7,8 @@ description: Discover how we transformed Classic Car Garage's brand identity and
 client: Classic Car Garage Australia
 brief: Brand Identity
 deliverables: Retail Merchandising, Radio Advertising
-image: classic-car-garage-logo.jpg
-carouselImage: classic_car_garage_slider.jpg
+image: classic-car-garage-55.jpg
+carouselImage: classic-car-garage-slider.jpg
 permalink: /portfolio/classic-car-garage-australia/
 categories:
   - Branding and Design

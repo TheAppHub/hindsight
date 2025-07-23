@@ -7,7 +7,7 @@ description: Homestyle Season Roast Chicken Package Design
 client: Coles
 brief: Pitch For Packaging Design
 deliverables: Concepts
-image: ColesChicken-Image1.jpg
+image: coles-roast-chicken5.jpg
 permalink: /portfolio/coles-roast-chicken-packs/
 categories:
   - Packaging & Print

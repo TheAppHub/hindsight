@@ -7,7 +7,7 @@ description: A Milestone Worth Celebrating
 client: Kubota Australia
 brief: Celebrate 50 years of Kubota Construction with a national campaign that drives engagement and sales.
 deliverables: Campaign, National TVC, META ad creative, Videography
-image: kubota-50-years-campaign1.jpg
+image: kubota-50-years-campaign7.jpg
 permalink: /portfolio/kubota-50-years-campaign/
 categories:
   - Video & Production

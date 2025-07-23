@@ -7,7 +7,7 @@ description: A brand identity for a new entry into an established market.
 client: Softmed
 brief: Packaging Design
 deliverables: Brand Identity
-image: happy-nappy-1.jpg
+image: happy_nappy_logo.jpg
 permalink: /portfolio/happy-nappy/
 categories:
   - Packaging & Print
