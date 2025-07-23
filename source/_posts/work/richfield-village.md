@@ -9,7 +9,7 @@ brief: Brand Refresh
 deliverables: Brand Identity, Signage & Wayfinding, Publication Design
 permalink: /portfolio/richfield-village/
 image: Richfield-Village_2.jpg
-carouselImage: Carousel-Slider-Richfield.jpg
+carouselImage: richfield_village_slider.jpg
 categories:
   - Branding and Design
   - Packaging & Print

@@ -9,7 +9,7 @@ brief: Creative Direction, Video Production
 deliverables: National Television Commercial, Digital Media
 permalink: /portfolio/in-a-place-we-call-home/
 image: kubota-slider.jpg
-carouselImage: TVC.jpg
+carouselImage: kubota_slider.jpg
 categories:
   - Video & Production
 tags:

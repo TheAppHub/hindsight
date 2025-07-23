@@ -9,6 +9,7 @@ brief: Brand Refresh
 deliverables: Brand Identity, Merchandising, Packaging Design
 image: coconut-republic3.jpg
 permalink: /portfolio/coconut-republic/
+carouselImage: coconut_republic_slider.jpg
 categories:
   - Branding and Design
   - Packaging & Print

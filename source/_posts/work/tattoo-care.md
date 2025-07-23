@@ -7,8 +7,8 @@ description: Happily Ever Aftercare
 client: Coconut Republic - Tattoo Care
 brief: Brand Development
 deliverables: Brand Identity, Packaging Design, Digital Marketing
-image: tattoo-care3.jpg
-carouselImage: coconut_republic_carousel_slider.jpg
+image: tattoo_aftercare_slider.jpg
+carouselImage: tattoo_aftercare_slider.jpg
 permalink: /portfolio/tattoo-care/
 categories:
   - Branding and Design

@@ -7,7 +7,7 @@ description: Fix your property, sell faster, pay after it has sold.
 client: Fix Sell Pay
 brief: Branding & Marketing
 deliverables: Brand Assets and Marketing Collateral
-image: fix-sell-pay1.jpg
+image: fix-sell-pay3.jpg
 permalink: /portfolio/fix-sell-pay/
 categories:
   - Branding and Design
