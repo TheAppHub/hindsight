@@ -15,13 +15,18 @@ categories:
 tags:
 ---
 
-## From Legacy to Modern Chemistry
+## Legacy Reimagined
 
-We created a streamlined visual identity anchored in their existing colour palette, balancing heritage with a sharper, more contemporary edge. A fresh logo, suite of business stationery and flexible brand guidelines brought structure to the rollout. Our UX and UI design for the website focused on user-friendly navigation, with clear messaging, custom iconography and considered copywriting to guide customers through CCC’s complex offering with ease.
+With over 50 years of trusted supply behind them, CCC Ingredients needed a refreshed identity that honoured their history - without feeling stuck in it.
+We evolved the logo, deepening the yellow to add richness and intensity, while introducing angular forms into the octagon, subtle nods to the diversity of ingredients they supply across industries.
 
-### A Seamless Handover
+### The result?
 
-We delivered a Figma-ready design system to make handover smooth and scalable. From the home page through to product pages, the interface was designed to highlight CCC’s depth of expertise while keeping the user journey simple and intuitive — building trust from first click to final enquiry.
+A mark that feels stable, confident, and contemporary.
+
+We developed a visual identity system with updated colourways, brand language, and business collateral that felt modern while retaining CCC’s credibility. Our digital work focused on a user-first experience: clear navigation and considered copy to help customers quickly understand a complex offering. A great mix of the right ingredients plus a 'sprinkle' of something new!
+
+The result is a digital brand that builds trust from the first click to the final enquiry.
 
 
 <div class='embed-container'><iframe src='https://www.youtube.com/embed/bF8XhUBuBNc?si=0Pq0RhoEYqVBrW-y' frameborder='0' allowfullscreen></iframe></div>
