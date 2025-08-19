@@ -7,7 +7,7 @@ description: With the completion of a major rebrand Redheads required a major de
 client: Redheads
 brief: Brand Rollout
 deliverables: Packaging Design
-image: Firelighters.jpg
+image: redhead_logo.jpg
 permalink: /portfolio/redheads/
 categories:
   - Branding and Design

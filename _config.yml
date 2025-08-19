@@ -128,7 +128,7 @@ email: "studio@hindsight.com.au"
 social:
   facebook: "https://facebook.com/HindsightDesign"
   instagram: "https://www.instagram.com/hindsight_creative/"
-  linkedin: "https://linkedin.com/company/hindsightdesign"
+  linkedin: "https://linkedin.com/company/hindsight-creative/"
 hours:
   monday: "8:30 AM - 4:30 PM"
   tuesday: "8:30 AM - 4:30 PM"
@@ -140,7 +140,7 @@ hours:
 
 # Google Tag Manager
 google_tag_manager:
-  id: "G-T6M39RQ3" # Replace with your GTM ID
+  id: "G-PSYELG337Y" # Replace with your GTM ID
 
 # Google Maps API Key
 google_maps_api_key: AIzaSyBpdXh0vdUjjRNwWM63SoxJ2o_L1By7g38

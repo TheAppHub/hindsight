@@ -15,6 +15,6 @@ categories:
 tags:
 ---
 
-##  Packaging concepts
+## Packaging concepts
 
 Rajah’s approached Hindsight requiring concepts and visuals for a brand and packaging refresh of their rice range of products.

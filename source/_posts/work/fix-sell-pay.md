@@ -15,7 +15,7 @@ categories:
 tags:
 ---
 
-## Fix your property, sell faster, pay after it has sold.
+## Fix your property, sell faster, pay after it has sold
 
 A brilliant business model that Hindsight became a part of from its inception.
 

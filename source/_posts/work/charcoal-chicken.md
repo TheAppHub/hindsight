@@ -7,14 +7,14 @@ description: Flamin’ Good’s Bold New Identity
 client: Charcoal Chicken
 brief: Premises Fitout & Branding
 deliverables: Branding, Shop Fitout and Signage
-image: Charcoal-Chicken_Tile1.jpg
+image: flamin_good_charcoal_chicken_logo.jpg
 permalink: /portfolio/charcoal-chicken/
 categories:
   - Branding and Design
 tags:
 ---
 
-## Flamin' Good's Bold New Identity.
+## Flamin' Good's Bold New Identity
 
 The brief to Hindsight was to create a brand name and identity for a new restaurant and take-away unique to the launch location. 
 
@@ -22,7 +22,7 @@ Our team at Hindsight Creative crafted a custom logo featuring a ‘hot bird’ 
 
 The logo is all about attitude and flavour, capturing the fiery essence of this unique restaurant and takeaway spot.
 
-### Every corner as bold as its flavours.
+### Every corner as bold as its flavours
 
 When it comes to Flamin’ Good Charcoal Chicken, we made sure the exterior says it all.
 

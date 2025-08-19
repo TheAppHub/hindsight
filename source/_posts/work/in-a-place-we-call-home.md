@@ -9,13 +9,13 @@ brief: Creative Direction, Video Production
 deliverables: National Television Commercial, Digital Media
 permalink: /portfolio/in-a-place-we-call-home/
 image: kubota-slider.jpg
-carouselImage: TVC.jpg
+carouselImage: kubota_slider.jpg
 categories:
   - Video & Production
 tags:
 ---
 
-## Kubota's video marketing triumph In a Place We Call Home.
+## Kubota's video marketing triumph In a Place We Call Home
 
 ### Real stories. Real impact.
 
@@ -23,7 +23,7 @@ Our collaboration with Kubota and Channel Nine's "The Block" provided an excitin
 
 We focused on real-life applications of Kubota machinery, weaving authentic stories into a compelling narrative that aired during 2022's season of The Block, proudly sponsored by Kubota.
 
-### Capturing the essence of Kubota.
+### Capturing the essence of Kubota
 
 We knew we weren't just showcasing machinery. Our video content focused on capturing the spirit of Kubota in Australians' everyday lives.
 

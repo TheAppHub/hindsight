@@ -21,7 +21,7 @@ The heart of Mount Pleasant’s vision lies in its seamless mix of nature and ur
 
 From eye-catching billboards to the final sales office fit-out, every piece of marketing collateral was designed to immerse future residents in the beauty of Mount Pleasant.
 
-### A brand is more than just a logo.
+### A brand is more than just a logo
 
 When Mount Pleasant approached us to craft a visual identity for their master-planned community, we knew it had to reflect their stunning blend of idyllic rural charm and modern urban values.
 
