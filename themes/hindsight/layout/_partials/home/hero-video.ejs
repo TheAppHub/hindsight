@@ -1,6 +1,6 @@
 <div
 	id="video-container"
-	class="relative w-full pt-[56%] md:pt-[45%] lg:pt-[37.5%] overflow-hidden bg-black"
+	class="relative w-full h-auto xl:h-[calc(100vh-80px)] overflow-hidden bg-black"
 ></div>
 
 <script>
@@ -20,26 +20,47 @@
 		video.setAttribute("loop", "");
 		video.setAttribute("playsinline", "");
 
+		// Responsive classes - different behavior for mobile vs desktop
 		video.className =
-			"absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500";
+			"w-full h-auto transition-opacity duration-500 " +
+			"max-[720px]:w-full max-[720px]:h-auto " +
+			"min-[721px]:xl:absolute min-[721px]:xl:inset-0 min-[721px]:xl:w-full min-[721px]:xl:h-full min-[721px]:xl:object-cover " +
+			"opacity-0";
 
-		const source = document.createElement("source");
-		source.setAttribute("src", "/videos/hero-video.mp4");
-		source.setAttribute("type", "video/mp4");
+		// Function to set the appropriate video source based on screen size
+		function setVideoSource() {
+			const isMobile = window.innerWidth <= 720;
+			const videoSource = isMobile
+				? "/videos/hero-video-mobile.mp4"
+				: "/videos/hero-video.mp4";
 
-		video.appendChild(source);
+			// Only change source if it's different from current
+			if (video.src !== videoSource) {
+				video.src = videoSource;
+				video.load();
+				video.play().catch((e) => {
+					console.warn("Video autoplay blocked or error:", e);
+				});
+			}
+		}
+
+		// Set initial video source
+		setVideoSource();
+
 		container.appendChild(video);
-
-		video.load(); // Start loading the video immediately
-
-		// Try to play immediately
-		video.play().catch((e) => {
-			console.warn("Autoplay blocked or error:", e);
-		});
 
 		// Once enough is buffered, fade in
 		video.addEventListener("canplaythrough", () => {
 			video.classList.add("opacity-100");
+		});
+
+		// Handle resize events for responsive behavior
+		let resizeTimeout;
+		window.addEventListener("resize", () => {
+			clearTimeout(resizeTimeout);
+			resizeTimeout = setTimeout(() => {
+				setVideoSource();
+			}, 250); // Debounce resize events
 		});
 	});
 </script>
