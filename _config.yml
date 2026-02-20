@@ -114,14 +114,14 @@ sitemap:
 
 # Contact
 address:
-  street: "24/756 Burwood Hwy"
-  suburb: "Ferntree Gully"
+  street: "12 Jellico Drive"
+  suburb: "Scoresby"
   state: "VIC"
-  postcode: "3156"
+  postcode: "3179"
   country: "Australia"
 coordinates:
-  lat: -37.8824032
-  lng: 145.2692256
+  lat: -37.898527
+  lng: 145.219493
 phone: "(03) 9758 0207"
 tel: "+61397580207"
 email: "studio@hindsight.com.au"
